@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="obsDataSet" targetNamespace="http://tempuri.org/obsDataSet.xsd" xmlns:mstns="http://tempuri.org/obsDataSet.xsd" xmlns="http://tempuri.org/obsDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="obsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="obsConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.OgrenciOtomasyon.Properties.Settings.GlobalReference.Default.obsConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ogrencilerTableAdapter" GeneratorDataComponentClassName="ogrencilerTableAdapter" Name="ogrenciler" UserDataComponentName="ogrencilerTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="obsConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id`, `ad`, `soyad`, `numara`, `program`, `vize`, `final`, `ortalama`, `durum` FROM `ogrenciler`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="ad" DataSetColumn="ad" />
+              <Mapping SourceColumn="soyad" DataSetColumn="soyad" />
+              <Mapping SourceColumn="numara" DataSetColumn="numara" />
+              <Mapping SourceColumn="program" DataSetColumn="program" />
+              <Mapping SourceColumn="vize" DataSetColumn="vize" />
+              <Mapping SourceColumn="final" DataSetColumn="final" />
+              <Mapping SourceColumn="ortalama" DataSetColumn="ortalama" />
+              <Mapping SourceColumn="durum" DataSetColumn="durum" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ogrenciler1TableAdapter" GeneratorDataComponentClassName="ogrenciler1TableAdapter" Name="ogrenciler1" UserDataComponentName="ogrenciler1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="obsConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id`, `ad`, `soyad`, `numara`, `program`, `vize`, `final`, `ortalama`, `durum` FROM `ogrenciler`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="ad" DataSetColumn="ad" />
+              <Mapping SourceColumn="soyad" DataSetColumn="soyad" />
+              <Mapping SourceColumn="numara" DataSetColumn="numara" />
+              <Mapping SourceColumn="program" DataSetColumn="program" />
+              <Mapping SourceColumn="vize" DataSetColumn="vize" />
+              <Mapping SourceColumn="final" DataSetColumn="final" />
+              <Mapping SourceColumn="ortalama" DataSetColumn="ortalama" />
+              <Mapping SourceColumn="durum" DataSetColumn="durum" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="obsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="obsDataSet" msprop:Generator_UserDSName="obsDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ogrenciler" msprop:Generator_TableClassName="ogrencilerDataTable" msprop:Generator_TableVarName="tableogrenciler" msprop:Generator_RowChangedName="ogrencilerRowChanged" msprop:Generator_TablePropName="ogrenciler" msprop:Generator_RowDeletingName="ogrencilerRowDeleting" msprop:Generator_RowChangingName="ogrencilerRowChanging" msprop:Generator_RowEvHandlerName="ogrencilerRowChangeEventHandler" msprop:Generator_RowDeletedName="ogrencilerRowDeleted" msprop:Generator_RowClassName="ogrencilerRow" msprop:Generator_UserTableName="ogrenciler" msprop:Generator_RowEvArgName="ogrencilerRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="ad" msprop:Generator_ColumnVarNameInTable="columnad" msprop:Generator_ColumnPropNameInRow="ad" msprop:Generator_ColumnPropNameInTable="adColumn" msprop:Generator_UserColumnName="ad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="soyad" msprop:Generator_ColumnVarNameInTable="columnsoyad" msprop:Generator_ColumnPropNameInRow="soyad" msprop:Generator_ColumnPropNameInTable="soyadColumn" msprop:Generator_UserColumnName="soyad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="numara" msprop:Generator_ColumnVarNameInTable="columnnumara" msprop:Generator_ColumnPropNameInRow="numara" msprop:Generator_ColumnPropNameInTable="numaraColumn" msprop:Generator_UserColumnName="numara" type="xs:int" />
+              <xs:element name="program" msprop:Generator_ColumnVarNameInTable="columnprogram" msprop:Generator_ColumnPropNameInRow="program" msprop:Generator_ColumnPropNameInTable="programColumn" msprop:Generator_UserColumnName="program" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="125" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vize" msprop:Generator_ColumnVarNameInTable="columnvize" msprop:Generator_ColumnPropNameInRow="vize" msprop:Generator_ColumnPropNameInTable="vizeColumn" msprop:Generator_UserColumnName="vize" type="xs:int" minOccurs="0" />
+              <xs:element name="final" msprop:Generator_ColumnVarNameInTable="columnfinal" msprop:Generator_ColumnPropNameInRow="final" msprop:Generator_ColumnPropNameInTable="finalColumn" msprop:Generator_UserColumnName="final" type="xs:int" minOccurs="0" />
+              <xs:element name="ortalama" msprop:Generator_ColumnVarNameInTable="columnortalama" msprop:Generator_ColumnPropNameInRow="ortalama" msprop:Generator_ColumnPropNameInTable="ortalamaColumn" msprop:Generator_UserColumnName="ortalama" type="xs:float" minOccurs="0" />
+              <xs:element name="durum" msprop:Generator_ColumnVarNameInTable="columndurum" msprop:Generator_ColumnPropNameInRow="durum" msprop:Generator_ColumnPropNameInTable="durumColumn" msprop:Generator_UserColumnName="durum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ogrenciler1" msprop:Generator_TableClassName="ogrenciler1DataTable" msprop:Generator_TableVarName="tableogrenciler1" msprop:Generator_TablePropName="ogrenciler1" msprop:Generator_RowDeletingName="ogrenciler1RowDeleting" msprop:Generator_RowChangingName="ogrenciler1RowChanging" msprop:Generator_RowEvHandlerName="ogrenciler1RowChangeEventHandler" msprop:Generator_RowDeletedName="ogrenciler1RowDeleted" msprop:Generator_UserTableName="ogrenciler1" msprop:Generator_RowChangedName="ogrenciler1RowChanged" msprop:Generator_RowEvArgName="ogrenciler1RowChangeEvent" msprop:Generator_RowClassName="ogrenciler1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="ad" msprop:Generator_ColumnVarNameInTable="columnad" msprop:Generator_ColumnPropNameInRow="ad" msprop:Generator_ColumnPropNameInTable="adColumn" msprop:Generator_UserColumnName="ad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="soyad" msprop:Generator_ColumnVarNameInTable="columnsoyad" msprop:Generator_ColumnPropNameInRow="soyad" msprop:Generator_ColumnPropNameInTable="soyadColumn" msprop:Generator_UserColumnName="soyad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="numara" msprop:Generator_ColumnVarNameInTable="columnnumara" msprop:Generator_ColumnPropNameInRow="numara" msprop:Generator_ColumnPropNameInTable="numaraColumn" msprop:Generator_UserColumnName="numara" type="xs:int" />
+              <xs:element name="program" msprop:Generator_ColumnVarNameInTable="columnprogram" msprop:Generator_ColumnPropNameInRow="program" msprop:Generator_ColumnPropNameInTable="programColumn" msprop:Generator_UserColumnName="program" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="125" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vize" msprop:Generator_ColumnVarNameInTable="columnvize" msprop:Generator_ColumnPropNameInRow="vize" msprop:Generator_ColumnPropNameInTable="vizeColumn" msprop:Generator_UserColumnName="vize" type="xs:int" minOccurs="0" />
+              <xs:element name="final" msprop:Generator_ColumnVarNameInTable="columnfinal" msprop:Generator_ColumnPropNameInRow="final" msprop:Generator_ColumnPropNameInTable="finalColumn" msprop:Generator_UserColumnName="final" type="xs:int" minOccurs="0" />
+              <xs:element name="ortalama" msprop:Generator_ColumnVarNameInTable="columnortalama" msprop:Generator_ColumnPropNameInRow="ortalama" msprop:Generator_ColumnPropNameInTable="ortalamaColumn" msprop:Generator_UserColumnName="ortalama" type="xs:float" minOccurs="0" />
+              <xs:element name="durum" msprop:Generator_ColumnVarNameInTable="columndurum" msprop:Generator_ColumnPropNameInRow="durum" msprop:Generator_ColumnPropNameInTable="durumColumn" msprop:Generator_UserColumnName="durum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ogrenciler" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="ogrenciler1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ogrenciler1" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
