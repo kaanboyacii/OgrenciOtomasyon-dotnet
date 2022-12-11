@@ -188,6 +188,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>obsDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="obsDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>obsDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="obsDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>obsDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -243,6 +253,28 @@
     </None>
     <None Include="obsDataSet2.xss">
       <DependentUpon>obsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="obsDataSet3.xsc">
+      <DependentUpon>obsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="obsDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>obsDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="obsDataSet3.xss">
+      <DependentUpon>obsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="obsDataSet4.xsc">
+      <DependentUpon>obsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="obsDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>obsDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="obsDataSet4.xss">
+      <DependentUpon>obsDataSet4.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

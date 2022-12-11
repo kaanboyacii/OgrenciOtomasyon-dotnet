@@ -148,9 +148,9 @@
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(50, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(659, 46);
+            this.label3.Size = new System.Drawing.Size(608, 46);
             this.label3.TabIndex = 22;
-            this.label3.Text = "KBÜ Student Information System";
+            this.label3.Text = "Bilgi School Student Login SIS";
             // 
             // button1
             // 

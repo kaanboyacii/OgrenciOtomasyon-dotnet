@@ -41,8 +41,6 @@ namespace OgrenciOtomasyon
             this.txtBoxUserName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtBoxLesson = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +50,7 @@ namespace OgrenciOtomasyon
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(62, 381);
+            this.button1.Location = new System.Drawing.Point(62, 339);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(385, 48);
             this.button1.TabIndex = 34;
@@ -67,9 +65,9 @@ namespace OgrenciOtomasyon
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(54, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(686, 46);
+            this.label3.Size = new System.Drawing.Size(639, 46);
             this.label3.TabIndex = 33;
-            this.label3.Text = "KBÜ Student Management System";
+            this.label3.Text = "Bilgi School Teacher Login SMS";
             // 
             // pictureBox1
             // 
@@ -83,7 +81,7 @@ namespace OgrenciOtomasyon
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnClear.Location = new System.Drawing.Point(357, 264);
+            this.btnClear.Location = new System.Drawing.Point(357, 217);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(90, 30);
             this.btnClear.TabIndex = 31;
@@ -95,7 +93,7 @@ namespace OgrenciOtomasyon
             this.btnExit.BackColor = System.Drawing.Color.Crimson;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(261, 311);
+            this.btnExit.Location = new System.Drawing.Point(261, 269);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(186, 48);
             this.btnExit.TabIndex = 30;
@@ -108,7 +106,7 @@ namespace OgrenciOtomasyon
             this.btnLogin.BackColor = System.Drawing.Color.LimeGreen;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(62, 311);
+            this.btnLogin.Location = new System.Drawing.Point(62, 269);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(186, 48);
             this.btnLogin.TabIndex = 29;
@@ -164,33 +162,12 @@ namespace OgrenciOtomasyon
             this.label1.TabIndex = 24;
             this.label1.Text = "Username:";
             // 
-            // txtBoxLesson
-            // 
-            this.txtBoxLesson.Location = new System.Drawing.Point(204, 226);
-            this.txtBoxLesson.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBoxLesson.Name = "txtBoxLesson";
-            this.txtBoxLesson.Size = new System.Drawing.Size(243, 22);
-            this.txtBoxLesson.TabIndex = 36;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(57, 224);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 26);
-            this.label4.TabIndex = 35;
-            this.label4.Text = "Lesson:";
-            // 
             // FormTeacherLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtBoxLesson);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
@@ -228,7 +205,5 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.TextBox txtBoxUserName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtBoxLesson;
-        private System.Windows.Forms.Label label4;
     }
 }

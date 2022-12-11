@@ -58,7 +58,7 @@ namespace OgrenciOtomasyon
             cmd = new MySqlCommand();
             con.Open();
             cmd.Connection = con;
-            cmd.CommandText = "SELECT * FROM ogrenciler where numara='" + txtBoxUserName.Text + "' AND password='" + txtBoxPassword.Text + "'";
+            cmd.CommandText = "SELECT * FROM ogrenciler where id='" + txtBoxUserName.Text + "' AND password='" + txtBoxPassword.Text + "'";
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
