@@ -63,8 +63,8 @@ namespace OgrenciOtomasyon
             if (dr.Read())
             {
                 MessageBox.Show("Student Login Succesful.");
-                Form2 frm2 = new Form2();
-                frm2.Show();
+                FormStudentInfo frmStudentInfo = new FormStudentInfo(txtBoxUserName.Text);
+                frmStudentInfo.Show();
                 this.Hide();
             }
             else
@@ -73,6 +73,12 @@ namespace OgrenciOtomasyon
             }
             con.Close();
         }
+
+        public void PassNum()
+        {
+            string Num = txtBoxUserName.Text;
+        }
+
 
         private void btnClear_Click(object sender, EventArgs e)
         {
