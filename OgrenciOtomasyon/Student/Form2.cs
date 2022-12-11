@@ -65,6 +65,8 @@ namespace OgrenciOtomasyon
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'obsDataSet5.ogrenciler' table. You can move, or remove it, as needed.
+            this.ogrencilerTableAdapter1.Fill(this.obsDataSet5.ogrenciler);
             ogrenciListele();
 
         }
@@ -73,10 +75,15 @@ namespace OgrenciOtomasyon
         {
             try
             {
+                String gender = "";
+                if (radioButtonMale.Checked == true)  //
+                    gender = "Male";                  //Cinsiyeti kontrol ediyor gender değişkenine atıyor.
+                if (radioButtonFemale.Checked == true)//
+                    gender = "Female";
                 //This is my connection string i have assigned the database file address path
                 string MyConnection2 = "server=localhost;user id=root;database=obs";
                 //This is my insert query in which i am taking input from the user through windows forms
-                string Query = "insert into ogrenciler(id,ad,soyad,iletisim) values('" + this.txtBoxId.Text + "','" + this.txtBoxFirstName.Text + "','" + this.txtBoxLastName.Text + "','" + this.txtboxNumber.Text + "');";
+                string Query = "insert into ogrenciler(id,ad,soyad,iletisim,cinsiyet,adres) values('" + this.txtBoxId.Text + "','" + this.txtBoxFirstName.Text + "','" + this.txtBoxLastName.Text + "','" + this.txtboxNumber.Text + "','" + gender + "','" + this.txtBoxAdres.Text + "');";
                 //This is  MySqlConnection here i have created the object and pass my connection string.
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 //This is command class which will handle the query and connection object.
@@ -102,10 +109,15 @@ namespace OgrenciOtomasyon
         {
             try
             {
+                String gender = "";
+                if (radioButtonMale.Checked == true)  //
+                    gender = "Male";                  //Cinsiyeti kontrol ediyor gender değişkenine atıyor.
+                if (radioButtonFemale.Checked == true)//
+                    gender = "Female";
                 //This is my connection string i have assigned the database file address path
                 string MyConnection2 = "server=localhost;user id=root;database=obs";
                 //This is my update query in which i am taking input from the user through windows forms and update the record.
-                string Query = "update ogrenciler set id='" + this.txtBoxId.Text + "',ad='" + this.txtBoxFirstName.Text + "',soyad='" + this.txtBoxLastName.Text + "',iletisim='" + this.txtboxNumber.Text + "' where id='" + this.txtBoxId.Text + "';";
+                string Query = "update ogrenciler set id='" + this.txtBoxId.Text + "',ad='" + this.txtBoxFirstName.Text + "',soyad='" + this.txtBoxLastName.Text + "',iletisim='" + this.txtboxNumber.Text + "',cinsiyet='" + gender + "',adres='" + this.txtBoxAdres.Text + "' where id='" + this.txtBoxId.Text + "';";
                 //This is  MySqlConnection here i have created the object and pass my connection string.
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
@@ -123,14 +135,6 @@ namespace OgrenciOtomasyon
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtBoxId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            txtBoxFirstName.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            txtBoxLastName.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            txtboxNumber.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -163,6 +167,9 @@ namespace OgrenciOtomasyon
             txtBoxFirstName.Clear();
             txtBoxLastName.Clear();
             txtboxNumber.Clear();
+            radioButtonFemale.Checked = false;
+            radioButtonMale.Checked = false;
+            txtBoxAdres.Clear();
             txtBoxId.Focus();
         }
 
@@ -171,6 +178,16 @@ namespace OgrenciOtomasyon
             Form1 frm1 = new Form1();
             frm1.Show();
             this.Hide();
+        }
+
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txtBoxId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txtBoxFirstName.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtBoxLastName.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            txtboxNumber.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            panel2.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            txtBoxAdres.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
         }
     }
 }
