@@ -161,6 +161,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTeacherLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTeacherLogin.Designer.cs">
+      <DependentUpon>FormTeacherLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="obsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTeacherLogin.resx">
+      <DependentUpon>FormTeacherLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

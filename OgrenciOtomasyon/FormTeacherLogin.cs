@@ -12,43 +12,14 @@ using MySql.Data.MySqlClient;
 
 namespace OgrenciOtomasyon
 {
-    public partial class Form1 : Form
+    public partial class FormTeacherLogin : Form
     {
         public MySqlConnection con = new MySqlConnection("Server=localhost;Database=obs;Uid=root;Pwd='';");
         MySqlCommand cmd;
         MySqlDataReader dr;
-        public Form1()
+        public FormTeacherLogin()
         {
             InitializeComponent();
-        }
-       
-        private void Form1_Load(object sender, EventArgs e)
-        {
-           
-        }
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load_1(object sender, EventArgs e)
-        {
-            txtBoxPassword.UseSystemPasswordChar = true;
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -58,11 +29,11 @@ namespace OgrenciOtomasyon
             cmd = new MySqlCommand();
             con.Open();
             cmd.Connection = con;
-            cmd.CommandText = "SELECT * FROM ogrenciler where numara='" + txtBoxUserName.Text + "' AND password='" + txtBoxPassword.Text + "'";
+            cmd.CommandText = "SELECT * FROM ogretmenler where username='" + txtBoxUserName.Text + "' AND password='" + txtBoxPassword.Text + "'";
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                MessageBox.Show("Student Login Succesful.");
+                MessageBox.Show("Teaher Login Succesful.");
                 Form2 frm2 = new Form2();
                 frm2.Show();
                 this.Hide();
@@ -74,18 +45,21 @@ namespace OgrenciOtomasyon
             con.Close();
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            txtBoxUserName.Clear();
-            txtBoxPassword.Clear();
+            Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormTeacherLogin frmTeacherLogin = new FormTeacherLogin();
-            frmTeacherLogin.Show();
-            this.Hide();
+            Form1 frm1 = new Form1();
+            frm1.Show();
+            this.Close();
+        }
 
+        private void FormTeacherLogin_Load(object sender, EventArgs e)
+        {
+            txtBoxPassword.UseSystemPasswordChar = true;
         }
     }
 }
