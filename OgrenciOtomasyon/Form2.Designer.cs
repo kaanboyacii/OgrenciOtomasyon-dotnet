@@ -39,6 +39,15 @@ namespace OgrenciOtomasyon
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numaraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.programDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.finalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ortalamaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.durumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ogrencilerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.obsDataSet = new OgrenciOtomasyon.obsDataSet();
             this.ogrencilerTableAdapter = new OgrenciOtomasyon.obsDataSetTableAdapters.ogrencilerTableAdapter();
@@ -52,15 +61,7 @@ namespace OgrenciOtomasyon
             this.txtBoxMidtermExam = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtBoxFinalExam = new System.Windows.Forms.TextBox();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numaraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.programDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.finalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ortalamaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.durumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource)).BeginInit();
@@ -71,7 +72,7 @@ namespace OgrenciOtomasyon
             // 
             this.lblNumara.AutoSize = true;
             this.lblNumara.BackColor = System.Drawing.Color.Transparent;
-            this.lblNumara.Location = new System.Drawing.Point(51, 200);
+            this.lblNumara.Location = new System.Drawing.Point(51, 189);
             this.lblNumara.Name = "lblNumara";
             this.lblNumara.Size = new System.Drawing.Size(111, 17);
             this.lblNumara.TabIndex = 72;
@@ -80,7 +81,7 @@ namespace OgrenciOtomasyon
             // txtboxNumber
             // 
             this.txtboxNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtboxNumber.Location = new System.Drawing.Point(188, 200);
+            this.txtboxNumber.Location = new System.Drawing.Point(188, 184);
             this.txtboxNumber.Name = "txtboxNumber";
             this.txtboxNumber.Size = new System.Drawing.Size(242, 24);
             this.txtboxNumber.TabIndex = 71;
@@ -89,7 +90,7 @@ namespace OgrenciOtomasyon
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(51, 156);
+            this.label1.Location = new System.Drawing.Point(51, 143);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 17);
             this.label1.TabIndex = 70;
@@ -98,7 +99,7 @@ namespace OgrenciOtomasyon
             // txtBoxLastName
             // 
             this.txtBoxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBoxLastName.Location = new System.Drawing.Point(188, 156);
+            this.txtBoxLastName.Location = new System.Drawing.Point(188, 138);
             this.txtBoxLastName.Name = "txtBoxLastName";
             this.txtBoxLastName.Size = new System.Drawing.Size(242, 24);
             this.txtBoxLastName.TabIndex = 69;
@@ -107,7 +108,7 @@ namespace OgrenciOtomasyon
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(51, 112);
+            this.label2.Location = new System.Drawing.Point(51, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 17);
             this.label2.TabIndex = 68;
@@ -116,7 +117,7 @@ namespace OgrenciOtomasyon
             // txtBoxFirstName
             // 
             this.txtBoxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBoxFirstName.Location = new System.Drawing.Point(188, 112);
+            this.txtBoxFirstName.Location = new System.Drawing.Point(188, 95);
             this.txtBoxFirstName.Name = "txtBoxFirstName";
             this.txtBoxFirstName.Size = new System.Drawing.Size(242, 24);
             this.txtBoxFirstName.TabIndex = 67;
@@ -124,7 +125,7 @@ namespace OgrenciOtomasyon
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Crimson;
+            this.label3.BackColor = System.Drawing.Color.Teal;
             this.label3.Font = new System.Drawing.Font("Dubai", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(42, 9);
             this.label3.Name = "label3";
@@ -134,7 +135,7 @@ namespace OgrenciOtomasyon
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Crimson;
+            this.pictureBox2.BackColor = System.Drawing.Color.Teal;
             this.pictureBox2.Location = new System.Drawing.Point(-6, -3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(2238, 82);
@@ -146,6 +147,7 @@ namespace OgrenciOtomasyon
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -166,124 +168,6 @@ namespace OgrenciOtomasyon
             this.dataGridView1.Size = new System.Drawing.Size(965, 417);
             this.dataGridView1.TabIndex = 73;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // ogrencilerBindingSource
-            // 
-            this.ogrencilerBindingSource.DataMember = "ogrenciler";
-            this.ogrencilerBindingSource.DataSource = this.obsDataSet;
-            // 
-            // obsDataSet
-            // 
-            this.obsDataSet.DataSetName = "obsDataSet";
-            this.obsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ogrencilerTableAdapter
-            // 
-            this.ogrencilerTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(49, 423);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(127, 48);
-            this.btnAdd.TabIndex = 74;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(51, 256);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 17);
-            this.label4.TabIndex = 76;
-            this.label4.Text = "Program";
-            // 
-            // txtBoxProgram
-            // 
-            this.txtBoxProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBoxProgram.Location = new System.Drawing.Point(188, 251);
-            this.txtBoxProgram.Name = "txtBoxProgram";
-            this.txtBoxProgram.Size = new System.Drawing.Size(242, 24);
-            this.txtBoxProgram.TabIndex = 75;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(256, 423);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(127, 48);
-            this.btnUpdate.TabIndex = 77;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Crimson;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(49, 487);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(127, 48);
-            this.btnDelete.TabIndex = 78;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnClear
-            // 
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnClear.Location = new System.Drawing.Point(256, 487);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(127, 48);
-            this.btnClear.TabIndex = 79;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(51, 305);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 17);
-            this.label5.TabIndex = 81;
-            this.label5.Text = "Midterm Exam:";
-            // 
-            // txtBoxMidtermExam
-            // 
-            this.txtBoxMidtermExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBoxMidtermExam.Location = new System.Drawing.Point(157, 300);
-            this.txtBoxMidtermExam.Name = "txtBoxMidtermExam";
-            this.txtBoxMidtermExam.Size = new System.Drawing.Size(44, 24);
-            this.txtBoxMidtermExam.TabIndex = 80;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(287, 305);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 17);
-            this.label6.TabIndex = 83;
-            this.label6.Text = "Final Exam:";
-            // 
-            // txtBoxFinalExam
-            // 
-            this.txtBoxFinalExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBoxFinalExam.Location = new System.Drawing.Point(386, 300);
-            this.txtBoxFinalExam.Name = "txtBoxFinalExam";
-            this.txtBoxFinalExam.Size = new System.Drawing.Size(44, 24);
-            this.txtBoxFinalExam.TabIndex = 82;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -367,11 +251,144 @@ namespace OgrenciOtomasyon
             this.durumDataGridViewTextBoxColumn.ReadOnly = true;
             this.durumDataGridViewTextBoxColumn.Width = 50;
             // 
+            // ogrencilerBindingSource
+            // 
+            this.ogrencilerBindingSource.DataMember = "ogrenciler";
+            this.ogrencilerBindingSource.DataSource = this.obsDataSet;
+            // 
+            // obsDataSet
+            // 
+            this.obsDataSet.DataSetName = "obsDataSet";
+            this.obsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ogrencilerTableAdapter
+            // 
+            this.ogrencilerTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(54, 380);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(127, 48);
+            this.btnAdd.TabIndex = 74;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(51, 232);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 17);
+            this.label4.TabIndex = 76;
+            this.label4.Text = "Program";
+            // 
+            // txtBoxProgram
+            // 
+            this.txtBoxProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtBoxProgram.Location = new System.Drawing.Point(188, 227);
+            this.txtBoxProgram.Name = "txtBoxProgram";
+            this.txtBoxProgram.Size = new System.Drawing.Size(242, 24);
+            this.txtBoxProgram.TabIndex = 75;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(253, 380);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(127, 48);
+            this.btnUpdate.TabIndex = 77;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Crimson;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(54, 464);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(127, 48);
+            this.btnDelete.TabIndex = 78;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnClear.Location = new System.Drawing.Point(253, 464);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(127, 48);
+            this.btnClear.TabIndex = 79;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(51, 274);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 17);
+            this.label5.TabIndex = 81;
+            this.label5.Text = "Midterm Exam:";
+            // 
+            // txtBoxMidtermExam
+            // 
+            this.txtBoxMidtermExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtBoxMidtermExam.Location = new System.Drawing.Point(174, 269);
+            this.txtBoxMidtermExam.Name = "txtBoxMidtermExam";
+            this.txtBoxMidtermExam.Size = new System.Drawing.Size(44, 24);
+            this.txtBoxMidtermExam.TabIndex = 80;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(279, 274);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 17);
+            this.label6.TabIndex = 83;
+            this.label6.Text = "Final Exam:";
+            // 
+            // txtBoxFinalExam
+            // 
+            this.txtBoxFinalExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtBoxFinalExam.Location = new System.Drawing.Point(386, 269);
+            this.txtBoxFinalExam.Name = "txtBoxFinalExam";
+            this.txtBoxFinalExam.Size = new System.Drawing.Size(44, 24);
+            this.txtBoxFinalExam.TabIndex = 82;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(1532, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(183, 57);
+            this.btnExit.TabIndex = 84;
+            this.btnExit.Text = "Log Out";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1654, 745);
+            this.ClientSize = new System.Drawing.Size(1727, 614);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtBoxFinalExam);
             this.Controls.Add(this.label5);
@@ -391,7 +408,10 @@ namespace OgrenciOtomasyon
             this.Controls.Add(this.txtBoxFirstName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -436,5 +456,6 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.DataGridViewTextBoxColumn finalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ortalamaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn durumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnExit;
     }
 }

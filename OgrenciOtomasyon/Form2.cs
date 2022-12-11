@@ -169,5 +169,12 @@ namespace OgrenciOtomasyon
             txtBoxFinalExam.Clear();
             txtBoxFirstName.Focus();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Form1 frm1 = new Form1();
+            frm1.Show();
+            this.Hide();
+        }
     }
 }
