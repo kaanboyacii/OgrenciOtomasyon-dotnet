@@ -34,7 +34,6 @@ namespace OgrenciOtomasyon
             this.lblMidterm = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.lblNumara = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,9 +43,6 @@ namespace OgrenciOtomasyon
             this.btnExit = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.obsDataSet = new OgrenciOtomasyon.obsDataSet();
-            this.ogrenciler1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ogrenciler1TableAdapter = new OgrenciOtomasyon.obsDataSetTableAdapters.ogrenciler1TableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +52,9 @@ namespace OgrenciOtomasyon
             this.finalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ortalamaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.durumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ogrenciler1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.obsDataSet = new OgrenciOtomasyon.obsDataSet();
+            this.ogrenciler1TableAdapter = new OgrenciOtomasyon.obsDataSetTableAdapters.ogrenciler1TableAdapter();
             this.lblStudentNumber = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.lblLastName = new System.Windows.Forms.Label();
@@ -72,8 +71,8 @@ namespace OgrenciOtomasyon
             this.listBox9 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrenciler1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFinal
@@ -115,21 +114,9 @@ namespace OgrenciOtomasyon
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(53, 204);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 17);
+            this.label4.Size = new System.Drawing.Size(58, 17);
             this.label4.TabIndex = 95;
-            this.label4.Text = "Program:";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(41, 410);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(127, 48);
-            this.btnAdd.TabIndex = 93;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.label4.Text = "Lesson:";
             // 
             // lblNumara
             // 
@@ -210,7 +197,7 @@ namespace OgrenciOtomasyon
             this.label7.Font = new System.Drawing.Font("Dubai", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(567, 96);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(230, 45);
+            this.label7.Size = new System.Drawing.Size(235, 48);
             this.label7.TabIndex = 102;
             this.label7.Text = "Change Password:";
             // 
@@ -236,20 +223,6 @@ namespace OgrenciOtomasyon
             this.dataGridView1.Size = new System.Drawing.Size(423, 183);
             this.dataGridView1.TabIndex = 103;
             this.dataGridView1.Visible = false;
-            // 
-            // obsDataSet
-            // 
-            this.obsDataSet.DataSetName = "obsDataSet";
-            this.obsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ogrenciler1BindingSource
-            // 
-            this.ogrenciler1BindingSource.DataMember = "ogrenciler1";
-            this.ogrenciler1BindingSource.DataSource = this.obsDataSet;
-            // 
-            // ogrenciler1TableAdapter
-            // 
-            this.ogrenciler1TableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -322,6 +295,20 @@ namespace OgrenciOtomasyon
             this.durumDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.durumDataGridViewTextBoxColumn.Name = "durumDataGridViewTextBoxColumn";
             this.durumDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // ogrenciler1BindingSource
+            // 
+            this.ogrenciler1BindingSource.DataMember = "ogrenciler1";
+            this.ogrenciler1BindingSource.DataSource = this.obsDataSet;
+            // 
+            // obsDataSet
+            // 
+            this.obsDataSet.DataSetName = "obsDataSet";
+            this.obsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ogrenciler1TableAdapter
+            // 
+            this.ogrenciler1TableAdapter.ClearBeforeFill = true;
             // 
             // lblStudentNumber
             // 
@@ -481,7 +468,6 @@ namespace OgrenciOtomasyon
             this.Controls.Add(this.lblMidterm);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblNumara);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.label2);
@@ -490,12 +476,12 @@ namespace OgrenciOtomasyon
             this.Controls.Add(this.pictureBox2);
             this.Name = "FormStudentInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormStudentInfo";
+            this.Text = "Kbü Student Information System";
             this.Load += new System.EventHandler(this.FormStudentInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrenciler1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -507,7 +493,6 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.Label lblMidterm;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblNumara;
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.Label label2;

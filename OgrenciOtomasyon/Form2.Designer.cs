@@ -38,22 +38,12 @@ namespace OgrenciOtomasyon
             this.txtBoxFirstName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numaraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.programDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.finalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ortalamaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.durumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ogrencilerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.obsDataSet = new OgrenciOtomasyon.obsDataSet();
             this.ogrencilerTableAdapter = new OgrenciOtomasyon.obsDataSetTableAdapters.ogrencilerTableAdapter();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtBoxProgram = new System.Windows.Forms.TextBox();
+            this.txtBoxUyruk = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -62,10 +52,30 @@ namespace OgrenciOtomasyon
             this.label6 = new System.Windows.Forms.Label();
             this.txtBoxFinalExam = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.obsDataSet2 = new OgrenciOtomasyon.obsDataSet2();
+            this.ogrencilerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ogrencilerTableAdapter1 = new OgrenciOtomasyon.obsDataSet2TableAdapters.ogrencilerTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ogrencilerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numaraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.finalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ortalamaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.durumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uyrukDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblLesson = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNumara
@@ -142,115 +152,6 @@ namespace OgrenciOtomasyon
             this.pictureBox2.TabIndex = 65;
             this.pictureBox2.TabStop = false;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.adDataGridViewTextBoxColumn,
-            this.soyadDataGridViewTextBoxColumn,
-            this.numaraDataGridViewTextBoxColumn,
-            this.programDataGridViewTextBoxColumn,
-            this.vizeDataGridViewTextBoxColumn,
-            this.finalDataGridViewTextBoxColumn,
-            this.ortalamaDataGridViewTextBoxColumn,
-            this.durumDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.ogrencilerBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(474, 95);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(965, 417);
-            this.dataGridView1.TabIndex = 73;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            this.idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // adDataGridViewTextBoxColumn
-            // 
-            this.adDataGridViewTextBoxColumn.DataPropertyName = "ad";
-            this.adDataGridViewTextBoxColumn.HeaderText = "ad";
-            this.adDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.adDataGridViewTextBoxColumn.Name = "adDataGridViewTextBoxColumn";
-            this.adDataGridViewTextBoxColumn.ReadOnly = true;
-            this.adDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // soyadDataGridViewTextBoxColumn
-            // 
-            this.soyadDataGridViewTextBoxColumn.DataPropertyName = "soyad";
-            this.soyadDataGridViewTextBoxColumn.HeaderText = "soyad";
-            this.soyadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.soyadDataGridViewTextBoxColumn.Name = "soyadDataGridViewTextBoxColumn";
-            this.soyadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.soyadDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // numaraDataGridViewTextBoxColumn
-            // 
-            this.numaraDataGridViewTextBoxColumn.DataPropertyName = "numara";
-            this.numaraDataGridViewTextBoxColumn.HeaderText = "numara";
-            this.numaraDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.numaraDataGridViewTextBoxColumn.Name = "numaraDataGridViewTextBoxColumn";
-            this.numaraDataGridViewTextBoxColumn.ReadOnly = true;
-            this.numaraDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // programDataGridViewTextBoxColumn
-            // 
-            this.programDataGridViewTextBoxColumn.DataPropertyName = "program";
-            this.programDataGridViewTextBoxColumn.HeaderText = "program";
-            this.programDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.programDataGridViewTextBoxColumn.Name = "programDataGridViewTextBoxColumn";
-            this.programDataGridViewTextBoxColumn.ReadOnly = true;
-            this.programDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // vizeDataGridViewTextBoxColumn
-            // 
-            this.vizeDataGridViewTextBoxColumn.DataPropertyName = "vize";
-            this.vizeDataGridViewTextBoxColumn.HeaderText = "vize";
-            this.vizeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vizeDataGridViewTextBoxColumn.Name = "vizeDataGridViewTextBoxColumn";
-            this.vizeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.vizeDataGridViewTextBoxColumn.Width = 40;
-            // 
-            // finalDataGridViewTextBoxColumn
-            // 
-            this.finalDataGridViewTextBoxColumn.DataPropertyName = "final";
-            this.finalDataGridViewTextBoxColumn.HeaderText = "final";
-            this.finalDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.finalDataGridViewTextBoxColumn.Name = "finalDataGridViewTextBoxColumn";
-            this.finalDataGridViewTextBoxColumn.ReadOnly = true;
-            this.finalDataGridViewTextBoxColumn.Width = 40;
-            // 
-            // ortalamaDataGridViewTextBoxColumn
-            // 
-            this.ortalamaDataGridViewTextBoxColumn.DataPropertyName = "ortalama";
-            this.ortalamaDataGridViewTextBoxColumn.HeaderText = "ortalama";
-            this.ortalamaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ortalamaDataGridViewTextBoxColumn.Name = "ortalamaDataGridViewTextBoxColumn";
-            this.ortalamaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ortalamaDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // durumDataGridViewTextBoxColumn
-            // 
-            this.durumDataGridViewTextBoxColumn.DataPropertyName = "durum";
-            this.durumDataGridViewTextBoxColumn.HeaderText = "durum";
-            this.durumDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.durumDataGridViewTextBoxColumn.Name = "durumDataGridViewTextBoxColumn";
-            this.durumDataGridViewTextBoxColumn.ReadOnly = true;
-            this.durumDataGridViewTextBoxColumn.Width = 50;
-            // 
             // ogrencilerBindingSource
             // 
             this.ogrencilerBindingSource.DataMember = "ogrenciler";
@@ -270,9 +171,9 @@ namespace OgrenciOtomasyon
             this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(54, 380);
+            this.btnAdd.Location = new System.Drawing.Point(54, 317);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(127, 48);
+            this.btnAdd.Size = new System.Drawing.Size(148, 48);
             this.btnAdd.TabIndex = 74;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -284,26 +185,26 @@ namespace OgrenciOtomasyon
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(51, 232);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 17);
+            this.label4.Size = new System.Drawing.Size(78, 17);
             this.label4.TabIndex = 76;
-            this.label4.Text = "Program";
+            this.label4.Text = "Nationality:";
             // 
-            // txtBoxProgram
+            // txtBoxUyruk
             // 
-            this.txtBoxProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBoxProgram.Location = new System.Drawing.Point(188, 227);
-            this.txtBoxProgram.Name = "txtBoxProgram";
-            this.txtBoxProgram.Size = new System.Drawing.Size(242, 24);
-            this.txtBoxProgram.TabIndex = 75;
+            this.txtBoxUyruk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtBoxUyruk.Location = new System.Drawing.Point(188, 227);
+            this.txtBoxUyruk.Name = "txtBoxUyruk";
+            this.txtBoxUyruk.Size = new System.Drawing.Size(242, 24);
+            this.txtBoxUyruk.TabIndex = 75;
             // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(253, 380);
+            this.btnUpdate.Location = new System.Drawing.Point(282, 317);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(127, 48);
+            this.btnUpdate.Size = new System.Drawing.Size(148, 48);
             this.btnUpdate.TabIndex = 77;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -314,9 +215,9 @@ namespace OgrenciOtomasyon
             this.btnDelete.BackColor = System.Drawing.Color.Crimson;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(54, 464);
+            this.btnDelete.Location = new System.Drawing.Point(54, 380);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(127, 48);
+            this.btnDelete.Size = new System.Drawing.Size(148, 48);
             this.btnDelete.TabIndex = 78;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -325,9 +226,9 @@ namespace OgrenciOtomasyon
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnClear.Location = new System.Drawing.Point(253, 464);
+            this.btnClear.Location = new System.Drawing.Point(282, 380);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(127, 48);
+            this.btnClear.Size = new System.Drawing.Size(148, 48);
             this.btnClear.TabIndex = 79;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -383,11 +284,154 @@ namespace OgrenciOtomasyon
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // obsDataSet2
+            // 
+            this.obsDataSet2.DataSetName = "obsDataSet2";
+            this.obsDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ogrencilerBindingSource1
+            // 
+            this.ogrencilerBindingSource1.DataMember = "ogrenciler";
+            this.ogrencilerBindingSource1.DataSource = this.obsDataSet2;
+            // 
+            // ogrencilerTableAdapter1
+            // 
+            this.ogrencilerTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.adDataGridViewTextBoxColumn,
+            this.soyadDataGridViewTextBoxColumn,
+            this.numaraDataGridViewTextBoxColumn,
+            this.dersDataGridViewTextBoxColumn,
+            this.vizeDataGridViewTextBoxColumn,
+            this.finalDataGridViewTextBoxColumn,
+            this.ortalamaDataGridViewTextBoxColumn,
+            this.durumDataGridViewTextBoxColumn,
+            this.uyrukDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.ogrencilerBindingSource2;
+            this.dataGridView1.Location = new System.Drawing.Point(456, 95);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(974, 294);
+            this.dataGridView1.TabIndex = 85;
+            // 
+            // ogrencilerBindingSource2
+            // 
+            this.ogrencilerBindingSource2.DataMember = "ogrenciler";
+            this.ogrencilerBindingSource2.DataSource = this.obsDataSet2;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // adDataGridViewTextBoxColumn
+            // 
+            this.adDataGridViewTextBoxColumn.DataPropertyName = "ad";
+            this.adDataGridViewTextBoxColumn.HeaderText = "ad";
+            this.adDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.adDataGridViewTextBoxColumn.Name = "adDataGridViewTextBoxColumn";
+            // 
+            // soyadDataGridViewTextBoxColumn
+            // 
+            this.soyadDataGridViewTextBoxColumn.DataPropertyName = "soyad";
+            this.soyadDataGridViewTextBoxColumn.HeaderText = "soyad";
+            this.soyadDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.soyadDataGridViewTextBoxColumn.Name = "soyadDataGridViewTextBoxColumn";
+            // 
+            // numaraDataGridViewTextBoxColumn
+            // 
+            this.numaraDataGridViewTextBoxColumn.DataPropertyName = "numara";
+            this.numaraDataGridViewTextBoxColumn.HeaderText = "numara";
+            this.numaraDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.numaraDataGridViewTextBoxColumn.Name = "numaraDataGridViewTextBoxColumn";
+            // 
+            // dersDataGridViewTextBoxColumn
+            // 
+            this.dersDataGridViewTextBoxColumn.DataPropertyName = "ders";
+            this.dersDataGridViewTextBoxColumn.HeaderText = "ders";
+            this.dersDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dersDataGridViewTextBoxColumn.Name = "dersDataGridViewTextBoxColumn";
+            this.dersDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // vizeDataGridViewTextBoxColumn
+            // 
+            this.vizeDataGridViewTextBoxColumn.DataPropertyName = "vize";
+            this.vizeDataGridViewTextBoxColumn.HeaderText = "vize";
+            this.vizeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vizeDataGridViewTextBoxColumn.Name = "vizeDataGridViewTextBoxColumn";
+            this.vizeDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // finalDataGridViewTextBoxColumn
+            // 
+            this.finalDataGridViewTextBoxColumn.DataPropertyName = "final";
+            this.finalDataGridViewTextBoxColumn.HeaderText = "final";
+            this.finalDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.finalDataGridViewTextBoxColumn.Name = "finalDataGridViewTextBoxColumn";
+            this.finalDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // ortalamaDataGridViewTextBoxColumn
+            // 
+            this.ortalamaDataGridViewTextBoxColumn.DataPropertyName = "ortalama";
+            this.ortalamaDataGridViewTextBoxColumn.HeaderText = "ortalama";
+            this.ortalamaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ortalamaDataGridViewTextBoxColumn.Name = "ortalamaDataGridViewTextBoxColumn";
+            this.ortalamaDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // durumDataGridViewTextBoxColumn
+            // 
+            this.durumDataGridViewTextBoxColumn.DataPropertyName = "durum";
+            this.durumDataGridViewTextBoxColumn.HeaderText = "durum";
+            this.durumDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.durumDataGridViewTextBoxColumn.Name = "durumDataGridViewTextBoxColumn";
+            this.durumDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // uyrukDataGridViewTextBoxColumn
+            // 
+            this.uyrukDataGridViewTextBoxColumn.DataPropertyName = "Uyruk";
+            this.uyrukDataGridViewTextBoxColumn.HeaderText = "Uyruk";
+            this.uyrukDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.uyrukDataGridViewTextBoxColumn.Name = "uyrukDataGridViewTextBoxColumn";
+            this.uyrukDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
+            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.Visible = false;
+            this.passwordDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // lblLesson
+            // 
+            this.lblLesson.AutoSize = true;
+            this.lblLesson.BackColor = System.Drawing.Color.Transparent;
+            this.lblLesson.Location = new System.Drawing.Point(453, 399);
+            this.lblLesson.Name = "lblLesson";
+            this.lblLesson.Size = new System.Drawing.Size(38, 17);
+            this.lblLesson.TabIndex = 86;
+            this.lblLesson.Text = "Ders";
+            this.lblLesson.Visible = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1727, 614);
+            this.Controls.Add(this.lblLesson);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtBoxFinalExam);
@@ -397,9 +441,8 @@ namespace OgrenciOtomasyon
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtBoxProgram);
+            this.Controls.Add(this.txtBoxUyruk);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblNumara);
             this.Controls.Add(this.txtboxNumber);
             this.Controls.Add(this.label1);
@@ -412,12 +455,15 @@ namespace OgrenciOtomasyon
             this.MaximizeBox = false;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "KBÜ Student Management System";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.obsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,13 +479,12 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.TextBox txtBoxFirstName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private obsDataSet obsDataSet;
         private System.Windows.Forms.BindingSource ogrencilerBindingSource;
         private obsDataSetTableAdapters.ogrencilerTableAdapter ogrencilerTableAdapter;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtBoxProgram;
+        private System.Windows.Forms.TextBox txtBoxUyruk;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClear;
@@ -447,15 +492,23 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.TextBox txtBoxMidtermExam;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBoxFinalExam;
+        private System.Windows.Forms.Button btnExit;
+        private obsDataSet2 obsDataSet2;
+        private System.Windows.Forms.BindingSource ogrencilerBindingSource1;
+        private obsDataSet2TableAdapters.ogrencilerTableAdapter ogrencilerTableAdapter1;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn soyadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numaraDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn programDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dersDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vizeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn finalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ortalamaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn durumDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uyrukDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource ogrencilerBindingSource2;
+        private System.Windows.Forms.Label lblLesson;
     }
 }

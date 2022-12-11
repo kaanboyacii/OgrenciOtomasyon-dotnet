@@ -41,6 +41,8 @@ namespace OgrenciOtomasyon
             this.txtBoxUserName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtBoxLesson = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -81,7 +83,7 @@ namespace OgrenciOtomasyon
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnClear.Location = new System.Drawing.Point(357, 244);
+            this.btnClear.Location = new System.Drawing.Point(357, 264);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(90, 30);
             this.btnClear.TabIndex = 31;
@@ -126,7 +128,7 @@ namespace OgrenciOtomasyon
             // 
             // txtBoxPassword
             // 
-            this.txtBoxPassword.Location = new System.Drawing.Point(204, 205);
+            this.txtBoxPassword.Location = new System.Drawing.Point(204, 174);
             this.txtBoxPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxPassword.Name = "txtBoxPassword";
             this.txtBoxPassword.Size = new System.Drawing.Size(243, 22);
@@ -134,7 +136,7 @@ namespace OgrenciOtomasyon
             // 
             // txtBoxUserName
             // 
-            this.txtBoxUserName.Location = new System.Drawing.Point(204, 150);
+            this.txtBoxUserName.Location = new System.Drawing.Point(204, 119);
             this.txtBoxUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxUserName.Name = "txtBoxUserName";
             this.txtBoxUserName.Size = new System.Drawing.Size(243, 22);
@@ -144,7 +146,7 @@ namespace OgrenciOtomasyon
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(57, 203);
+            this.label2.Location = new System.Drawing.Point(57, 172);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 26);
@@ -155,12 +157,31 @@ namespace OgrenciOtomasyon
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(53, 148);
+            this.label1.Location = new System.Drawing.Point(53, 117);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 26);
             this.label1.TabIndex = 24;
             this.label1.Text = "Username:";
+            // 
+            // txtBoxLesson
+            // 
+            this.txtBoxLesson.Location = new System.Drawing.Point(204, 226);
+            this.txtBoxLesson.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxLesson.Name = "txtBoxLesson";
+            this.txtBoxLesson.Size = new System.Drawing.Size(243, 22);
+            this.txtBoxLesson.TabIndex = 36;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(57, 224);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 26);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "Lesson:";
             // 
             // FormTeacherLogin
             // 
@@ -168,6 +189,8 @@ namespace OgrenciOtomasyon
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtBoxLesson);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
@@ -205,5 +228,7 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.TextBox txtBoxUserName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBoxLesson;
+        private System.Windows.Forms.Label label4;
     }
 }

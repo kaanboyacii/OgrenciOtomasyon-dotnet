@@ -49,7 +49,7 @@ namespace OgrenciOtomasyon
                 listBox1.Items.Add(dr["ad"].ToString());
                 listBox2.Items.Add(dr["soyad"].ToString());
                 listBox3.Items.Add(dr["numara"].ToString());
-                listBox4.Items.Add(dr["program"].ToString());
+                listBox4.Items.Add(dr["ders"].ToString());
                 listBox5.Items.Add(dr["uyruk"].ToString());
                 listBox6.Items.Add(dr["vize"].ToString());
                 listBox7.Items.Add(dr["final"].ToString());

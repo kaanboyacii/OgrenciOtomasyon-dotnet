@@ -29,12 +29,12 @@ namespace OgrenciOtomasyon
             cmd = new MySqlCommand();
             con.Open();
             cmd.Connection = con;
-            cmd.CommandText = "SELECT * FROM ogretmenler where username='" + txtBoxUserName.Text + "' AND password='" + txtBoxPassword.Text + "'";
+            cmd.CommandText = "SELECT * FROM ogretmenler where username='" + txtBoxUserName.Text + "' AND password='" + txtBoxPassword.Text + "' AND lesson='" + txtBoxLesson.Text + "'";
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
                 MessageBox.Show("Teaher Login Succesful.");
-                Form2 frm2 = new Form2();
+                Form2 frm2 = new Form2(txtBoxLesson.Text);
                 frm2.Show();
                 this.Hide();
             }

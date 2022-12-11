@@ -74,11 +74,6 @@ namespace OgrenciOtomasyon
             con.Close();
         }
 
-        public void PassNum()
-        {
-            string Num = txtBoxUserName.Text;
-        }
-
 
         private void btnClear_Click(object sender, EventArgs e)
         {
