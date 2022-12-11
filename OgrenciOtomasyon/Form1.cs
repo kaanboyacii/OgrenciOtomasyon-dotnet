@@ -14,7 +14,9 @@ namespace OgrenciOtomasyon
 {
     public partial class Form1 : Form
     {
-        public MySqlConnection mysqlbaglan = new MySqlConnection("Server=localhost;Database=obs;Uid=root;Pwd='';");
+        public MySqlConnection con = new MySqlConnection("Server=localhost;Database=obs;Uid=root;Pwd='';");
+        MySqlCommand cmd;
+        MySqlDataReader dr;
         public Form1()
         {
             InitializeComponent();
@@ -22,22 +24,7 @@ namespace OgrenciOtomasyon
        
         private void Form1_Load(object sender, EventArgs e)
         {
-            try
-            {
-                mysqlbaglan.Open();
-                if (mysqlbaglan.State != ConnectionState.Closed)
-                {
-                    MessageBox.Show("Bağlantı Başarılı Bir Şekilde Gerçekleşti");
-                }
-                else
-                {
-                    MessageBox.Show("Maalesef Bağlantı Yapılamadı...!");
-                }
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show("Hata! " + err.Message, "Hata Oluştu", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+           
         }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -51,12 +38,46 @@ namespace OgrenciOtomasyon
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
-
+            txtBoxPassword.UseSystemPasswordChar = true;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string user = txtBoxUserName.Text;
+            string pass = txtBoxPassword.Text;
+            cmd = new MySqlCommand();
+            con.Open();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT * FROM ogretmenler where username='" + txtBoxUserName.Text + "' AND password='" + txtBoxPassword.Text + "'";
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                MessageBox.Show("Giriş Başarılı.");
+                Form2 frm2 = new Form2();
+                frm2.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Hatalı Kullanıcı Adı veya Şifre Girdiniz.");
+            }
+            con.Close();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtBoxUserName.Clear();
+            txtBoxPassword.Clear();
         }
     }
 }
