@@ -62,7 +62,6 @@ namespace OgrenciOtomasyon
             this.ogrencilerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ogrencilerTableAdapter1 = new OgrenciOtomasyon.obsDataSet5TableAdapters.ogrencilerTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ogrencilerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +70,7 @@ namespace OgrenciOtomasyon
             this.cinsiyetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ogrencilerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obsDataSet)).BeginInit();
@@ -144,9 +144,9 @@ namespace OgrenciOtomasyon
             this.label3.Font = new System.Drawing.Font("Dubai", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(42, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(625, 67);
+            this.label3.Size = new System.Drawing.Size(748, 67);
             this.label3.TabIndex = 66;
-            this.label3.Text = "KBÜ Student Management System";
+            this.label3.Text = "Bilgi School Student Management System";
             // 
             // pictureBox2
             // 
@@ -178,7 +178,7 @@ namespace OgrenciOtomasyon
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(56, 361);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(148, 48);
+            this.btnAdd.Size = new System.Drawing.Size(106, 48);
             this.btnAdd.TabIndex = 74;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -189,9 +189,9 @@ namespace OgrenciOtomasyon
             this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(284, 361);
+            this.btnUpdate.Location = new System.Drawing.Point(190, 361);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(148, 48);
+            this.btnUpdate.Size = new System.Drawing.Size(106, 48);
             this.btnUpdate.TabIndex = 77;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -202,9 +202,9 @@ namespace OgrenciOtomasyon
             this.btnDelete.BackColor = System.Drawing.Color.Crimson;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(56, 424);
+            this.btnDelete.Location = new System.Drawing.Point(326, 361);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(148, 48);
+            this.btnDelete.Size = new System.Drawing.Size(106, 48);
             this.btnDelete.TabIndex = 78;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -213,9 +213,9 @@ namespace OgrenciOtomasyon
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnClear.Location = new System.Drawing.Point(284, 424);
+            this.btnClear.Location = new System.Drawing.Point(54, 308);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(148, 48);
+            this.btnClear.Size = new System.Drawing.Size(108, 36);
             this.btnClear.TabIndex = 79;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -240,12 +240,13 @@ namespace OgrenciOtomasyon
             this.button1.BackColor = System.Drawing.Color.Yellow;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(56, 486);
+            this.button1.Location = new System.Drawing.Point(56, 428);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(376, 48);
             this.button1.TabIndex = 87;
-            this.button1.Text = "Add New Lesson";
+            this.button1.Text = "Add New Course";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtBoxId
             // 
@@ -378,18 +379,13 @@ namespace OgrenciOtomasyon
             this.adresDataGridViewTextBoxColumn,
             this.passwordDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.ogrencilerBindingSource2;
-            this.dataGridView1.Location = new System.Drawing.Point(464, 101);
+            this.dataGridView1.Location = new System.Drawing.Point(464, 95);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(788, 294);
+            this.dataGridView1.Size = new System.Drawing.Size(788, 314);
             this.dataGridView1.TabIndex = 95;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
-            // 
-            // ogrencilerBindingSource2
-            // 
-            this.ogrencilerBindingSource2.DataMember = "ogrenciler";
-            this.ogrencilerBindingSource2.DataSource = this.obsDataSet5;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -405,6 +401,7 @@ namespace OgrenciOtomasyon
             this.adDataGridViewTextBoxColumn.HeaderText = "ad";
             this.adDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.adDataGridViewTextBoxColumn.Name = "adDataGridViewTextBoxColumn";
+            this.adDataGridViewTextBoxColumn.Width = 125;
             // 
             // soyadDataGridViewTextBoxColumn
             // 
@@ -412,6 +409,7 @@ namespace OgrenciOtomasyon
             this.soyadDataGridViewTextBoxColumn.HeaderText = "soyad";
             this.soyadDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.soyadDataGridViewTextBoxColumn.Name = "soyadDataGridViewTextBoxColumn";
+            this.soyadDataGridViewTextBoxColumn.Width = 125;
             // 
             // iletisimDataGridViewTextBoxColumn
             // 
@@ -419,6 +417,7 @@ namespace OgrenciOtomasyon
             this.iletisimDataGridViewTextBoxColumn.HeaderText = "iletisim";
             this.iletisimDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.iletisimDataGridViewTextBoxColumn.Name = "iletisimDataGridViewTextBoxColumn";
+            this.iletisimDataGridViewTextBoxColumn.Width = 125;
             // 
             // dersDataGridViewTextBoxColumn
             // 
@@ -454,6 +453,11 @@ namespace OgrenciOtomasyon
             this.passwordDataGridViewTextBoxColumn.Visible = false;
             this.passwordDataGridViewTextBoxColumn.Width = 125;
             // 
+            // ogrencilerBindingSource2
+            // 
+            this.ogrencilerBindingSource2.DataMember = "ogrenciler";
+            this.ogrencilerBindingSource2.DataSource = this.obsDataSet5;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -484,7 +488,7 @@ namespace OgrenciOtomasyon
             this.MaximizeBox = false;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "KBÜ Student Management System";
+            this.Text = "Bilgi School Student Management System";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource)).EndInit();

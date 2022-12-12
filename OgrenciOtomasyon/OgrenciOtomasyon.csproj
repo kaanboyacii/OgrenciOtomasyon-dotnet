@@ -160,6 +160,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>obsDataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="obsDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>obsDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\Course.Designer.cs">
+      <DependentUpon>Course.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +218,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\Course.resx">
+      <DependentUpon>Course.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
@@ -291,6 +305,17 @@
     </None>
     <None Include="obsDataSet5.xss">
       <DependentUpon>obsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="obsDataSet6.xsc">
+      <DependentUpon>obsDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="obsDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>obsDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="obsDataSet6.xss">
+      <DependentUpon>obsDataSet6.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
