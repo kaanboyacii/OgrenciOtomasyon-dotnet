@@ -22,6 +22,8 @@ namespace OgrenciOtomasyon.Student
 
         private void ExamResult_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'obsDataSet7.exam' table. You can move, or remove it, as needed.
+            this.examTableAdapter.Fill(this.obsDataSet7.exam);
             // TODO: This line of code loads data into the 'obsDataSet7.exam_result' table. You can move, or remove it, as needed.
             this.exam_resultTableAdapter.Fill(this.obsDataSet7.exam_result);
             // TODO: This line of code loads data into the 'obsDataSet7.course' table. You can move, or remove it, as needed.

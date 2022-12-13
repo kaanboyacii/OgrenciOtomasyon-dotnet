@@ -62,9 +62,9 @@ namespace OgrenciOtomasyon.Student
             this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(622, 12);
+            this.btnExit.Location = new System.Drawing.Point(622, 9);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(268, 57);
+            this.btnExit.Size = new System.Drawing.Size(268, 64);
             this.btnExit.TabIndex = 128;
             this.btnExit.Text = "Back Student Page";
             this.btnExit.UseVisualStyleBackColor = false;
