@@ -213,6 +213,7 @@ namespace OgrenciOtomasyon.Student
             this.btnDelete.TabIndex = 113;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // dataGridView1
             // 
@@ -314,6 +315,7 @@ namespace OgrenciOtomasyon.Student
             this.Controls.Add(this.txtBoxName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Course";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

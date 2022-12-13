@@ -196,5 +196,19 @@ namespace OgrenciOtomasyon
             course.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Student.Exam exam = new Student.Exam();
+            exam.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Student.ExamResult examre = new Student.ExamResult();
+            examre.Show();
+            this.Hide();
+        }
     }
 }

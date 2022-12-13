@@ -71,6 +71,8 @@ namespace OgrenciOtomasyon
             this.adresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ogrencilerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obsDataSet)).BeginInit();
@@ -383,7 +385,7 @@ namespace OgrenciOtomasyon
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(788, 314);
+            this.dataGridView1.Size = new System.Drawing.Size(862, 489);
             this.dataGridView1.TabIndex = 95;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             // 
@@ -458,11 +460,39 @@ namespace OgrenciOtomasyon
             this.ogrencilerBindingSource2.DataMember = "ogrenciler";
             this.ogrencilerBindingSource2.DataSource = this.obsDataSet5;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(56, 482);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(376, 48);
+            this.button2.TabIndex = 96;
+            this.button2.Text = "Add New Exam";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.SeaGreen;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(56, 536);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(376, 48);
+            this.button3.TabIndex = 97;
+            this.button3.Text = "Add New Exam Result";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1727, 614);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtBoxAdres);
             this.Controls.Add(this.label6);
@@ -549,5 +579,7 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.DataGridViewTextBoxColumn cinsiyetDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adresDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
