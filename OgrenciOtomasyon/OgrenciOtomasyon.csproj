@@ -170,6 +170,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>obsDataSet7.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PasswordChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordChange.Designer.cs">
+      <DependentUpon>PasswordChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student\Course.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +241,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordChange.resx">
+      <DependentUpon>PasswordChange.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student\Course.resx">
       <DependentUpon>Course.cs</DependentUpon>

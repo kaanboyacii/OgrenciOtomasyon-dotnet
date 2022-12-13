@@ -183,7 +183,7 @@ namespace OgrenciOtomasyon
             this.MaximizeBox = false;
             this.Name = "FormTeacherLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormTeacherLogin";
+            this.Text = "Bilgi School Student Management System";
             this.Load += new System.EventHandler(this.FormTeacherLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -34,8 +34,8 @@ namespace OgrenciOtomasyon
 
             string MyConnection3 = "server=localhost;user id=root;database=obs";
             MySqlConnection MyConn3 = new MySqlConnection(MyConnection3);
-            string Query = "select * from ogrenciler where numara='" + lblStudentNumber.Text + "';";
-            MySqlCommand cmd = new MySqlCommand("select * from ogrenciler where numara='" + lblStudentNumber.Text + "';", MyConn3);
+            string Query = "select * from ogrenciler where id='" + lblStudentNumber.Text + "';";
+            MySqlCommand cmd = new MySqlCommand("select * from ogrenciler where id='" + lblStudentNumber.Text + "';", MyConn3);
             MySqlDataAdapter da = new MySqlDataAdapter();
             MyConn3.Open();
             da.SelectCommand = cmd;
@@ -43,19 +43,20 @@ namespace OgrenciOtomasyon
             DataTable dt = new DataTable();
             da.Fill(ds);
             dt = ds.Tables[0];
-
             foreach (DataRow dr in dt.Rows)
             {
-                listBox1.Items.Add(dr["ad"].ToString());
-                listBox2.Items.Add(dr["soyad"].ToString());
-                listBox3.Items.Add(dr["numara"].ToString());
-                listBox4.Items.Add(dr["ders"].ToString());
-                listBox5.Items.Add(dr["uyruk"].ToString());
-                listBox6.Items.Add(dr["vize"].ToString());
-                listBox7.Items.Add(dr["final"].ToString());
-                listBox8.Items.Add(dr["ortalama"].ToString());
-                listBox9.Items.Add(dr["durum"].ToString());
-
+                txtBoxFirstName.Text = dr["ad"].ToString();
+                txtBoxLastName.Text = dr["soyad"].ToString();
+                txtBoxId.Text = dr["id"].ToString();
+                txtBoxContact.Text = dr["iletisim"].ToString();
+                txtBoxGender.Text = dr["cinsiyet"].ToString();
+                txtBoxAddress.Text = dr["adres"].ToString();
+                //listBox1.Items.Add(dr["ad"].ToString());
+                //listBox2.Items.Add(dr["soyad"].ToString());
+                //listBox3.Items.Add(dr["id"].ToString());
+                //listBox4.Items.Add(dr["iletisim"].ToString());
+                //listBox5.Items.Add(dr["adres"].ToString());
+                //listBox6.Items.Add(dr["cinsiyet"].ToString());
             }
             MyConn3.Close();
 
@@ -68,7 +69,7 @@ namespace OgrenciOtomasyon
             {
                 string MyConnection2 = "server=localhost;user id=root;database=obs";
                 //Display query
-                string Query = "select * from ogrenciler where numara='" + lblStudentNumber.Text + "';";
+                string Query = "select * from ogrenciler where id='" + lblStudentNumber.Text + "';";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                 //  MyConn2.Open();
@@ -86,30 +87,23 @@ namespace OgrenciOtomasyon
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            //This is my connection string i have assigned the database file address path
-            string MyConnection2 = "server=localhost;user id=root;database=obs";
-            //This is my update query in which i am taking input from the user through windows forms and update the record.
-            string Query = "update ogrenciler set password='" + this.txtBoxChangePassword.Text + "' where numara='" + lblStudentNumber.Text + "';";
-            //This is  MySqlConnection here i have created the object and pass my connection string.
-            MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
-            MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
-            MySqlDataReader MyReader2;
-            MyConn2.Open();
-            MyReader2 = MyCommand2.ExecuteReader();
-            MessageBox.Show("Password Changed");
-            while (MyReader2.Read())
-            {
-            }
-            MyConn2.Close();//Connection closed here
-            txtBoxChangePassword.Clear();
-        }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             Form1 frm1 = new Form1();
             frm1.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Invalidate();
+            MessageBox.Show("Page Refreshed");
+        }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            PasswordChange pass = new PasswordChange(StudentNum);
+            pass.Show();
             this.Hide();
         }
     }

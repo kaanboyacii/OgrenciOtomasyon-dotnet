@@ -30,18 +30,13 @@ namespace OgrenciOtomasyon
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.lblFinal = new System.Windows.Forms.Label();
             this.lblMidterm = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.lblNumara = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtBoxChangePassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,105 +51,62 @@ namespace OgrenciOtomasyon
             this.obsDataSet = new OgrenciOtomasyon.obsDataSet();
             this.ogrenciler1TableAdapter = new OgrenciOtomasyon.obsDataSetTableAdapters.ogrenciler1TableAdapter();
             this.lblStudentNumber = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblNationality = new System.Windows.Forms.Label();
-            this.lblAverage = new System.Windows.Forms.Label();
-            this.lblStatus = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.listBox5 = new System.Windows.Forms.ListBox();
-            this.listBox6 = new System.Windows.Forms.ListBox();
-            this.listBox7 = new System.Windows.Forms.ListBox();
-            this.listBox8 = new System.Windows.Forms.ListBox();
-            this.listBox9 = new System.Windows.Forms.ListBox();
+            this.txtBoxFirstName = new System.Windows.Forms.TextBox();
+            this.txtBoxLastName = new System.Windows.Forms.TextBox();
+            this.txtBoxId = new System.Windows.Forms.TextBox();
+            this.txtBoxContact = new System.Windows.Forms.TextBox();
+            this.txtBoxGender = new System.Windows.Forms.TextBox();
+            this.txtBoxAddress = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnChangePassword = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrenciler1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obsDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblFinal
-            // 
-            this.lblFinal.AutoSize = true;
-            this.lblFinal.BackColor = System.Drawing.Color.Transparent;
-            this.lblFinal.Location = new System.Drawing.Point(53, 294);
-            this.lblFinal.Name = "lblFinal";
-            this.lblFinal.Size = new System.Drawing.Size(80, 17);
-            this.lblFinal.TabIndex = 100;
-            this.lblFinal.Text = "Final Exam:";
-            // 
             // lblMidterm
             // 
             this.lblMidterm.AutoSize = true;
             this.lblMidterm.BackColor = System.Drawing.Color.Transparent;
-            this.lblMidterm.Location = new System.Drawing.Point(53, 265);
+            this.lblMidterm.Location = new System.Drawing.Point(54, 243);
             this.lblMidterm.Name = "lblMidterm";
-            this.lblMidterm.Size = new System.Drawing.Size(100, 17);
+            this.lblMidterm.Size = new System.Drawing.Size(60, 17);
             this.lblMidterm.TabIndex = 98;
-            this.lblMidterm.Text = "Midterm Exam:";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(575, 204);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(329, 48);
-            this.btnUpdate.TabIndex = 96;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.lblMidterm.Text = "Contact:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(53, 204);
+            this.label4.Location = new System.Drawing.Point(53, 280);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 17);
+            this.label4.Size = new System.Drawing.Size(60, 17);
             this.label4.TabIndex = 95;
-            this.label4.Text = "Lesson:";
+            this.label4.Text = "Gender:";
             // 
             // lblNumara
             // 
             this.lblNumara.AutoSize = true;
             this.lblNumara.BackColor = System.Drawing.Color.Transparent;
-            this.lblNumara.Location = new System.Drawing.Point(53, 176);
+            this.lblNumara.Location = new System.Drawing.Point(55, 215);
             this.lblNumara.Name = "lblNumara";
-            this.lblNumara.Size = new System.Drawing.Size(115, 17);
+            this.lblNumara.Size = new System.Drawing.Size(78, 17);
             this.lblNumara.TabIndex = 91;
-            this.lblNumara.Text = "Student Number:";
+            this.lblNumara.Text = "Student ID:";
             // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.BackColor = System.Drawing.Color.Transparent;
-            this.lblFirstName.Location = new System.Drawing.Point(53, 113);
+            this.lblFirstName.Location = new System.Drawing.Point(53, 149);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(78, 17);
             this.lblFirstName.TabIndex = 89;
             this.lblFirstName.Text = "First name:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(572, 158);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 17);
-            this.label2.TabIndex = 87;
-            this.label2.Text = "New Password:";
-            // 
-            // txtBoxChangePassword
-            // 
-            this.txtBoxChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBoxChangePassword.Location = new System.Drawing.Point(682, 158);
-            this.txtBoxChangePassword.Name = "txtBoxChangePassword";
-            this.txtBoxChangePassword.Size = new System.Drawing.Size(222, 24);
-            this.txtBoxChangePassword.TabIndex = 86;
             // 
             // label3
             // 
@@ -163,16 +115,16 @@ namespace OgrenciOtomasyon
             this.label3.Font = new System.Drawing.Font("Dubai", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(44, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(604, 67);
+            this.label3.Size = new System.Drawing.Size(482, 67);
             this.label3.TabIndex = 85;
-            this.label3.Text = "KBÜ Student Information System";
+            this.label3.Text = "Bilgi School Student Panel";
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Teal;
-            this.pictureBox2.Location = new System.Drawing.Point(-4, -2);
+            this.pictureBox2.Location = new System.Drawing.Point(-3, -2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(2238, 82);
+            this.pictureBox2.Size = new System.Drawing.Size(1251, 82);
             this.pictureBox2.TabIndex = 84;
             this.pictureBox2.TabStop = false;
             // 
@@ -182,24 +134,13 @@ namespace OgrenciOtomasyon
             this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(735, 10);
+            this.btnExit.Location = new System.Drawing.Point(931, 10);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(183, 57);
+            this.btnExit.Size = new System.Drawing.Size(268, 64);
             this.btnExit.TabIndex = 101;
             this.btnExit.Text = "Log Out";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.Control;
-            this.label7.Font = new System.Drawing.Font("Dubai", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(567, 96);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(235, 48);
-            this.label7.TabIndex = 102;
-            this.label7.Text = "Change Password:";
             // 
             // dataGridView1
             // 
@@ -216,11 +157,11 @@ namespace OgrenciOtomasyon
             this.ortalamaDataGridViewTextBoxColumn,
             this.durumDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.ogrenciler1BindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(495, 275);
+            this.dataGridView1.Location = new System.Drawing.Point(912, 371);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(423, 183);
+            this.dataGridView1.Size = new System.Drawing.Size(266, 81);
             this.dataGridView1.TabIndex = 103;
             this.dataGridView1.Visible = false;
             // 
@@ -314,27 +255,18 @@ namespace OgrenciOtomasyon
             // 
             this.lblStudentNumber.AutoSize = true;
             this.lblStudentNumber.BackColor = System.Drawing.Color.Transparent;
-            this.lblStudentNumber.Location = new System.Drawing.Point(811, 83);
+            this.lblStudentNumber.Location = new System.Drawing.Point(1106, 83);
             this.lblStudentNumber.Name = "lblStudentNumber";
             this.lblStudentNumber.Size = new System.Drawing.Size(107, 17);
             this.lblStudentNumber.TabIndex = 104;
             this.lblStudentNumber.Text = "StudentNumber";
             this.lblStudentNumber.Visible = false;
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(178, 110);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(261, 20);
-            this.listBox1.TabIndex = 105;
-            // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
             this.lblLastName.BackColor = System.Drawing.Color.Transparent;
-            this.lblLastName.Location = new System.Drawing.Point(53, 143);
+            this.lblLastName.Location = new System.Drawing.Point(53, 182);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(78, 17);
             this.lblLastName.TabIndex = 106;
@@ -344,139 +276,129 @@ namespace OgrenciOtomasyon
             // 
             this.lblNationality.AutoSize = true;
             this.lblNationality.BackColor = System.Drawing.Color.Transparent;
-            this.lblNationality.Location = new System.Drawing.Point(53, 235);
+            this.lblNationality.Location = new System.Drawing.Point(53, 314);
             this.lblNationality.Name = "lblNationality";
-            this.lblNationality.Size = new System.Drawing.Size(78, 17);
+            this.lblNationality.Size = new System.Drawing.Size(64, 17);
             this.lblNationality.TabIndex = 107;
-            this.lblNationality.Text = "Nationality:";
+            this.lblNationality.Text = "Address:";
             // 
-            // lblAverage
+            // txtBoxFirstName
             // 
-            this.lblAverage.AutoSize = true;
-            this.lblAverage.BackColor = System.Drawing.Color.Transparent;
-            this.lblAverage.Location = new System.Drawing.Point(54, 321);
-            this.lblAverage.Name = "lblAverage";
-            this.lblAverage.Size = new System.Drawing.Size(65, 17);
-            this.lblAverage.TabIndex = 108;
-            this.lblAverage.Text = "Average:";
+            this.txtBoxFirstName.Location = new System.Drawing.Point(178, 144);
+            this.txtBoxFirstName.Name = "txtBoxFirstName";
+            this.txtBoxFirstName.ReadOnly = true;
+            this.txtBoxFirstName.Size = new System.Drawing.Size(229, 22);
+            this.txtBoxFirstName.TabIndex = 115;
+            this.txtBoxFirstName.TextChanged += new System.EventHandler(this.FormStudentInfo_Load);
             // 
-            // lblStatus
+            // txtBoxLastName
             // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.BackColor = System.Drawing.Color.Transparent;
-            this.lblStatus.Location = new System.Drawing.Point(54, 352);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(52, 17);
-            this.lblStatus.TabIndex = 109;
-            this.lblStatus.Text = "Status:";
+            this.txtBoxLastName.Location = new System.Drawing.Point(178, 179);
+            this.txtBoxLastName.Name = "txtBoxLastName";
+            this.txtBoxLastName.ReadOnly = true;
+            this.txtBoxLastName.Size = new System.Drawing.Size(229, 22);
+            this.txtBoxLastName.TabIndex = 116;
             // 
-            // listBox2
+            // txtBoxId
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(178, 143);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(261, 20);
-            this.listBox2.TabIndex = 110;
+            this.txtBoxId.Location = new System.Drawing.Point(178, 212);
+            this.txtBoxId.Name = "txtBoxId";
+            this.txtBoxId.ReadOnly = true;
+            this.txtBoxId.Size = new System.Drawing.Size(229, 22);
+            this.txtBoxId.TabIndex = 117;
             // 
-            // listBox3
+            // txtBoxContact
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 16;
-            this.listBox3.Location = new System.Drawing.Point(178, 176);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(261, 20);
-            this.listBox3.TabIndex = 111;
+            this.txtBoxContact.Location = new System.Drawing.Point(178, 240);
+            this.txtBoxContact.Name = "txtBoxContact";
+            this.txtBoxContact.ReadOnly = true;
+            this.txtBoxContact.Size = new System.Drawing.Size(229, 22);
+            this.txtBoxContact.TabIndex = 118;
             // 
-            // listBox4
+            // txtBoxGender
             // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 16;
-            this.listBox4.Location = new System.Drawing.Point(178, 204);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(261, 20);
-            this.listBox4.TabIndex = 112;
+            this.txtBoxGender.Location = new System.Drawing.Point(178, 277);
+            this.txtBoxGender.Name = "txtBoxGender";
+            this.txtBoxGender.ReadOnly = true;
+            this.txtBoxGender.Size = new System.Drawing.Size(229, 22);
+            this.txtBoxGender.TabIndex = 119;
             // 
-            // listBox5
+            // txtBoxAddress
             // 
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.ItemHeight = 16;
-            this.listBox5.Location = new System.Drawing.Point(178, 235);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(261, 20);
-            this.listBox5.TabIndex = 113;
+            this.txtBoxAddress.Location = new System.Drawing.Point(178, 311);
+            this.txtBoxAddress.Multiline = true;
+            this.txtBoxAddress.Name = "txtBoxAddress";
+            this.txtBoxAddress.ReadOnly = true;
+            this.txtBoxAddress.Size = new System.Drawing.Size(229, 75);
+            this.txtBoxAddress.TabIndex = 120;
             // 
-            // listBox6
+            // label1
             // 
-            this.listBox6.FormattingEnabled = true;
-            this.listBox6.ItemHeight = 16;
-            this.listBox6.Location = new System.Drawing.Point(178, 265);
-            this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(261, 20);
-            this.listBox6.TabIndex = 114;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(53, 96);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(226, 29);
+            this.label1.TabIndex = 121;
+            this.label1.Text = "Student Information:";
             // 
-            // listBox7
+            // button1
             // 
-            this.listBox7.FormattingEnabled = true;
-            this.listBox7.ItemHeight = 16;
-            this.listBox7.Location = new System.Drawing.Point(178, 294);
-            this.listBox7.Name = "listBox7";
-            this.listBox7.Size = new System.Drawing.Size(261, 20);
-            this.listBox7.TabIndex = 115;
+            this.button1.BackColor = System.Drawing.Color.Green;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(56, 354);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 32);
+            this.button1.TabIndex = 122;
+            this.button1.Text = "Refresh";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // listBox8
+            // btnChangePassword
             // 
-            this.listBox8.FormattingEnabled = true;
-            this.listBox8.ItemHeight = 16;
-            this.listBox8.Location = new System.Drawing.Point(178, 321);
-            this.listBox8.Name = "listBox8";
-            this.listBox8.Size = new System.Drawing.Size(261, 20);
-            this.listBox8.TabIndex = 116;
-            // 
-            // listBox9
-            // 
-            this.listBox9.FormattingEnabled = true;
-            this.listBox9.ItemHeight = 16;
-            this.listBox9.Location = new System.Drawing.Point(178, 352);
-            this.listBox9.Name = "listBox9";
-            this.listBox9.Size = new System.Drawing.Size(261, 20);
-            this.listBox9.TabIndex = 117;
+            this.btnChangePassword.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnChangePassword.ForeColor = System.Drawing.Color.White;
+            this.btnChangePassword.Location = new System.Drawing.Point(58, 404);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(349, 48);
+            this.btnChangePassword.TabIndex = 123;
+            this.btnChangePassword.Text = "Change Your Password";
+            this.btnChangePassword.UseVisualStyleBackColor = false;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // FormStudentInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 496);
-            this.Controls.Add(this.listBox9);
-            this.Controls.Add(this.listBox8);
-            this.Controls.Add(this.listBox7);
-            this.Controls.Add(this.listBox6);
-            this.Controls.Add(this.listBox5);
-            this.Controls.Add(this.listBox4);
-            this.Controls.Add(this.listBox3);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.lblStatus);
-            this.Controls.Add(this.lblAverage);
+            this.ClientSize = new System.Drawing.Size(1211, 496);
+            this.Controls.Add(this.btnChangePassword);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtBoxAddress);
+            this.Controls.Add(this.txtBoxGender);
+            this.Controls.Add(this.txtBoxContact);
+            this.Controls.Add(this.txtBoxId);
+            this.Controls.Add(this.txtBoxLastName);
+            this.Controls.Add(this.txtBoxFirstName);
             this.Controls.Add(this.lblNationality);
             this.Controls.Add(this.lblLastName);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.lblStudentNumber);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.lblFinal);
             this.Controls.Add(this.lblMidterm);
-            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblNumara);
             this.Controls.Add(this.lblFirstName);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtBoxChangePassword);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormStudentInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Kbü Student Information System";
+            this.Text = "Bilgi School Student Information System";
             this.Load += new System.EventHandler(this.FormStudentInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -488,19 +410,13 @@ namespace OgrenciOtomasyon
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblFinal;
         private System.Windows.Forms.Label lblMidterm;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblNumara;
         private System.Windows.Forms.Label lblFirstName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtBoxChangePassword;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView1;
         private obsDataSet obsDataSet;
         private System.Windows.Forms.BindingSource ogrenciler1BindingSource;
@@ -515,18 +431,16 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.DataGridViewTextBoxColumn ortalamaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn durumDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label lblStudentNumber;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblNationality;
-        private System.Windows.Forms.Label lblAverage;
-        private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.ListBox listBox4;
-        private System.Windows.Forms.ListBox listBox5;
-        private System.Windows.Forms.ListBox listBox6;
-        private System.Windows.Forms.ListBox listBox7;
-        private System.Windows.Forms.ListBox listBox8;
-        private System.Windows.Forms.ListBox listBox9;
+        private System.Windows.Forms.TextBox txtBoxFirstName;
+        private System.Windows.Forms.TextBox txtBoxLastName;
+        private System.Windows.Forms.TextBox txtBoxId;
+        private System.Windows.Forms.TextBox txtBoxContact;
+        private System.Windows.Forms.TextBox txtBoxGender;
+        private System.Windows.Forms.TextBox txtBoxAddress;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnChangePassword;
     }
 }
