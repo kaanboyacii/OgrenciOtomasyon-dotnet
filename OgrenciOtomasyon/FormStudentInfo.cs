@@ -29,9 +29,9 @@ namespace OgrenciOtomasyon
 
         private void FormStudentInfo_Load(object sender, EventArgs e)
         {
-            lblStudentNumber.Text = StudentNum;
             ogrenciListele();
-
+            ogrenciSınavlarınıListele();
+            lblStudentNumber.Text = StudentNum;
             string MyConnection3 = "server=localhost;user id=root;database=obs";
             MySqlConnection MyConn3 = new MySqlConnection(MyConnection3);
             string Query = "select * from ogrenciler where id='" + lblStudentNumber.Text + "';";
@@ -61,7 +61,38 @@ namespace OgrenciOtomasyon
             MyConn3.Close();
 
         }
-        
+        private void ogrenciSınavlarınıListele()
+        {
+            try
+            {
+                string MyConnection2 = "server=localhost;user id=root;database=obs";
+                string Query = "select * from exam_result where student_id='" + lblStudentNumber.Text + "';";
+                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
+                MySqlDataAdapter da = new MySqlDataAdapter();
+                MyConn2.Open();
+                da.SelectCommand = MyCommand2;
+                DataSet ds = new DataSet();
+                DataTable dt = new DataTable();
+                da.Fill(ds);
+                dt = ds.Tables[0];
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    DataRow dr = dt.Rows[i];
+                    ListViewItem listitem = new ListViewItem(dr["exam_id"].ToString());
+                    listitem.SubItems.Add(dr["course_id"].ToString());
+                    listitem.SubItems.Add(dr["marks"].ToString());
+                    listView1.Items.Add(listitem);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
 
         private void ogrenciListele()
         {
