@@ -46,18 +46,18 @@ namespace OgrenciOtomasyon.Student
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.obsDataSet6 = new OgrenciOtomasyon.obsDataSet6();
-            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.courseTableAdapter = new OgrenciOtomasyon.obsDataSet6TableAdapters.courseTableAdapter();
             this.courseidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gradeidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.obsDataSet6 = new OgrenciOtomasyon.obsDataSet6();
+            this.courseTableAdapter = new OgrenciOtomasyon.obsDataSet6TableAdapters.courseTableAdapter();
             this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -69,6 +69,7 @@ namespace OgrenciOtomasyon.Student
             this.label4.Size = new System.Drawing.Size(74, 17);
             this.label4.TabIndex = 108;
             this.label4.Text = "Course ID:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtBoxId
             // 
@@ -77,6 +78,7 @@ namespace OgrenciOtomasyon.Student
             this.txtBoxId.Name = "txtBoxId";
             this.txtBoxId.Size = new System.Drawing.Size(242, 24);
             this.txtBoxId.TabIndex = 107;
+            this.txtBoxId.TextChanged += new System.EventHandler(this.txtBoxId_TextChanged);
             // 
             // button1
             // 
@@ -89,6 +91,7 @@ namespace OgrenciOtomasyon.Student
             this.button1.TabIndex = 106;
             this.button1.Text = "Add New Course";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnClear
             // 
@@ -136,6 +139,7 @@ namespace OgrenciOtomasyon.Student
             this.lblNumara.Size = new System.Drawing.Size(69, 17);
             this.lblNumara.TabIndex = 102;
             this.lblNumara.Text = "Grade ID:";
+            this.lblNumara.Click += new System.EventHandler(this.lblNumara_Click);
             // 
             // txtboxGradeId
             // 
@@ -144,6 +148,7 @@ namespace OgrenciOtomasyon.Student
             this.txtboxGradeId.Name = "txtboxGradeId";
             this.txtboxGradeId.Size = new System.Drawing.Size(242, 24);
             this.txtboxGradeId.TabIndex = 101;
+            this.txtboxGradeId.TextChanged += new System.EventHandler(this.txtboxGradeId_TextChanged);
             // 
             // label1
             // 
@@ -154,6 +159,7 @@ namespace OgrenciOtomasyon.Student
             this.label1.Size = new System.Drawing.Size(83, 17);
             this.label1.TabIndex = 100;
             this.label1.Text = "Description:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtBoxDesc
             // 
@@ -163,6 +169,7 @@ namespace OgrenciOtomasyon.Student
             this.txtBoxDesc.Name = "txtBoxDesc";
             this.txtBoxDesc.Size = new System.Drawing.Size(242, 75);
             this.txtBoxDesc.TabIndex = 99;
+            this.txtBoxDesc.TextChanged += new System.EventHandler(this.txtBoxDesc_TextChanged);
             // 
             // label2
             // 
@@ -173,6 +180,7 @@ namespace OgrenciOtomasyon.Student
             this.label2.Size = new System.Drawing.Size(49, 17);
             this.label2.TabIndex = 98;
             this.label2.Text = "Name:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtBoxName
             // 
@@ -181,6 +189,7 @@ namespace OgrenciOtomasyon.Student
             this.txtBoxName.Name = "txtBoxName";
             this.txtBoxName.Size = new System.Drawing.Size(242, 24);
             this.txtBoxName.TabIndex = 97;
+            this.txtBoxName.TextChanged += new System.EventHandler(this.txtBoxName_TextChanged);
             // 
             // label3
             // 
@@ -192,6 +201,7 @@ namespace OgrenciOtomasyon.Student
             this.label3.Size = new System.Drawing.Size(383, 67);
             this.label3.TabIndex = 96;
             this.label3.Text = "Course Management";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox2
             // 
@@ -201,6 +211,7 @@ namespace OgrenciOtomasyon.Student
             this.pictureBox2.Size = new System.Drawing.Size(2238, 82);
             this.pictureBox2.TabIndex = 95;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // btnDelete
             // 
@@ -232,20 +243,7 @@ namespace OgrenciOtomasyon.Student
             this.dataGridView1.Size = new System.Drawing.Size(554, 300);
             this.dataGridView1.TabIndex = 114;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // obsDataSet6
-            // 
-            this.obsDataSet6.DataSetName = "obsDataSet6";
-            this.obsDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // courseBindingSource
-            // 
-            this.courseBindingSource.DataMember = "course";
-            this.courseBindingSource.DataSource = this.obsDataSet6;
-            // 
-            // courseTableAdapter
-            // 
-            this.courseTableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // courseidDataGridViewTextBoxColumn
             // 
@@ -278,6 +276,20 @@ namespace OgrenciOtomasyon.Student
             this.gradeidDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.gradeidDataGridViewTextBoxColumn.Name = "gradeidDataGridViewTextBoxColumn";
             this.gradeidDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // courseBindingSource
+            // 
+            this.courseBindingSource.DataMember = "course";
+            this.courseBindingSource.DataSource = this.obsDataSet6;
+            // 
+            // obsDataSet6
+            // 
+            this.obsDataSet6.DataSetName = "obsDataSet6";
+            this.obsDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // courseTableAdapter
+            // 
+            this.courseTableAdapter.ClearBeforeFill = true;
             // 
             // btnExit
             // 
@@ -323,8 +335,8 @@ namespace OgrenciOtomasyon.Student
             this.Load += new System.EventHandler(this.Course_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
