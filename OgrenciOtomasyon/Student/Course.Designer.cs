@@ -32,7 +32,6 @@ namespace OgrenciOtomasyon.Student
             this.components = new System.ComponentModel.Container();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBoxId = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -80,23 +79,10 @@ namespace OgrenciOtomasyon.Student
             this.txtBoxId.TabIndex = 107;
             this.txtBoxId.TextChanged += new System.EventHandler(this.txtBoxId_TextChanged);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Yellow;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(58, 346);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(376, 48);
-            this.button1.TabIndex = 106;
-            this.button1.Text = "Add New Course";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnClear.Location = new System.Drawing.Point(58, 223);
+            this.btnClear.Location = new System.Drawing.Point(58, 238);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(108, 36);
             this.btnClear.TabIndex = 105;
@@ -109,9 +95,9 @@ namespace OgrenciOtomasyon.Student
             this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(192, 279);
+            this.btnUpdate.Location = new System.Drawing.Point(58, 345);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(106, 48);
+            this.btnUpdate.Size = new System.Drawing.Size(378, 48);
             this.btnUpdate.TabIndex = 104;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -122,9 +108,9 @@ namespace OgrenciOtomasyon.Student
             this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(58, 279);
+            this.btnAdd.Location = new System.Drawing.Point(58, 291);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(106, 48);
+            this.btnAdd.Size = new System.Drawing.Size(378, 48);
             this.btnAdd.TabIndex = 103;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -167,7 +153,7 @@ namespace OgrenciOtomasyon.Student
             this.txtBoxDesc.Location = new System.Drawing.Point(192, 184);
             this.txtBoxDesc.Multiline = true;
             this.txtBoxDesc.Name = "txtBoxDesc";
-            this.txtBoxDesc.Size = new System.Drawing.Size(242, 75);
+            this.txtBoxDesc.Size = new System.Drawing.Size(242, 90);
             this.txtBoxDesc.TabIndex = 99;
             this.txtBoxDesc.TextChanged += new System.EventHandler(this.txtBoxDesc_TextChanged);
             // 
@@ -218,9 +204,9 @@ namespace OgrenciOtomasyon.Student
             this.btnDelete.BackColor = System.Drawing.Color.Crimson;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(328, 279);
+            this.btnDelete.Location = new System.Drawing.Point(58, 399);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(106, 48);
+            this.btnDelete.Size = new System.Drawing.Size(378, 48);
             this.btnDelete.TabIndex = 113;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -240,7 +226,7 @@ namespace OgrenciOtomasyon.Student
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(554, 300);
+            this.dataGridView1.Size = new System.Drawing.Size(554, 353);
             this.dataGridView1.TabIndex = 114;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -297,7 +283,7 @@ namespace OgrenciOtomasyon.Student
             this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(933, 12);
+            this.btnExit.Location = new System.Drawing.Point(748, 12);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(268, 57);
             this.btnExit.TabIndex = 115;
@@ -309,13 +295,12 @@ namespace OgrenciOtomasyon.Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1213, 559);
+            this.ClientSize = new System.Drawing.Size(1030, 459);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtBoxId);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
@@ -345,7 +330,6 @@ namespace OgrenciOtomasyon.Student
         #endregion
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBoxId;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;

@@ -229,7 +229,7 @@ namespace OgrenciOtomasyon
             this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(1532, 12);
+            this.btnExit.Location = new System.Drawing.Point(1210, 12);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(183, 57);
             this.btnExit.TabIndex = 84;
@@ -381,11 +381,11 @@ namespace OgrenciOtomasyon
             this.adresDataGridViewTextBoxColumn,
             this.passwordDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.ogrencilerBindingSource2;
-            this.dataGridView1.Location = new System.Drawing.Point(464, 95);
+            this.dataGridView1.Location = new System.Drawing.Point(475, 95);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(862, 489);
+            this.dataGridView1.Size = new System.Drawing.Size(918, 507);
             this.dataGridView1.TabIndex = 95;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             // 
@@ -465,7 +465,7 @@ namespace OgrenciOtomasyon
             this.button2.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(56, 482);
+            this.button2.Location = new System.Drawing.Point(56, 491);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(376, 48);
             this.button2.TabIndex = 96;
@@ -478,7 +478,7 @@ namespace OgrenciOtomasyon
             this.button3.BackColor = System.Drawing.Color.SeaGreen;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(56, 536);
+            this.button3.Location = new System.Drawing.Point(56, 554);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(376, 48);
             this.button3.TabIndex = 97;
@@ -490,7 +490,7 @@ namespace OgrenciOtomasyon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1727, 614);
+            this.ClientSize = new System.Drawing.Size(1405, 614);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);

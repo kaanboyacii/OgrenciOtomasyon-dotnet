@@ -32,9 +32,10 @@ namespace OgrenciOtomasyon.Student
             this.components = new System.ComponentModel.Container();
             this.btnExit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.examBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.obsDataSet7 = new OgrenciOtomasyon.obsDataSet7();
             this.btnDelete = new System.Windows.Forms.Button();
             this.txtBoxId = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -45,16 +46,14 @@ namespace OgrenciOtomasyon.Student
             this.lblNumara = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateStartDateTime = new System.Windows.Forms.DateTimePicker();
-            this.obsDataSet7 = new OgrenciOtomasyon.obsDataSet7();
-            this.examBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.examTableAdapter = new OgrenciOtomasyon.obsDataSet7TableAdapters.examTableAdapter();
             this.examidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.examBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -63,7 +62,7 @@ namespace OgrenciOtomasyon.Student
             this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(933, 12);
+            this.btnExit.Location = new System.Drawing.Point(622, 12);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(268, 57);
             this.btnExit.TabIndex = 128;
@@ -84,18 +83,28 @@ namespace OgrenciOtomasyon.Student
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(428, 300);
+            this.dataGridView1.Size = new System.Drawing.Size(428, 352);
             this.dataGridView1.TabIndex = 127;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // examBindingSource
+            // 
+            this.examBindingSource.DataMember = "exam";
+            this.examBindingSource.DataSource = this.obsDataSet7;
+            // 
+            // obsDataSet7
+            // 
+            this.obsDataSet7.DataSetName = "obsDataSet7";
+            this.obsDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Crimson;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(328, 280);
+            this.btnDelete.Location = new System.Drawing.Point(58, 399);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(106, 48);
+            this.btnDelete.Size = new System.Drawing.Size(376, 48);
             this.btnDelete.TabIndex = 126;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -108,18 +117,6 @@ namespace OgrenciOtomasyon.Student
             this.txtBoxId.Name = "txtBoxId";
             this.txtBoxId.Size = new System.Drawing.Size(242, 24);
             this.txtBoxId.TabIndex = 125;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Yellow;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(58, 347);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(376, 48);
-            this.button1.TabIndex = 124;
-            this.button1.Text = "Add New Course";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // btnClear
             // 
@@ -137,9 +134,9 @@ namespace OgrenciOtomasyon.Student
             this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(192, 280);
+            this.btnUpdate.Location = new System.Drawing.Point(58, 328);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(106, 48);
+            this.btnUpdate.Size = new System.Drawing.Size(376, 48);
             this.btnUpdate.TabIndex = 122;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -150,9 +147,9 @@ namespace OgrenciOtomasyon.Student
             this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(58, 280);
+            this.btnAdd.Location = new System.Drawing.Point(58, 254);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(106, 48);
+            this.btnAdd.Size = new System.Drawing.Size(376, 48);
             this.btnAdd.TabIndex = 121;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -223,19 +220,9 @@ namespace OgrenciOtomasyon.Student
             this.dateStartDateTime.Location = new System.Drawing.Point(192, 160);
             this.dateStartDateTime.Margin = new System.Windows.Forms.Padding(4);
             this.dateStartDateTime.Name = "dateStartDateTime";
-            this.dateStartDateTime.Size = new System.Drawing.Size(252, 22);
+            this.dateStartDateTime.Size = new System.Drawing.Size(242, 22);
             this.dateStartDateTime.TabIndex = 133;
             this.dateStartDateTime.Value = new System.DateTime(2019, 4, 12, 0, 0, 0, 0);
-            // 
-            // obsDataSet7
-            // 
-            this.obsDataSet7.DataSetName = "obsDataSet7";
-            this.obsDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // examBindingSource
-            // 
-            this.examBindingSource.DataMember = "exam";
-            this.examBindingSource.DataSource = this.obsDataSet7;
             // 
             // examTableAdapter
             // 
@@ -247,7 +234,7 @@ namespace OgrenciOtomasyon.Student
             this.examidDataGridViewTextBoxColumn.HeaderText = "exam_id";
             this.examidDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.examidDataGridViewTextBoxColumn.Name = "examidDataGridViewTextBoxColumn";
-            this.examidDataGridViewTextBoxColumn.Width = 125;
+            this.examidDataGridViewTextBoxColumn.Width = 50;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -269,7 +256,7 @@ namespace OgrenciOtomasyon.Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1213, 559);
+            this.ClientSize = new System.Drawing.Size(902, 459);
             this.Controls.Add(this.dateStartDateTime);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblNumara);
@@ -278,7 +265,6 @@ namespace OgrenciOtomasyon.Student
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtBoxId);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
@@ -292,9 +278,9 @@ namespace OgrenciOtomasyon.Student
             this.Text = "Bilgi School Student Management System";
             this.Load += new System.EventHandler(this.Exam_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.examBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,7 +292,6 @@ namespace OgrenciOtomasyon.Student
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TextBox txtBoxId;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
