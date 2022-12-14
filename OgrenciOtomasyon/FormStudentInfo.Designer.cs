@@ -67,8 +67,8 @@ namespace OgrenciOtomasyon
             this.listView1 = new System.Windows.Forms.ListView();
             this.exam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.course = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.mark = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrenciler1BindingSource)).BeginInit();
@@ -403,6 +403,7 @@ namespace OgrenciOtomasyon
             this.listView1.TabIndex = 126;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // exam
             // 
@@ -411,6 +412,10 @@ namespace OgrenciOtomasyon
             // course
             // 
             this.course.Text = "Course";
+            // 
+            // mark
+            // 
+            this.mark.Text = "Mark";
             // 
             // dataGridView2
             // 
@@ -424,10 +429,6 @@ namespace OgrenciOtomasyon
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(137, 163);
             this.dataGridView2.TabIndex = 125;
-            // 
-            // mark
-            // 
-            this.mark.Text = "Mark";
             // 
             // FormStudentInfo
             // 

@@ -25,6 +25,7 @@ namespace OgrenciOtomasyon
             this.StudentNum = StuNum;
         }
 
+
         public string StudentNum { get; set; }
 
         private void FormStudentInfo_Load(object sender, EventArgs e)
@@ -136,6 +137,11 @@ namespace OgrenciOtomasyon
             PasswordChange pass = new PasswordChange(StudentNum);
             pass.Show();
             this.Hide();
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

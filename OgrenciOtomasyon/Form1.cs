@@ -24,7 +24,6 @@ namespace OgrenciOtomasyon
        
         private void Form1_Load(object sender, EventArgs e)
         {
-           
         }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
