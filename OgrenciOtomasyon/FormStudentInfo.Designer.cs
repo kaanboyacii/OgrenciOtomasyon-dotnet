@@ -31,6 +31,7 @@ namespace OgrenciOtomasyon
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.lblMidterm = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblNumara = new System.Windows.Forms.Label();
@@ -65,10 +66,10 @@ namespace OgrenciOtomasyon
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.exam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.course = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.mark = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.marks = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrenciler1BindingSource)).BeginInit();
@@ -391,31 +392,22 @@ namespace OgrenciOtomasyon
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.exam,
-            this.course,
-            this.mark});
+            this.name});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
             this.listView1.Location = new System.Drawing.Point(454, 144);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(199, 242);
+            this.listView1.Size = new System.Drawing.Size(102, 242);
             this.listView1.TabIndex = 126;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // exam
+            // name
             // 
-            this.exam.Text = "Exam";
-            // 
-            // course
-            // 
-            this.course.Text = "Course";
-            // 
-            // mark
-            // 
-            this.mark.Text = "Mark";
+            this.name.Text = "Name:";
+            this.name.Width = 130;
             // 
             // dataGridView2
             // 
@@ -430,11 +422,32 @@ namespace OgrenciOtomasyon
             this.dataGridView2.Size = new System.Drawing.Size(137, 163);
             this.dataGridView2.TabIndex = 125;
             // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.marks});
+            this.listView2.HideSelection = false;
+            this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem2});
+            this.listView2.Location = new System.Drawing.Point(550, 144);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(113, 242);
+            this.listView2.TabIndex = 127;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
+            // 
+            // marks
+            // 
+            this.marks.Text = "Mark:";
+            this.marks.Width = 130;
+            // 
             // FormStudentInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1211, 496);
+            this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label2);
@@ -509,9 +522,9 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader exam;
-        private System.Windows.Forms.ColumnHeader course;
+        private System.Windows.Forms.ColumnHeader name;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.ColumnHeader mark;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader marks;
     }
 }

@@ -32,6 +32,7 @@ namespace OgrenciOtomasyon
         {
             ogrenciListele();
             ogrenciSınavlarınıListele();
+            ogrenciSınavNotlarınıListele();
             lblStudentNumber.Text = StudentNum;
             string MyConnection3 = "server=localhost;user id=root;database=obs";
             MySqlConnection MyConn3 = new MySqlConnection(MyConnection3);
@@ -62,17 +63,19 @@ namespace OgrenciOtomasyon
             MyConn3.Close();
 
         }
+
         private void ogrenciSınavlarınıListele()
         {
             try
             {
-                string MyConnection2 = "server=localhost;user id=root;database=obs";
-                string Query = "select * from exam_result where student_id='" + lblStudentNumber.Text + "';";
-                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
-                MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
+                string MyConnection = "server=localhost;user id=root;database=obs";
+                string Query = "SELECT name FROM course WHERE course_id = (select course_id from ogrenciler where id = '" + lblStudentNumber.Text + "') ";
+                MySqlConnection MyConn = new MySqlConnection(MyConnection);
+                MySqlCommand MyCommand1 = new MySqlCommand(Query, MyConn);
+ 
                 MySqlDataAdapter da = new MySqlDataAdapter();
-                MyConn2.Open();
-                da.SelectCommand = MyCommand2;
+                MyConn.Open();
+                da.SelectCommand = MyCommand1;
                 DataSet ds = new DataSet();
                 DataTable dt = new DataTable();
                 da.Fill(ds);
@@ -80,10 +83,37 @@ namespace OgrenciOtomasyon
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     DataRow dr = dt.Rows[i];
-                    ListViewItem listitem = new ListViewItem(dr["exam_id"].ToString());
-                    listitem.SubItems.Add(dr["course_id"].ToString());
-                    listitem.SubItems.Add(dr["marks"].ToString());
+                    ListViewItem listitem = new ListViewItem(dr["name"].ToString());
                     listView1.Items.Add(listitem);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void ogrenciSınavNotlarınıListele()
+        {
+            try
+            {
+                string MyConnection = "server=localhost;user id=root;database=obs";
+                string Query = "select marks from exam_result where student_id='" + lblStudentNumber.Text + "' ";
+                MySqlConnection MyConn = new MySqlConnection(MyConnection);
+                MySqlCommand MyCommand1 = new MySqlCommand(Query, MyConn);
+
+                MySqlDataAdapter da = new MySqlDataAdapter();
+                MyConn.Open();
+                da.SelectCommand = MyCommand1;
+                DataSet ds = new DataSet();
+                DataTable dt = new DataTable();
+                da.Fill(ds);
+                dt = ds.Tables[0];
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    DataRow dr = dt.Rows[i];
+                    ListViewItem listitem = new ListViewItem(dr["marks"].ToString());
+                    listView2.Items.Add(listitem);
                 }
 
             }
@@ -140,6 +170,11 @@ namespace OgrenciOtomasyon
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
