@@ -21,11 +21,48 @@ namespace OgrenciOtomasyon
         {
             InitializeComponent();
         }
-
-        private void btnLogin_Click(object sender, EventArgs e)
+        public void ogretmenIdGetir()
         {
             string user = txtBoxUserName.Text;
             string pass = txtBoxPassword.Text;
+            string MyConnection3 = "server=localhost;user id=root;database=obs";
+            MySqlConnection MyConn3 = new MySqlConnection(MyConnection3);
+            string Query = "SELECT * FROM ogretmenler where username='" + txtBoxUserName.Text + "' AND password='" + txtBoxPassword.Text + "'";
+            MySqlCommand cmd = new MySqlCommand(Query, MyConn3);
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            MyConn3.Open();
+            da.SelectCommand = cmd;
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            da.Fill(ds);
+            dt = ds.Tables[0];
+            foreach (DataRow dr in dt.Rows)
+            {
+                lblTeacherId.Text = dr["id"].ToString();
+            }
+            MyConn3.Close();
+        }
+
+        public void btnLogin_Click(object sender, EventArgs e)
+        {
+            string user = txtBoxUserName.Text;
+            string pass = txtBoxPassword.Text;
+            string MyConnection3 = "server=localhost;user id=root;database=obs";
+            MySqlConnection MyConn3 = new MySqlConnection(MyConnection3);
+            string Query = "SELECT * FROM ogretmenler where username='" + txtBoxUserName.Text + "' AND password='" + txtBoxPassword.Text + "'";
+            MySqlCommand cmd = new MySqlCommand(Query, MyConn3);
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            MyConn3.Open();
+            da.SelectCommand = cmd;
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            da.Fill(ds);
+            dt = ds.Tables[0];
+            foreach (DataRow dr in dt.Rows)
+            {
+                lblTeacherId.Text = dr["id"].ToString();
+            }
+            MyConn3.Close();
             cmd = new MySqlCommand();
             con.Open();
             cmd.Connection = con;
@@ -34,7 +71,7 @@ namespace OgrenciOtomasyon
             if (dr.Read())
             {
                 MessageBox.Show("Teaher Login Succesful.");
-                Form2 frm2 = new Form2();
+                Form2 frm2 = new Form2(lblTeacherId.Text);
                 frm2.Show();
                 this.Hide();
             }
@@ -59,6 +96,7 @@ namespace OgrenciOtomasyon
 
         private void FormTeacherLogin_Load(object sender, EventArgs e)
         {
+            ogretmenIdGetir();
             this.ActiveControl = txtBoxUserName;
             txtBoxPassword.UseSystemPasswordChar = true;
         }

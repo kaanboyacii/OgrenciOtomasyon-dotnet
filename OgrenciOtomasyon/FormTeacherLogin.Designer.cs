@@ -43,6 +43,7 @@ namespace OgrenciOtomasyon
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
+            this.lblTeacherId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -182,12 +183,22 @@ namespace OgrenciOtomasyon
             this.lblUsername.TabIndex = 35;
             this.lblUsername.Text = "Username:";
             // 
+            // lblTeacherId
+            // 
+            this.lblTeacherId.AutoSize = true;
+            this.lblTeacherId.Location = new System.Drawing.Point(379, 419);
+            this.lblTeacherId.Name = "lblTeacherId";
+            this.lblTeacherId.Size = new System.Drawing.Size(46, 17);
+            this.lblTeacherId.TabIndex = 41;
+            this.lblTeacherId.Text = "label1";
+            // 
             // FormTeacherLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblTeacherId);
             this.Controls.Add(this.txtBoxPassword);
             this.Controls.Add(this.txtBoxUserName);
             this.Controls.Add(this.panel2);
@@ -229,5 +240,6 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Label lblTeacherId;
     }
 }

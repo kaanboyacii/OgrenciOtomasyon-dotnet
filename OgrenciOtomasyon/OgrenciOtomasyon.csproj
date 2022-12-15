@@ -149,6 +149,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="obsDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>obsDataSet8.xsd</DependentUpon>
+    </Compile>
     <Compile Include="StudentPanel\examCalender.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -368,6 +373,17 @@
     </None>
     <None Include="obsDataSet7.xss">
       <DependentUpon>obsDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="obsDataSet8.xsc">
+      <DependentUpon>obsDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="obsDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>obsDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="obsDataSet8.xss">
+      <DependentUpon>obsDataSet8.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
