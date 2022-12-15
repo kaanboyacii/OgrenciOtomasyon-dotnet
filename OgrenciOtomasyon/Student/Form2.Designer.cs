@@ -62,17 +62,15 @@ namespace OgrenciOtomasyon
             this.ogrencilerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ogrencilerTableAdapter1 = new OgrenciOtomasyon.obsDataSet5TableAdapters.ogrencilerTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iletisimDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cinsiyetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ogrencilerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtBoxClass = new System.Windows.Forms.TextBox();
+            this.obsDataSet8 = new OgrenciOtomasyon.obsDataSet8();
+            this.ogrencilerBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.ogrencilerTableAdapter2 = new OgrenciOtomasyon.obsDataSet8TableAdapters.ogrencilerTableAdapter();
+            this.ogrencilerBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obsDataSet)).BeginInit();
@@ -83,13 +81,16 @@ namespace OgrenciOtomasyon
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource5)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNumara
             // 
             this.lblNumara.AutoSize = true;
             this.lblNumara.BackColor = System.Drawing.Color.Transparent;
-            this.lblNumara.Location = new System.Drawing.Point(53, 190);
+            this.lblNumara.Location = new System.Drawing.Point(53, 220);
             this.lblNumara.Name = "lblNumara";
             this.lblNumara.Size = new System.Drawing.Size(60, 17);
             this.lblNumara.TabIndex = 72;
@@ -98,7 +99,7 @@ namespace OgrenciOtomasyon
             // txtboxNumber
             // 
             this.txtboxNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtboxNumber.Location = new System.Drawing.Point(190, 185);
+            this.txtboxNumber.Location = new System.Drawing.Point(190, 215);
             this.txtboxNumber.Name = "txtboxNumber";
             this.txtboxNumber.Size = new System.Drawing.Size(242, 24);
             this.txtboxNumber.TabIndex = 71;
@@ -178,7 +179,7 @@ namespace OgrenciOtomasyon
             this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(56, 361);
+            this.btnAdd.Location = new System.Drawing.Point(56, 402);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(106, 48);
             this.btnAdd.TabIndex = 74;
@@ -191,7 +192,7 @@ namespace OgrenciOtomasyon
             this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(190, 361);
+            this.btnUpdate.Location = new System.Drawing.Point(190, 402);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(106, 48);
             this.btnUpdate.TabIndex = 77;
@@ -204,7 +205,7 @@ namespace OgrenciOtomasyon
             this.btnDelete.BackColor = System.Drawing.Color.Crimson;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(326, 361);
+            this.btnDelete.Location = new System.Drawing.Point(326, 402);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(106, 48);
             this.btnDelete.TabIndex = 78;
@@ -215,7 +216,7 @@ namespace OgrenciOtomasyon
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnClear.Location = new System.Drawing.Point(54, 308);
+            this.btnClear.Location = new System.Drawing.Point(54, 349);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(108, 36);
             this.btnClear.TabIndex = 79;
@@ -242,7 +243,7 @@ namespace OgrenciOtomasyon
             this.button1.BackColor = System.Drawing.Color.Yellow;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(56, 428);
+            this.button1.Location = new System.Drawing.Point(56, 475);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(376, 48);
             this.button1.TabIndex = 87;
@@ -291,7 +292,7 @@ namespace OgrenciOtomasyon
             this.panel2.Controls.Add(this.radioButtonMale);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.Location = new System.Drawing.Point(190, 216);
+            this.panel2.Location = new System.Drawing.Point(190, 250);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(242, 30);
@@ -328,7 +329,7 @@ namespace OgrenciOtomasyon
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(53, 216);
+            this.label5.Location = new System.Drawing.Point(53, 250);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 17);
             this.label5.TabIndex = 92;
@@ -338,7 +339,7 @@ namespace OgrenciOtomasyon
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(53, 258);
+            this.label6.Location = new System.Drawing.Point(53, 294);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 17);
             this.label6.TabIndex = 93;
@@ -347,7 +348,7 @@ namespace OgrenciOtomasyon
             // txtBoxAdres
             // 
             this.txtBoxAdres.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBoxAdres.Location = new System.Drawing.Point(190, 253);
+            this.txtBoxAdres.Location = new System.Drawing.Point(190, 294);
             this.txtBoxAdres.Multiline = true;
             this.txtBoxAdres.Name = "txtBoxAdres";
             this.txtBoxAdres.Size = new System.Drawing.Size(242, 91);
@@ -369,91 +370,17 @@ namespace OgrenciOtomasyon
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.adDataGridViewTextBoxColumn,
-            this.soyadDataGridViewTextBoxColumn,
-            this.iletisimDataGridViewTextBoxColumn,
-            this.dersDataGridViewTextBoxColumn,
-            this.cinsiyetDataGridViewTextBoxColumn,
-            this.adresDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.ogrencilerBindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(475, 95);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(918, 507);
+            this.dataGridView1.Size = new System.Drawing.Size(918, 554);
             this.dataGridView1.TabIndex = 95;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // adDataGridViewTextBoxColumn
-            // 
-            this.adDataGridViewTextBoxColumn.DataPropertyName = "ad";
-            this.adDataGridViewTextBoxColumn.HeaderText = "ad";
-            this.adDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.adDataGridViewTextBoxColumn.Name = "adDataGridViewTextBoxColumn";
-            this.adDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // soyadDataGridViewTextBoxColumn
-            // 
-            this.soyadDataGridViewTextBoxColumn.DataPropertyName = "soyad";
-            this.soyadDataGridViewTextBoxColumn.HeaderText = "soyad";
-            this.soyadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.soyadDataGridViewTextBoxColumn.Name = "soyadDataGridViewTextBoxColumn";
-            this.soyadDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // iletisimDataGridViewTextBoxColumn
-            // 
-            this.iletisimDataGridViewTextBoxColumn.DataPropertyName = "iletisim";
-            this.iletisimDataGridViewTextBoxColumn.HeaderText = "iletisim";
-            this.iletisimDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iletisimDataGridViewTextBoxColumn.Name = "iletisimDataGridViewTextBoxColumn";
-            this.iletisimDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dersDataGridViewTextBoxColumn
-            // 
-            this.dersDataGridViewTextBoxColumn.DataPropertyName = "ders";
-            this.dersDataGridViewTextBoxColumn.HeaderText = "ders";
-            this.dersDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dersDataGridViewTextBoxColumn.Name = "dersDataGridViewTextBoxColumn";
-            this.dersDataGridViewTextBoxColumn.Visible = false;
-            this.dersDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // cinsiyetDataGridViewTextBoxColumn
-            // 
-            this.cinsiyetDataGridViewTextBoxColumn.DataPropertyName = "cinsiyet";
-            this.cinsiyetDataGridViewTextBoxColumn.HeaderText = "cinsiyet";
-            this.cinsiyetDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cinsiyetDataGridViewTextBoxColumn.Name = "cinsiyetDataGridViewTextBoxColumn";
-            this.cinsiyetDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // adresDataGridViewTextBoxColumn
-            // 
-            this.adresDataGridViewTextBoxColumn.DataPropertyName = "adres";
-            this.adresDataGridViewTextBoxColumn.HeaderText = "adres";
-            this.adresDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.adresDataGridViewTextBoxColumn.Name = "adresDataGridViewTextBoxColumn";
-            this.adresDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
-            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.Visible = false;
-            this.passwordDataGridViewTextBoxColumn.Width = 125;
             // 
             // ogrencilerBindingSource2
             // 
@@ -465,7 +392,7 @@ namespace OgrenciOtomasyon
             this.button2.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(56, 491);
+            this.button2.Location = new System.Drawing.Point(56, 538);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(376, 48);
             this.button2.TabIndex = 96;
@@ -478,7 +405,7 @@ namespace OgrenciOtomasyon
             this.button3.BackColor = System.Drawing.Color.SeaGreen;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(56, 554);
+            this.button3.Location = new System.Drawing.Point(56, 601);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(376, 48);
             this.button3.TabIndex = 97;
@@ -486,11 +413,50 @@ namespace OgrenciOtomasyon
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Location = new System.Drawing.Point(53, 190);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(46, 17);
+            this.label7.TabIndex = 99;
+            this.label7.Text = "Class:";
+            // 
+            // txtBoxClass
+            // 
+            this.txtBoxClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtBoxClass.Location = new System.Drawing.Point(190, 185);
+            this.txtBoxClass.Name = "txtBoxClass";
+            this.txtBoxClass.Size = new System.Drawing.Size(242, 24);
+            this.txtBoxClass.TabIndex = 98;
+            // 
+            // obsDataSet8
+            // 
+            this.obsDataSet8.DataSetName = "obsDataSet8";
+            this.obsDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ogrencilerBindingSource3
+            // 
+            this.ogrencilerBindingSource3.DataMember = "ogrenciler";
+            this.ogrencilerBindingSource3.DataSource = this.obsDataSet8;
+            // 
+            // ogrencilerTableAdapter2
+            // 
+            this.ogrencilerTableAdapter2.ClearBeforeFill = true;
+            // 
+            // ogrencilerBindingSource5
+            // 
+            this.ogrencilerBindingSource5.DataMember = "ogrenciler";
+            this.ogrencilerBindingSource5.DataSource = this.obsDataSet8;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1405, 614);
+            this.ClientSize = new System.Drawing.Size(1405, 661);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtBoxClass);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
@@ -531,6 +497,9 @@ namespace OgrenciOtomasyon
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -571,15 +540,13 @@ namespace OgrenciOtomasyon
         private obsDataSet5TableAdapters.ogrencilerTableAdapter ogrencilerTableAdapter1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource ogrencilerBindingSource2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soyadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iletisimDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dersDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cinsiyetDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adresDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtBoxClass;
+        private obsDataSet8 obsDataSet8;
+        private System.Windows.Forms.BindingSource ogrencilerBindingSource3;
+        private obsDataSet8TableAdapters.ogrencilerTableAdapter ogrencilerTableAdapter2;
+        private System.Windows.Forms.BindingSource ogrencilerBindingSource5;
     }
 }

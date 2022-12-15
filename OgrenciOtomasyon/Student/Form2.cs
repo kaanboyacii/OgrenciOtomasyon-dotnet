@@ -18,6 +18,12 @@ namespace OgrenciOtomasyon
         {
             InitializeComponent();
         }
+        public Form2(string TeaId)
+        {
+            InitializeComponent();
+            this.TeacherId = TeaId;
+        }
+        public string TeacherId { get; set; }
 
         private void ogrenciListele()
         {
@@ -25,7 +31,7 @@ namespace OgrenciOtomasyon
             {
                 string MyConnection2 = "server=localhost;user id=root;database=obs";
                 //Display query
-                string Query = "select * from ogrenciler ";
+                string Query = "select * from ogrenciler where classroom_id = (select classroom_id from classroom where teacher_id = '" + TeacherId + "') ";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                 //  MyConn2.Open();
@@ -65,8 +71,6 @@ namespace OgrenciOtomasyon
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'obsDataSet5.ogrenciler' table. You can move, or remove it, as needed.
-            this.ogrencilerTableAdapter1.Fill(this.obsDataSet5.ogrenciler);
             ogrenciListele();
 
         }
@@ -83,7 +87,7 @@ namespace OgrenciOtomasyon
                 //This is my connection string i have assigned the database file address path
                 string MyConnection2 = "server=localhost;user id=root;database=obs";
                 //This is my insert query in which i am taking input from the user through windows forms
-                string Query = "insert into ogrenciler(id,ad,soyad,iletisim,cinsiyet,adres) values('" + this.txtBoxId.Text + "','" + this.txtBoxFirstName.Text + "','" + this.txtBoxLastName.Text + "','" + this.txtboxNumber.Text + "','" + gender + "','" + this.txtBoxAdres.Text + "');";
+                string Query = "insert into ogrenciler(id,ad,soyad,classroom_id,iletisim,cinsiyet,adres) values('" + this.txtBoxId.Text + "','" + this.txtBoxFirstName.Text + "','" + this.txtBoxLastName.Text + "','" + "','" + this.txtBoxClass.Text + "','" + this.txtboxNumber.Text + "','" + gender + "','" + this.txtBoxAdres.Text + "');";
                 //This is  MySqlConnection here i have created the object and pass my connection string.
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 //This is command class which will handle the query and connection object.
@@ -166,6 +170,7 @@ namespace OgrenciOtomasyon
             txtBoxId.Clear();
             txtBoxFirstName.Clear();
             txtBoxLastName.Clear();
+            txtBoxClass.Clear();
             txtboxNumber.Clear();
             radioButtonFemale.Checked = false;
             radioButtonMale.Checked = false;
@@ -185,8 +190,17 @@ namespace OgrenciOtomasyon
             txtBoxId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             txtBoxFirstName.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             txtBoxLastName.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            txtboxNumber.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            panel2.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            txtBoxClass.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            txtboxNumber.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            radioButtonFemale.Checked = false;
+            radioButtonMale.Checked = false;
+            String gender = "";
+            if (radioButtonMale.Text == dataGridView1.CurrentRow.Cells[5].Value.ToString())
+                radioButtonMale.Select();
+                gender = "Male";                  
+            if (radioButtonFemale.Text == dataGridView1.CurrentRow.Cells[5].Value.ToString())
+                radioButtonFemale.Select();
+                gender = "Female";
             txtBoxAdres.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
         }
 
