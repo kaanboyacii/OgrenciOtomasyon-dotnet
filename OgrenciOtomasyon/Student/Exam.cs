@@ -63,7 +63,7 @@ namespace OgrenciOtomasyon.Student
                 //This is my connection string i have assigned the database file address path
                 string MyConnection2 = "server=localhost;user id=root;database=obs";
                 //This is my insert query in which i am taking input from the user through windows forms
-                string Query = "insert into exam(exam_id,name,start_Date) values('" + this.txtBoxId.Text + "','" + this.txtBoxName.Text + "','" + this.dateStartDateTime.Text + "');";
+                string Query = "insert into exam(exam_id,name,start_Date,classroom_id) values('" + this.txtBoxId.Text + "','" + this.txtBoxName.Text + "','" + this.dateStartDateTime.Text + "','" + this.txtBoxClassId.Text + "');";
                 //This is  MySqlConnection here i have created the object and pass my connection string.
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 //This is command class which will handle the query and connection object.
@@ -90,7 +90,7 @@ namespace OgrenciOtomasyon.Student
             try
             {
                 string MyConnection2 = "server=localhost;user id=root;database=obs";
-                string Query = "update exam set exam_id='" + this.txtBoxId.Text + "',name='" + this.txtBoxName.Text + "',start_Date='" + this.dateStartDateTime.Text + "' where exam_id='" + this.txtBoxId.Text + "';";
+                string Query = "update exam set exam_id='" + this.txtBoxId.Text + "',name='" + this.txtBoxName.Text + "',start_Date='" + this.dateStartDateTime.Text + "',classroom_id='" + this.txtBoxClassId.Text + "' where exam_id='" + this.txtBoxId.Text + "';";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                 MySqlDataReader MyReader2;
@@ -113,6 +113,7 @@ namespace OgrenciOtomasyon.Student
         {
             txtBoxId.Clear();
             txtBoxName.Clear();
+            txtBoxClassId.Clear();
             dateStartDateTime.CustomFormat = " ";
             txtBoxId.Focus();
         }
@@ -146,6 +147,7 @@ namespace OgrenciOtomasyon.Student
             txtBoxId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             txtBoxName.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             dateStartDateTime.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            txtBoxClassId.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
         }
     }
 }

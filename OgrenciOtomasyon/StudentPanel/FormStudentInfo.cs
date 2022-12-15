@@ -49,6 +49,7 @@ namespace OgrenciOtomasyon
                 txtBoxFirstName.Text = dr["ad"].ToString();
                 txtBoxLastName.Text = dr["soyad"].ToString();
                 txtBoxId.Text = dr["id"].ToString();
+                textBox1.Text = dr["classroom_id"].ToString();
                 txtBoxContact.Text = dr["iletisim"].ToString();
                 txtBoxGender.Text = dr["cinsiyet"].ToString();
                 txtBoxAddress.Text = dr["adres"].ToString();
@@ -68,7 +69,7 @@ namespace OgrenciOtomasyon
             try
             {
                 string MyConnection = "server=localhost;user id=root;database=obs";
-                string Query = "SELECT name FROM exam WHERE exam_id = (select exam_id from ogrenciler where id = '" + lblStudentNumber.Text + "') ";
+                string Query = "SELECT name FROM exam WHERE classroom_id = (select classroom_id from ogrenciler where id = '" + lblStudentNumber.Text + "') and exam_id =(select exam_id from exam_result where student_id = '" + lblStudentNumber.Text + "') ";
                 MySqlConnection MyConn = new MySqlConnection(MyConnection);
                 MySqlCommand MyCommand1 = new MySqlCommand(Query, MyConn);
  
@@ -97,7 +98,7 @@ namespace OgrenciOtomasyon
             try
             {
                 string MyConnection = "server=localhost;user id=root;database=obs";
-                string Query = "select marks from exam_result where student_id='" + lblStudentNumber.Text + "' ";
+                string Query = "select marks from exam_result where student_id in (select id from ogrenciler where classroom_id in (select classroom_id from exam where classroom_id in (select classroom_id from ogrenciler where id = '" + lblStudentNumber.Text + "') ) ) and student_id in (select id from ogrenciler where student_id = '" + lblStudentNumber.Text + "')";
                 MySqlConnection MyConn = new MySqlConnection(MyConnection);
                 MySqlCommand MyCommand1 = new MySqlCommand(Query, MyConn);
 
@@ -121,6 +122,7 @@ namespace OgrenciOtomasyon
                 MessageBox.Show(ex.Message);
             }
         }
+
 
         private void btnExit_Click(object sender, EventArgs e)
         {

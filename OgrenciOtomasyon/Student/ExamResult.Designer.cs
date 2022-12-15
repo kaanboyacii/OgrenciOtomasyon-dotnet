@@ -32,6 +32,12 @@ namespace OgrenciOtomasyon.Student
             this.components = new System.ComponentModel.Container();
             this.btnExit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.examidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseidDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.examresultBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.obsDataSet7 = new OgrenciOtomasyon.obsDataSet7();
             this.btnDelete = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBoxExamId = new System.Windows.Forms.TextBox();
@@ -47,33 +53,33 @@ namespace OgrenciOtomasyon.Student
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.obsDataSet7 = new OgrenciOtomasyon.obsDataSet7();
-            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.courseTableAdapter = new OgrenciOtomasyon.obsDataSet7TableAdapters.courseTableAdapter();
-            this.examresultBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.exam_resultTableAdapter = new OgrenciOtomasyon.obsDataSet7TableAdapters.exam_resultTableAdapter();
-            this.examidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.courseidDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.courseidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gradeidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.courseTableAdapter = new OgrenciOtomasyon.obsDataSet7TableAdapters.courseTableAdapter();
+            this.exam_resultTableAdapter = new OgrenciOtomasyon.obsDataSet7TableAdapters.exam_resultTableAdapter();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.examBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.examTableAdapter = new OgrenciOtomasyon.obsDataSet7TableAdapters.examTableAdapter();
             this.examidDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.examBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.examTableAdapter = new OgrenciOtomasyon.obsDataSet7TableAdapters.examTableAdapter();
+            this.obsDataSet8 = new OgrenciOtomasyon.obsDataSet8();
+            this.courseBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.courseTableAdapter1 = new OgrenciOtomasyon.obsDataSet8TableAdapters.courseTableAdapter();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtBoxClassId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.examresultBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.examresultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.examBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -107,6 +113,48 @@ namespace OgrenciOtomasyon.Student
             this.dataGridView1.Size = new System.Drawing.Size(392, 352);
             this.dataGridView1.TabIndex = 131;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // examidDataGridViewTextBoxColumn
+            // 
+            this.examidDataGridViewTextBoxColumn.DataPropertyName = "exam_id";
+            this.examidDataGridViewTextBoxColumn.HeaderText = "exam_id";
+            this.examidDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.examidDataGridViewTextBoxColumn.Name = "examidDataGridViewTextBoxColumn";
+            this.examidDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // studentidDataGridViewTextBoxColumn
+            // 
+            this.studentidDataGridViewTextBoxColumn.DataPropertyName = "student_id";
+            this.studentidDataGridViewTextBoxColumn.HeaderText = "student_id";
+            this.studentidDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.studentidDataGridViewTextBoxColumn.Name = "studentidDataGridViewTextBoxColumn";
+            this.studentidDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // courseidDataGridViewTextBoxColumn1
+            // 
+            this.courseidDataGridViewTextBoxColumn1.DataPropertyName = "course_id";
+            this.courseidDataGridViewTextBoxColumn1.HeaderText = "course_id";
+            this.courseidDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.courseidDataGridViewTextBoxColumn1.Name = "courseidDataGridViewTextBoxColumn1";
+            this.courseidDataGridViewTextBoxColumn1.Width = 75;
+            // 
+            // marksDataGridViewTextBoxColumn
+            // 
+            this.marksDataGridViewTextBoxColumn.DataPropertyName = "marks";
+            this.marksDataGridViewTextBoxColumn.HeaderText = "marks";
+            this.marksDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.marksDataGridViewTextBoxColumn.Name = "marksDataGridViewTextBoxColumn";
+            this.marksDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // examresultBindingSource
+            // 
+            this.examresultBindingSource.DataMember = "exam_result";
+            this.examresultBindingSource.DataSource = this.obsDataSet7;
+            // 
+            // obsDataSet7
+            // 
+            this.obsDataSet7.DataSetName = "obsDataSet7";
+            this.obsDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnDelete
             // 
@@ -142,7 +190,7 @@ namespace OgrenciOtomasyon.Student
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnClear.Location = new System.Drawing.Point(329, 190);
+            this.btnClear.Location = new System.Drawing.Point(329, 217);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(108, 36);
             this.btnClear.TabIndex = 126;
@@ -180,7 +228,7 @@ namespace OgrenciOtomasyon.Student
             // 
             this.lblNumara.AutoSize = true;
             this.lblNumara.BackColor = System.Drawing.Color.Transparent;
-            this.lblNumara.Location = new System.Drawing.Point(58, 160);
+            this.lblNumara.Location = new System.Drawing.Point(58, 187);
             this.lblNumara.Name = "lblNumara";
             this.lblNumara.Size = new System.Drawing.Size(74, 17);
             this.lblNumara.TabIndex = 123;
@@ -189,7 +237,7 @@ namespace OgrenciOtomasyon.Student
             // txtboxCourseId
             // 
             this.txtboxCourseId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtboxCourseId.Location = new System.Drawing.Point(195, 155);
+            this.txtboxCourseId.Location = new System.Drawing.Point(195, 185);
             this.txtboxCourseId.Name = "txtboxCourseId";
             this.txtboxCourseId.Size = new System.Drawing.Size(242, 24);
             this.txtboxCourseId.TabIndex = 122;
@@ -198,7 +246,7 @@ namespace OgrenciOtomasyon.Student
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(58, 190);
+            this.label1.Location = new System.Drawing.Point(58, 217);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 17);
             this.label1.TabIndex = 121;
@@ -207,7 +255,7 @@ namespace OgrenciOtomasyon.Student
             // txtBoxMark
             // 
             this.txtBoxMark.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBoxMark.Location = new System.Drawing.Point(195, 185);
+            this.txtBoxMark.Location = new System.Drawing.Point(195, 215);
             this.txtBoxMark.Name = "txtBoxMark";
             this.txtBoxMark.Size = new System.Drawing.Size(106, 24);
             this.txtBoxMark.TabIndex = 120;
@@ -257,70 +305,14 @@ namespace OgrenciOtomasyon.Student
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.courseidDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
-            this.descriptionDataGridViewTextBoxColumn,
-            this.gradeidDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.courseBindingSource;
+            this.descriptionDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.courseBindingSource1;
             this.dataGridView2.Location = new System.Drawing.Point(886, 95);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(294, 352);
             this.dataGridView2.TabIndex = 133;
-            // 
-            // obsDataSet7
-            // 
-            this.obsDataSet7.DataSetName = "obsDataSet7";
-            this.obsDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // courseBindingSource
-            // 
-            this.courseBindingSource.DataMember = "course";
-            this.courseBindingSource.DataSource = this.obsDataSet7;
-            // 
-            // courseTableAdapter
-            // 
-            this.courseTableAdapter.ClearBeforeFill = true;
-            // 
-            // examresultBindingSource
-            // 
-            this.examresultBindingSource.DataMember = "exam_result";
-            this.examresultBindingSource.DataSource = this.obsDataSet7;
-            // 
-            // exam_resultTableAdapter
-            // 
-            this.exam_resultTableAdapter.ClearBeforeFill = true;
-            // 
-            // examidDataGridViewTextBoxColumn
-            // 
-            this.examidDataGridViewTextBoxColumn.DataPropertyName = "exam_id";
-            this.examidDataGridViewTextBoxColumn.HeaderText = "exam_id";
-            this.examidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.examidDataGridViewTextBoxColumn.Name = "examidDataGridViewTextBoxColumn";
-            this.examidDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // studentidDataGridViewTextBoxColumn
-            // 
-            this.studentidDataGridViewTextBoxColumn.DataPropertyName = "student_id";
-            this.studentidDataGridViewTextBoxColumn.HeaderText = "student_id";
-            this.studentidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.studentidDataGridViewTextBoxColumn.Name = "studentidDataGridViewTextBoxColumn";
-            this.studentidDataGridViewTextBoxColumn.Width = 75;
-            // 
-            // courseidDataGridViewTextBoxColumn1
-            // 
-            this.courseidDataGridViewTextBoxColumn1.DataPropertyName = "course_id";
-            this.courseidDataGridViewTextBoxColumn1.HeaderText = "course_id";
-            this.courseidDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.courseidDataGridViewTextBoxColumn1.Name = "courseidDataGridViewTextBoxColumn1";
-            this.courseidDataGridViewTextBoxColumn1.Width = 75;
-            // 
-            // marksDataGridViewTextBoxColumn
-            // 
-            this.marksDataGridViewTextBoxColumn.DataPropertyName = "marks";
-            this.marksDataGridViewTextBoxColumn.HeaderText = "marks";
-            this.marksDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.marksDataGridViewTextBoxColumn.Name = "marksDataGridViewTextBoxColumn";
-            this.marksDataGridViewTextBoxColumn.Width = 50;
             // 
             // courseidDataGridViewTextBoxColumn
             // 
@@ -347,14 +339,18 @@ namespace OgrenciOtomasyon.Student
             this.descriptionDataGridViewTextBoxColumn.Visible = false;
             this.descriptionDataGridViewTextBoxColumn.Width = 125;
             // 
-            // gradeidDataGridViewTextBoxColumn
+            // courseBindingSource
             // 
-            this.gradeidDataGridViewTextBoxColumn.DataPropertyName = "grade_id";
-            this.gradeidDataGridViewTextBoxColumn.HeaderText = "grade_id";
-            this.gradeidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.gradeidDataGridViewTextBoxColumn.Name = "gradeidDataGridViewTextBoxColumn";
-            this.gradeidDataGridViewTextBoxColumn.Visible = false;
-            this.gradeidDataGridViewTextBoxColumn.Width = 125;
+            this.courseBindingSource.DataMember = "course";
+            this.courseBindingSource.DataSource = this.obsDataSet7;
+            // 
+            // courseTableAdapter
+            // 
+            this.courseTableAdapter.ClearBeforeFill = true;
+            // 
+            // exam_resultTableAdapter
+            // 
+            this.exam_resultTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridView3
             // 
@@ -371,15 +367,6 @@ namespace OgrenciOtomasyon.Student
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.Size = new System.Drawing.Size(336, 352);
             this.dataGridView3.TabIndex = 134;
-            // 
-            // examBindingSource
-            // 
-            this.examBindingSource.DataMember = "exam";
-            this.examBindingSource.DataSource = this.obsDataSet7;
-            // 
-            // examTableAdapter
-            // 
-            this.examTableAdapter.ClearBeforeFill = true;
             // 
             // examidDataGridViewTextBoxColumn1
             // 
@@ -405,11 +392,54 @@ namespace OgrenciOtomasyon.Student
             this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
             this.startDateDataGridViewTextBoxColumn.Width = 125;
             // 
+            // examBindingSource
+            // 
+            this.examBindingSource.DataMember = "exam";
+            this.examBindingSource.DataSource = this.obsDataSet7;
+            // 
+            // examTableAdapter
+            // 
+            this.examTableAdapter.ClearBeforeFill = true;
+            // 
+            // obsDataSet8
+            // 
+            this.obsDataSet8.DataSetName = "obsDataSet8";
+            this.obsDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // courseBindingSource1
+            // 
+            this.courseBindingSource1.DataMember = "course";
+            this.courseBindingSource1.DataSource = this.obsDataSet8;
+            // 
+            // courseTableAdapter1
+            // 
+            this.courseTableAdapter1.ClearBeforeFill = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(58, 160);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(95, 17);
+            this.label5.TabIndex = 136;
+            this.label5.Text = "Classroom ID:";
+            // 
+            // txtBoxClassId
+            // 
+            this.txtBoxClassId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtBoxClassId.Location = new System.Drawing.Point(195, 155);
+            this.txtBoxClassId.Name = "txtBoxClassId";
+            this.txtBoxClassId.Size = new System.Drawing.Size(242, 24);
+            this.txtBoxClassId.TabIndex = 135;
+            // 
             // ExamResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1551, 459);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtBoxClassId);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.btnExit);
@@ -434,13 +464,15 @@ namespace OgrenciOtomasyon.Student
             this.Text = "Bilgi School Student Management System";
             this.Load += new System.EventHandler(this.ExamResult_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.examresultBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.examresultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.examBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -477,12 +509,16 @@ namespace OgrenciOtomasyon.Student
         private System.Windows.Forms.DataGridViewTextBoxColumn courseidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gradeidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.BindingSource examBindingSource;
         private obsDataSet7TableAdapters.examTableAdapter examTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn examidDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
+        private obsDataSet8 obsDataSet8;
+        private System.Windows.Forms.BindingSource courseBindingSource1;
+        private obsDataSet8TableAdapters.courseTableAdapter courseTableAdapter1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtBoxClassId;
     }
 }

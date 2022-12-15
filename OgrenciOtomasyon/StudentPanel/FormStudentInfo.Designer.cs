@@ -60,6 +60,8 @@ namespace OgrenciOtomasyon
             this.listView2 = new System.Windows.Forms.ListView();
             this.marks = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnExamCalender = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrenciler1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obsDataSet)).BeginInit();
@@ -69,7 +71,7 @@ namespace OgrenciOtomasyon
             // 
             this.lblMidterm.AutoSize = true;
             this.lblMidterm.BackColor = System.Drawing.Color.Transparent;
-            this.lblMidterm.Location = new System.Drawing.Point(54, 243);
+            this.lblMidterm.Location = new System.Drawing.Point(57, 259);
             this.lblMidterm.Name = "lblMidterm";
             this.lblMidterm.Size = new System.Drawing.Size(60, 17);
             this.lblMidterm.TabIndex = 98;
@@ -79,7 +81,7 @@ namespace OgrenciOtomasyon
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(53, 280);
+            this.label4.Location = new System.Drawing.Point(57, 287);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 17);
             this.label4.TabIndex = 95;
@@ -89,7 +91,7 @@ namespace OgrenciOtomasyon
             // 
             this.lblNumara.AutoSize = true;
             this.lblNumara.BackColor = System.Drawing.Color.Transparent;
-            this.lblNumara.Location = new System.Drawing.Point(55, 215);
+            this.lblNumara.Location = new System.Drawing.Point(57, 203);
             this.lblNumara.Name = "lblNumara";
             this.lblNumara.Size = new System.Drawing.Size(78, 17);
             this.lblNumara.TabIndex = 91;
@@ -99,7 +101,7 @@ namespace OgrenciOtomasyon
             // 
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.BackColor = System.Drawing.Color.Transparent;
-            this.lblFirstName.Location = new System.Drawing.Point(53, 149);
+            this.lblFirstName.Location = new System.Drawing.Point(57, 147);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(78, 17);
             this.lblFirstName.TabIndex = 89;
@@ -110,7 +112,7 @@ namespace OgrenciOtomasyon
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Teal;
             this.label3.Font = new System.Drawing.Font("Dubai", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 10);
+            this.label3.Location = new System.Drawing.Point(48, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(482, 67);
             this.label3.TabIndex = 85;
@@ -168,7 +170,7 @@ namespace OgrenciOtomasyon
             // 
             this.lblLastName.AutoSize = true;
             this.lblLastName.BackColor = System.Drawing.Color.Transparent;
-            this.lblLastName.Location = new System.Drawing.Point(53, 182);
+            this.lblLastName.Location = new System.Drawing.Point(57, 175);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(78, 17);
             this.lblLastName.TabIndex = 106;
@@ -178,7 +180,7 @@ namespace OgrenciOtomasyon
             // 
             this.lblNationality.AutoSize = true;
             this.lblNationality.BackColor = System.Drawing.Color.Transparent;
-            this.lblNationality.Location = new System.Drawing.Point(53, 314);
+            this.lblNationality.Location = new System.Drawing.Point(57, 315);
             this.lblNationality.Name = "lblNationality";
             this.lblNationality.Size = new System.Drawing.Size(64, 17);
             this.lblNationality.TabIndex = 107;
@@ -195,7 +197,7 @@ namespace OgrenciOtomasyon
             // 
             // txtBoxLastName
             // 
-            this.txtBoxLastName.Location = new System.Drawing.Point(178, 179);
+            this.txtBoxLastName.Location = new System.Drawing.Point(178, 172);
             this.txtBoxLastName.Name = "txtBoxLastName";
             this.txtBoxLastName.ReadOnly = true;
             this.txtBoxLastName.Size = new System.Drawing.Size(229, 22);
@@ -203,7 +205,7 @@ namespace OgrenciOtomasyon
             // 
             // txtBoxId
             // 
-            this.txtBoxId.Location = new System.Drawing.Point(178, 212);
+            this.txtBoxId.Location = new System.Drawing.Point(176, 200);
             this.txtBoxId.Name = "txtBoxId";
             this.txtBoxId.ReadOnly = true;
             this.txtBoxId.Size = new System.Drawing.Size(229, 22);
@@ -211,7 +213,7 @@ namespace OgrenciOtomasyon
             // 
             // txtBoxContact
             // 
-            this.txtBoxContact.Location = new System.Drawing.Point(178, 240);
+            this.txtBoxContact.Location = new System.Drawing.Point(176, 256);
             this.txtBoxContact.Name = "txtBoxContact";
             this.txtBoxContact.ReadOnly = true;
             this.txtBoxContact.Size = new System.Drawing.Size(229, 22);
@@ -219,7 +221,7 @@ namespace OgrenciOtomasyon
             // 
             // txtBoxGender
             // 
-            this.txtBoxGender.Location = new System.Drawing.Point(178, 277);
+            this.txtBoxGender.Location = new System.Drawing.Point(176, 284);
             this.txtBoxGender.Name = "txtBoxGender";
             this.txtBoxGender.ReadOnly = true;
             this.txtBoxGender.Size = new System.Drawing.Size(229, 22);
@@ -227,7 +229,7 @@ namespace OgrenciOtomasyon
             // 
             // txtBoxAddress
             // 
-            this.txtBoxAddress.Location = new System.Drawing.Point(178, 311);
+            this.txtBoxAddress.Location = new System.Drawing.Point(176, 312);
             this.txtBoxAddress.Multiline = true;
             this.txtBoxAddress.Name = "txtBoxAddress";
             this.txtBoxAddress.ReadOnly = true;
@@ -239,7 +241,7 @@ namespace OgrenciOtomasyon
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(53, 96);
+            this.label1.Location = new System.Drawing.Point(55, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(226, 29);
             this.label1.TabIndex = 121;
@@ -250,7 +252,7 @@ namespace OgrenciOtomasyon
             this.button1.BackColor = System.Drawing.Color.Green;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(56, 354);
+            this.button1.Location = new System.Drawing.Point(60, 354);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 32);
             this.button1.TabIndex = 122;
@@ -263,7 +265,7 @@ namespace OgrenciOtomasyon
             this.btnChangePassword.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnChangePassword.ForeColor = System.Drawing.Color.White;
-            this.btnChangePassword.Location = new System.Drawing.Point(58, 404);
+            this.btnChangePassword.Location = new System.Drawing.Point(56, 404);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(349, 48);
             this.btnChangePassword.TabIndex = 123;
@@ -335,11 +337,31 @@ namespace OgrenciOtomasyon
             this.btnExamCalender.UseVisualStyleBackColor = false;
             this.btnExamCalender.Click += new System.EventHandler(this.btnExamCalender_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(176, 228);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(229, 22);
+            this.textBox1.TabIndex = 131;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(57, 231);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(95, 17);
+            this.label5.TabIndex = 130;
+            this.label5.Text = "Classroom ID:";
+            // 
             // FormStudentInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1211, 496);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnExamCalender);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
@@ -406,5 +428,7 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.ColumnHeader marks;
         private System.Windows.Forms.Button btnExamCalender;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label5;
     }
 }

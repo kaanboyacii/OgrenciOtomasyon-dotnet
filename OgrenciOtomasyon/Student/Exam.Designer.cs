@@ -32,6 +32,9 @@ namespace OgrenciOtomasyon.Student
             this.components = new System.ComponentModel.Container();
             this.btnExit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.examidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.examBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.obsDataSet7 = new OgrenciOtomasyon.obsDataSet7();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -47,9 +50,8 @@ namespace OgrenciOtomasyon.Student
             this.label2 = new System.Windows.Forms.Label();
             this.dateStartDateTime = new System.Windows.Forms.DateTimePicker();
             this.examTableAdapter = new OgrenciOtomasyon.obsDataSet7TableAdapters.examTableAdapter();
-            this.examidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBoxClassId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.examBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obsDataSet7)).BeginInit();
@@ -87,6 +89,30 @@ namespace OgrenciOtomasyon.Student
             this.dataGridView1.TabIndex = 127;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // examidDataGridViewTextBoxColumn
+            // 
+            this.examidDataGridViewTextBoxColumn.DataPropertyName = "exam_id";
+            this.examidDataGridViewTextBoxColumn.HeaderText = "exam_id";
+            this.examidDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.examidDataGridViewTextBoxColumn.Name = "examidDataGridViewTextBoxColumn";
+            this.examidDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // startDateDataGridViewTextBoxColumn
+            // 
+            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "start_Date";
+            this.startDateDataGridViewTextBoxColumn.HeaderText = "start_Date";
+            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
+            this.startDateDataGridViewTextBoxColumn.Width = 125;
+            // 
             // examBindingSource
             // 
             this.examBindingSource.DataMember = "exam";
@@ -121,7 +147,7 @@ namespace OgrenciOtomasyon.Student
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnClear.Location = new System.Drawing.Point(56, 196);
+            this.btnClear.Location = new System.Drawing.Point(58, 212);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(108, 36);
             this.btnClear.TabIndex = 123;
@@ -158,7 +184,7 @@ namespace OgrenciOtomasyon.Student
             // txtBoxName
             // 
             this.txtBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBoxName.Location = new System.Drawing.Point(192, 125);
+            this.txtBoxName.Location = new System.Drawing.Point(192, 155);
             this.txtBoxName.Name = "txtBoxName";
             this.txtBoxName.Size = new System.Drawing.Size(242, 24);
             this.txtBoxName.TabIndex = 118;
@@ -197,7 +223,7 @@ namespace OgrenciOtomasyon.Student
             // 
             this.lblNumara.AutoSize = true;
             this.lblNumara.BackColor = System.Drawing.Color.Transparent;
-            this.lblNumara.Location = new System.Drawing.Point(55, 160);
+            this.lblNumara.Location = new System.Drawing.Point(55, 184);
             this.lblNumara.Name = "lblNumara";
             this.lblNumara.Size = new System.Drawing.Size(76, 17);
             this.lblNumara.TabIndex = 131;
@@ -207,7 +233,7 @@ namespace OgrenciOtomasyon.Student
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(55, 130);
+            this.label2.Location = new System.Drawing.Point(55, 160);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 17);
             this.label2.TabIndex = 129;
@@ -217,7 +243,7 @@ namespace OgrenciOtomasyon.Student
             // 
             this.dateStartDateTime.CustomFormat = "yyyy-MM-dd";
             this.dateStartDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateStartDateTime.Location = new System.Drawing.Point(192, 160);
+            this.dateStartDateTime.Location = new System.Drawing.Point(192, 184);
             this.dateStartDateTime.Margin = new System.Windows.Forms.Padding(4);
             this.dateStartDateTime.Name = "dateStartDateTime";
             this.dateStartDateTime.Size = new System.Drawing.Size(242, 22);
@@ -228,35 +254,31 @@ namespace OgrenciOtomasyon.Student
             // 
             this.examTableAdapter.ClearBeforeFill = true;
             // 
-            // examidDataGridViewTextBoxColumn
+            // label1
             // 
-            this.examidDataGridViewTextBoxColumn.DataPropertyName = "exam_id";
-            this.examidDataGridViewTextBoxColumn.HeaderText = "exam_id";
-            this.examidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.examidDataGridViewTextBoxColumn.Name = "examidDataGridViewTextBoxColumn";
-            this.examidDataGridViewTextBoxColumn.Width = 50;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(55, 130);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 17);
+            this.label1.TabIndex = 135;
+            this.label1.Text = "Classroom ID:";
             // 
-            // nameDataGridViewTextBoxColumn
+            // txtBoxClassId
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // startDateDataGridViewTextBoxColumn
-            // 
-            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "start_Date";
-            this.startDateDataGridViewTextBoxColumn.HeaderText = "start_Date";
-            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
-            this.startDateDataGridViewTextBoxColumn.Width = 125;
+            this.txtBoxClassId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtBoxClassId.Location = new System.Drawing.Point(192, 125);
+            this.txtBoxClassId.Name = "txtBoxClassId";
+            this.txtBoxClassId.Size = new System.Drawing.Size(242, 24);
+            this.txtBoxClassId.TabIndex = 134;
             // 
             // Exam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(902, 459);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtBoxClassId);
             this.Controls.Add(this.dateStartDateTime);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblNumara);
@@ -308,5 +330,7 @@ namespace OgrenciOtomasyon.Student
         private System.Windows.Forms.DataGridViewTextBoxColumn examidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBoxClassId;
     }
 }

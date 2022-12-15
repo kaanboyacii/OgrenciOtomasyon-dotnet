@@ -22,12 +22,12 @@ namespace OgrenciOtomasyon.Student
 
         private void ExamResult_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'obsDataSet8.course' table. You can move, or remove it, as needed.
+            this.courseTableAdapter1.Fill(this.obsDataSet8.course);
             // TODO: This line of code loads data into the 'obsDataSet7.exam' table. You can move, or remove it, as needed.
             this.examTableAdapter.Fill(this.obsDataSet7.exam);
             // TODO: This line of code loads data into the 'obsDataSet7.exam_result' table. You can move, or remove it, as needed.
             this.exam_resultTableAdapter.Fill(this.obsDataSet7.exam_result);
-            // TODO: This line of code loads data into the 'obsDataSet7.course' table. You can move, or remove it, as needed.
-            this.courseTableAdapter.Fill(this.obsDataSet7.course);
             examResultListele();
         }
         private void examResultListele()
@@ -68,7 +68,7 @@ namespace OgrenciOtomasyon.Student
                 //This is my connection string i have assigned the database file address path
                 string MyConnection2 = "server=localhost;user id=root;database=obs";
                 //This is my insert query in which i am taking input from the user through windows forms
-                string Query = "insert into exam_result(exam_id,student_id,course_id,marks) values('" + this.txtBoxExamId.Text + "','" + this.txtBoxStudentId.Text + "','" + this.txtboxCourseId.Text + "','" + this.txtBoxMark.Text + "');";
+                string Query = "insert into exam_result(exam_id,student_id,course_id,marks,classroom_id) values('" + this.txtBoxExamId.Text + "','" + this.txtBoxStudentId.Text + "','" + this.txtboxCourseId.Text + "','" + this.txtBoxMark.Text + "','" + this.txtBoxClassId.Text + "');";
                 //This is  MySqlConnection here i have created the object and pass my connection string.
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 //This is command class which will handle the query and connection object.
@@ -95,7 +95,7 @@ namespace OgrenciOtomasyon.Student
             try
             {
                 string MyConnection2 = "server=localhost;user id=root;database=obs";
-                string Query = "update exam_result set exam_id='" + this.txtBoxExamId.Text + "',student_id='" + this.txtBoxStudentId.Text + "',course_id='" + this.txtboxCourseId.Text + "',marks='" + this.txtBoxMark.Text + "' where exam_id='" + this.txtBoxExamId.Text + "';";
+                string Query = "update exam_result set exam_id='" + this.txtBoxExamId.Text + "',student_id='" + this.txtBoxStudentId.Text + "',course_id='" + this.txtboxCourseId.Text + "',marks='" + this.txtBoxMark.Text + "',classroom_id='" + this.txtBoxClassId.Text + "' where exam_id='" + this.txtBoxExamId.Text + "';";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                 MySqlDataReader MyReader2;
@@ -151,6 +151,7 @@ namespace OgrenciOtomasyon.Student
         {
             txtBoxExamId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             txtBoxStudentId.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtBoxClassId.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             txtboxCourseId.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             txtBoxMark.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
         }
