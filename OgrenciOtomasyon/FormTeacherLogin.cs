@@ -59,6 +59,7 @@ namespace OgrenciOtomasyon
 
         private void FormTeacherLogin_Load(object sender, EventArgs e)
         {
+            this.ActiveControl = txtBoxUserName;
             txtBoxPassword.UseSystemPasswordChar = true;
         }
     }

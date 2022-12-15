@@ -35,11 +35,6 @@ namespace OgrenciOtomasyon
 
         }
 
-        private void Form1_Load_1(object sender, EventArgs e)
-        {
-            txtBoxPassword.UseSystemPasswordChar = true;
-        }
-
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
@@ -86,6 +81,11 @@ namespace OgrenciOtomasyon
             frmTeacherLogin.Show();
             this.Hide();
 
+        }
+
+        private void Form1_Load_2(object sender, EventArgs e)
+        {
+            this.ActiveControl = txtBoxUserName;
         }
     }
 }

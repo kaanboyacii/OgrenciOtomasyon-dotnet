@@ -39,8 +39,10 @@ namespace OgrenciOtomasyon
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtBoxPassword = new System.Windows.Forms.TextBox();
             this.txtBoxUserName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -81,7 +83,7 @@ namespace OgrenciOtomasyon
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnClear.Location = new System.Drawing.Point(357, 217);
+            this.btnClear.Location = new System.Drawing.Point(357, 233);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(90, 30);
             this.btnClear.TabIndex = 31;
@@ -126,41 +128,59 @@ namespace OgrenciOtomasyon
             // 
             // txtBoxPassword
             // 
-            this.txtBoxPassword.Location = new System.Drawing.Point(204, 174);
-            this.txtBoxPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxPassword.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtBoxPassword.ForeColor = System.Drawing.Color.Teal;
+            this.txtBoxPassword.Location = new System.Drawing.Point(176, 197);
             this.txtBoxPassword.Name = "txtBoxPassword";
-            this.txtBoxPassword.Size = new System.Drawing.Size(243, 22);
-            this.txtBoxPassword.TabIndex = 27;
+            this.txtBoxPassword.Size = new System.Drawing.Size(174, 20);
+            this.txtBoxPassword.TabIndex = 40;
+            this.txtBoxPassword.UseSystemPasswordChar = true;
             // 
             // txtBoxUserName
             // 
-            this.txtBoxUserName.Location = new System.Drawing.Point(204, 119);
-            this.txtBoxUserName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxUserName.ForeColor = System.Drawing.Color.Teal;
+            this.txtBoxUserName.Location = new System.Drawing.Point(177, 141);
             this.txtBoxUserName.Name = "txtBoxUserName";
-            this.txtBoxUserName.Size = new System.Drawing.Size(243, 22);
-            this.txtBoxUserName.TabIndex = 26;
+            this.txtBoxUserName.Size = new System.Drawing.Size(174, 15);
+            this.txtBoxUserName.TabIndex = 39;
             // 
-            // label2
+            // panel2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(57, 172);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 26);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "Password:";
+            this.panel2.BackColor = System.Drawing.Color.Teal;
+            this.panel2.Location = new System.Drawing.Point(61, 222);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(289, 3);
+            this.panel2.TabIndex = 38;
             // 
-            // label1
+            // panel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(53, 117);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 26);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Username:";
+            this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Location = new System.Drawing.Point(62, 168);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(289, 3);
+            this.panel1.TabIndex = 37;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPassword.Location = new System.Drawing.Point(57, 193);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(107, 26);
+            this.lblPassword.TabIndex = 36;
+            this.lblPassword.Text = "Password:";
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUsername.Location = new System.Drawing.Point(57, 135);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(113, 26);
+            this.lblUsername.TabIndex = 35;
+            this.lblUsername.Text = "Username:";
             // 
             // FormTeacherLogin
             // 
@@ -168,6 +188,12 @@ namespace OgrenciOtomasyon
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtBoxPassword);
+            this.Controls.Add(this.txtBoxUserName);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
@@ -175,10 +201,6 @@ namespace OgrenciOtomasyon
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.txtBoxPassword);
-            this.Controls.Add(this.txtBoxUserName);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormTeacherLogin";
@@ -203,7 +225,9 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txtBoxPassword;
         private System.Windows.Forms.TextBox txtBoxUserName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblUsername;
     }
 }

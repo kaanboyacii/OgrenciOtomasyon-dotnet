@@ -30,8 +30,8 @@ namespace OgrenciOtomasyon
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.lblMidterm = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblNumara = new System.Windows.Forms.Label();
@@ -39,16 +39,6 @@ namespace OgrenciOtomasyon
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numaraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.programDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.finalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ortalamaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.durumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ogrenciler1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.obsDataSet = new OgrenciOtomasyon.obsDataSet();
             this.ogrenciler1TableAdapter = new OgrenciOtomasyon.obsDataSetTableAdapters.ogrenciler1TableAdapter();
@@ -71,7 +61,6 @@ namespace OgrenciOtomasyon
             this.marks = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnExamCalender = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrenciler1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obsDataSet)).BeginInit();
             this.SuspendLayout();
@@ -149,101 +138,6 @@ namespace OgrenciOtomasyon
             this.btnExit.Text = "Log Out";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.adDataGridViewTextBoxColumn,
-            this.soyadDataGridViewTextBoxColumn,
-            this.numaraDataGridViewTextBoxColumn,
-            this.programDataGridViewTextBoxColumn,
-            this.vizeDataGridViewTextBoxColumn,
-            this.finalDataGridViewTextBoxColumn,
-            this.ortalamaDataGridViewTextBoxColumn,
-            this.durumDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.ogrenciler1BindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(1057, 441);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(266, 81);
-            this.dataGridView1.TabIndex = 103;
-            this.dataGridView1.Visible = false;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // adDataGridViewTextBoxColumn
-            // 
-            this.adDataGridViewTextBoxColumn.DataPropertyName = "ad";
-            this.adDataGridViewTextBoxColumn.HeaderText = "ad";
-            this.adDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.adDataGridViewTextBoxColumn.Name = "adDataGridViewTextBoxColumn";
-            this.adDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // soyadDataGridViewTextBoxColumn
-            // 
-            this.soyadDataGridViewTextBoxColumn.DataPropertyName = "soyad";
-            this.soyadDataGridViewTextBoxColumn.HeaderText = "soyad";
-            this.soyadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.soyadDataGridViewTextBoxColumn.Name = "soyadDataGridViewTextBoxColumn";
-            this.soyadDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // numaraDataGridViewTextBoxColumn
-            // 
-            this.numaraDataGridViewTextBoxColumn.DataPropertyName = "numara";
-            this.numaraDataGridViewTextBoxColumn.HeaderText = "numara";
-            this.numaraDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.numaraDataGridViewTextBoxColumn.Name = "numaraDataGridViewTextBoxColumn";
-            this.numaraDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // programDataGridViewTextBoxColumn
-            // 
-            this.programDataGridViewTextBoxColumn.DataPropertyName = "program";
-            this.programDataGridViewTextBoxColumn.HeaderText = "program";
-            this.programDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.programDataGridViewTextBoxColumn.Name = "programDataGridViewTextBoxColumn";
-            this.programDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // vizeDataGridViewTextBoxColumn
-            // 
-            this.vizeDataGridViewTextBoxColumn.DataPropertyName = "vize";
-            this.vizeDataGridViewTextBoxColumn.HeaderText = "vize";
-            this.vizeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vizeDataGridViewTextBoxColumn.Name = "vizeDataGridViewTextBoxColumn";
-            this.vizeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // finalDataGridViewTextBoxColumn
-            // 
-            this.finalDataGridViewTextBoxColumn.DataPropertyName = "final";
-            this.finalDataGridViewTextBoxColumn.HeaderText = "final";
-            this.finalDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.finalDataGridViewTextBoxColumn.Name = "finalDataGridViewTextBoxColumn";
-            this.finalDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // ortalamaDataGridViewTextBoxColumn
-            // 
-            this.ortalamaDataGridViewTextBoxColumn.DataPropertyName = "ortalama";
-            this.ortalamaDataGridViewTextBoxColumn.HeaderText = "ortalama";
-            this.ortalamaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ortalamaDataGridViewTextBoxColumn.Name = "ortalamaDataGridViewTextBoxColumn";
-            this.ortalamaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // durumDataGridViewTextBoxColumn
-            // 
-            this.durumDataGridViewTextBoxColumn.DataPropertyName = "durum";
-            this.durumDataGridViewTextBoxColumn.HeaderText = "durum";
-            this.durumDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.durumDataGridViewTextBoxColumn.Name = "durumDataGridViewTextBoxColumn";
-            this.durumDataGridViewTextBoxColumn.Width = 125;
             // 
             // ogrenciler1BindingSource
             // 
@@ -394,7 +288,7 @@ namespace OgrenciOtomasyon
             this.name});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5});
+            listViewItem1});
             this.listView1.Location = new System.Drawing.Point(454, 144);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(154, 242);
@@ -414,7 +308,7 @@ namespace OgrenciOtomasyon
             this.marks});
             this.listView2.HideSelection = false;
             this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem6});
+            listViewItem2});
             this.listView2.Location = new System.Drawing.Point(608, 144);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(135, 242);
@@ -462,7 +356,6 @@ namespace OgrenciOtomasyon
             this.Controls.Add(this.lblNationality);
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.lblStudentNumber);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblMidterm);
             this.Controls.Add(this.label4);
@@ -477,7 +370,6 @@ namespace OgrenciOtomasyon
             this.Text = "Bilgi School Student Information System";
             this.Load += new System.EventHandler(this.FormStudentInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrenciler1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.obsDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -493,19 +385,9 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private obsDataSet obsDataSet;
         private System.Windows.Forms.BindingSource ogrenciler1BindingSource;
         private obsDataSetTableAdapters.ogrenciler1TableAdapter ogrenciler1TableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soyadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numaraDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn programDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vizeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn finalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ortalamaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn durumDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label lblStudentNumber;
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblNationality;
