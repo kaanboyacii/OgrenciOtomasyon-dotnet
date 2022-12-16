@@ -87,7 +87,7 @@ namespace OgrenciOtomasyon
                 //This is my connection string i have assigned the database file address path
                 string MyConnection2 = "server=localhost;user id=root;database=obs";
                 //This is my insert query in which i am taking input from the user through windows forms
-                string Query = "insert into ogrenciler(id,ad,soyad,classroom_id,iletisim,cinsiyet,adres) values('" + this.txtBoxId.Text + "','" + this.txtBoxFirstName.Text + "','" + this.txtBoxLastName.Text + "','" + "','" + this.txtBoxClass.Text + "','" + this.txtboxNumber.Text + "','" + gender + "','" + this.txtBoxAdres.Text + "');";
+                string Query = "insert into ogrenciler(id,ad,soyad,classroom_id,iletisim,cinsiyet,adres) values('" + this.txtBoxId.Text + "','" + this.txtBoxFirstName.Text + "','" + this.txtBoxLastName.Text + "','" + this.txtBoxClass.Text + "','" + this.txtboxNumber.Text + "','" + gender + "','" + this.txtBoxAdres.Text + "');";
                 //This is  MySqlConnection here i have created the object and pass my connection string.
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 //This is command class which will handle the query and connection object.

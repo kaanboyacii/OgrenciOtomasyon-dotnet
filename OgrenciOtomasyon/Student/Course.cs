@@ -28,6 +28,10 @@ namespace OgrenciOtomasyon.Student
 
         private void Course_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'obsDataSet9.course' table. You can move, or remove it, as needed.
+            this.courseTableAdapter2.Fill(this.obsDataSet9.course);
+            // TODO: This line of code loads data into the 'obsDataSet8.course' table. You can move, or remove it, as needed.
+            this.courseTableAdapter1.Fill(this.obsDataSet8.course);
             courseListele();
 
         }
@@ -36,8 +40,7 @@ namespace OgrenciOtomasyon.Student
             try
             {
                 string MyConnection2 = "server=localhost;user id=root;database=obs";
-                //Display query
-                string Query = "select * from course ";
+                string Query = "select * from course where classroom_id in (select classroom_id from classroom where teacher_id = '" + TeacherId + "') ";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                 //  MyConn2.Open();
@@ -59,17 +62,13 @@ namespace OgrenciOtomasyon.Student
         {
             try
             {
-                //This is my connection string i have assigned the database file address path
-                string MyConnection2 = "server=localhost;user id=root;database=obs";
-                //This is my insert query in which i am taking input from the user through windows forms
-                string Query = "insert into course(course_id,name,grade_id,description) values('" + this.txtBoxId.Text + "','" + this.txtBoxName.Text + "','" + this.txtboxGradeId.Text +  "','" + this.txtBoxDesc.Text + "');";
-                //This is  MySqlConnection here i have created the object and pass my connection string.
+                string MyConnection2 = "server=localhost;user id=root;database=obs"; 
+                string Query = "insert into course(course_id,name,classroom_id,description) values('" + this.txtBoxId.Text + "','" + this.txtBoxName.Text + "','" + this.txtboxClassId.Text + "','" + this.txtBoxDesc.Text + "');";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
-                //This is command class which will handle the query and connection object.
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                 MySqlDataReader MyReader2;
                 MyConn2.Open();
-                MyReader2 = MyCommand2.ExecuteReader();     // Here our query will be executed and data saved into the database.
+                MyReader2 = MyCommand2.ExecuteReader();
                 MessageBox.Show("Added Course");
                 //ortalamaHesap();
                 while (MyReader2.Read())
@@ -88,7 +87,7 @@ namespace OgrenciOtomasyon.Student
         {
             txtBoxId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             txtBoxName.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            txtboxGradeId.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            txtboxClassId.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             txtBoxDesc.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
         }
 
@@ -97,7 +96,7 @@ namespace OgrenciOtomasyon.Student
             try
             {
                 string MyConnection2 = "server=localhost;user id=root;database=obs";
-                string Query = "update course set course_id='" + this.txtBoxId.Text + "',name='" + this.txtBoxName.Text + "',grade_id='" + this.txtboxGradeId.Text + "',description='" + this.txtBoxDesc.Text + "' where course_id='" + this.txtBoxId.Text + "';";
+                string Query = "update course set course_id='" + this.txtBoxId.Text + "',name='" + this.txtBoxName.Text + "',grade_id='" + this.txtboxClassId.Text + "',description='" + this.txtBoxDesc.Text + "' where course_id='" + this.txtBoxId.Text + "';";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                 MySqlDataReader MyReader2;
@@ -127,7 +126,7 @@ namespace OgrenciOtomasyon.Student
         {
             txtBoxId.Clear();
             txtBoxName.Clear();
-            txtboxGradeId.Clear();
+            txtboxClassId.Clear();
             txtBoxDesc.Clear();
             txtBoxId.Focus();
         }
