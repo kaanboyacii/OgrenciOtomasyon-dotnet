@@ -18,6 +18,12 @@ namespace OgrenciOtomasyon.Student
         {
             InitializeComponent();
         }
+        public Exam(string TeaId)
+        {
+            InitializeComponent();
+            this.TeacherId = TeaId;
+        }
+        public string TeacherId { get; set; }
 
         private void Exam_Load(object sender, EventArgs e)
         {
@@ -30,18 +36,14 @@ namespace OgrenciOtomasyon.Student
             try
             {
                 string MyConnection2 = "server=localhost;user id=root;database=obs";
-                //Display query
                 string Query = "select * from exam ";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
-                //  MyConn2.Open();
-                //For offline connection we weill use  MySqlDataAdapter class.
                 MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
                 MyAdapter.SelectCommand = MyCommand2;
                 DataTable dTable = new DataTable();
                 MyAdapter.Fill(dTable);
-                dataGridView1.DataSource = dTable; // here i have assign dTable object to the dataGridView1 object to display data.
-                                                   // MyConn2.Close();
+                dataGridView1.DataSource = dTable;
             }
             catch (Exception ex)
             {
@@ -51,7 +53,7 @@ namespace OgrenciOtomasyon.Student
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Form2 frm2 = new Form2();
+            Form2 frm2 = new Form2(TeacherId);
             frm2.Show();
             this.Hide();
         }

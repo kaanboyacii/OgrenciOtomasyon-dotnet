@@ -19,6 +19,13 @@ namespace OgrenciOtomasyon.Student
         {
             InitializeComponent();
         }
+        public ExamResult(string TeaId)
+        {
+            InitializeComponent();
+            this.TeacherId = TeaId;
+        }
+        public string TeacherId { get; set; }
+
 
         private void ExamResult_Load(object sender, EventArgs e)
         {
@@ -56,7 +63,7 @@ namespace OgrenciOtomasyon.Student
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Form2 frm2 = new Form2();
+            Form2 frm2 = new Form2(TeacherId);
             frm2.Show();
             this.Hide();
         }

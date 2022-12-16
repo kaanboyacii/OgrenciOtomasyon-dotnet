@@ -206,21 +206,21 @@ namespace OgrenciOtomasyon
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Student.Course course = new Student.Course();
+            Student.Course course = new Student.Course(TeacherId);
             course.Show();
             this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Student.Exam exam = new Student.Exam();
+            Student.Exam exam = new Student.Exam(TeacherId);
             exam.Show();
             this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Student.ExamResult examre = new Student.ExamResult();
+            Student.ExamResult examre = new Student.ExamResult(TeacherId);
             examre.Show();
             this.Hide();
         }
