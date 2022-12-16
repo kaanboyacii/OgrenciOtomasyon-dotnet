@@ -26,7 +26,7 @@ namespace OgrenciOtomasyon
             try
             {
                 string MyConnection = "server=localhost;user id=root;database=obs";
-                string Query = "SELECT name,start_Date FROM exam WHERE exam_id = (select exam_id from ogrenciler where id = '" + StudentNum + "') ";
+                string Query = "SELECT name,start_Date FROM exam WHERE classroom_id = (select classroom_id from ogrenciler where id = '" + StudentNum + "') ";
                 MySqlConnection MyConn = new MySqlConnection(MyConnection);
                 MySqlCommand MyCommand1 = new MySqlCommand(Query, MyConn);
 

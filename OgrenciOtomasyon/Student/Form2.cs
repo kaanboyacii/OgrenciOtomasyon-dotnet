@@ -121,7 +121,7 @@ namespace OgrenciOtomasyon
                 //This is my connection string i have assigned the database file address path
                 string MyConnection2 = "server=localhost;user id=root;database=obs";
                 //This is my update query in which i am taking input from the user through windows forms and update the record.
-                string Query = "update ogrenciler set id='" + this.txtBoxId.Text + "',ad='" + this.txtBoxFirstName.Text + "',soyad='" + this.txtBoxLastName.Text + "',iletisim='" + this.txtboxNumber.Text + "',cinsiyet='" + gender + "',adres='" + this.txtBoxAdres.Text + "' where id='" + this.txtBoxId.Text + "';";
+                string Query = "update ogrenciler set id='" + this.txtBoxId.Text + "',ad='" + this.txtBoxFirstName.Text + "',soyad='" + this.txtBoxLastName.Text + "',classroom_id='" + this.txtBoxClass.Text + "',cinsiyet='" + this.txtboxNumber.Text + "',cinsiyet='" + gender + "',adres='" + this.txtBoxAdres.Text + "' where id='" + this.txtBoxId.Text + "';";
                 //This is  MySqlConnection here i have created the object and pass my connection string.
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
