@@ -29,12 +29,8 @@ namespace OgrenciOtomasyon.Student
 
         private void ExamResult_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'obsDataSet8.course' table. You can move, or remove it, as needed.
-            this.courseTableAdapter1.Fill(this.obsDataSet8.course);
-            // TODO: This line of code loads data into the 'obsDataSet7.exam' table. You can move, or remove it, as needed.
-            this.examTableAdapter.Fill(this.obsDataSet7.exam);
-            // TODO: This line of code loads data into the 'obsDataSet7.exam_result' table. You can move, or remove it, as needed.
-            this.exam_resultTableAdapter.Fill(this.obsDataSet7.exam_result);
+            courseListele();
+            examListele();
             examResultListele();
         }
         private void examResultListele()
@@ -42,8 +38,8 @@ namespace OgrenciOtomasyon.Student
             try
             {
                 string MyConnection2 = "server=localhost;user id=root;database=obs";
-                //Display query
-                string Query = "select * from exam_result ";
+               
+                string Query = "select * from exam_result where student_id in (select id from ogrenciler where classroom_id in (select classroom_id from classroom  where teacher_id = '" + TeacherId + "'))";                  
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                 //  MyConn2.Open();
@@ -54,6 +50,44 @@ namespace OgrenciOtomasyon.Student
                 MyAdapter.Fill(dTable);
                 dataGridView1.DataSource = dTable; // here i have assign dTable object to the dataGridView1 object to display data.
                                                    // MyConn2.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void courseListele()
+        {
+            try
+            {
+                string MyConnection2 = "server=localhost;user id=root;database=obs";
+                string Query = "select * from course where classroom_id in (select classroom_id from classroom where teacher_id = '" + TeacherId + "') ";
+                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
+                MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+                MyAdapter.SelectCommand = MyCommand2;
+                DataTable dTable = new DataTable();
+                MyAdapter.Fill(dTable);
+                dataGridView2.DataSource = dTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void examListele()
+        {
+            try
+            {
+                string MyConnection2 = "server=localhost;user id=root;database=obs";
+                string Query = "select * from exam where classroom_id in (select classroom_id from classroom where teacher_id = '" + TeacherId + "') ";
+                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
+                MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+                MyAdapter.SelectCommand = MyCommand2;
+                DataTable dTable = new DataTable();
+                MyAdapter.Fill(dTable);
+                dataGridView3.DataSource = dTable;
             }
             catch (Exception ex)
             {
@@ -126,6 +160,7 @@ namespace OgrenciOtomasyon.Student
             txtBoxExamId.Clear();
             txtBoxStudentId.Clear();
             txtboxCourseId.Clear();
+            txtBoxClassId.Clear();
             txtBoxMark.Clear();
             txtBoxExamId.Focus(); 
         }
@@ -158,7 +193,7 @@ namespace OgrenciOtomasyon.Student
         {
             txtBoxExamId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             txtBoxStudentId.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            txtBoxClassId.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            txtBoxClassId.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             txtboxCourseId.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             txtBoxMark.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
         }

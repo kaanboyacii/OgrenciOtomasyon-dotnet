@@ -36,7 +36,7 @@ namespace OgrenciOtomasyon.Student
             try
             {
                 string MyConnection2 = "server=localhost;user id=root;database=obs";
-                string Query = "select * from exam ";
+                string Query = "select * from exam where classroom_id in (select classroom_id from classroom where teacher_id = '" + TeacherId + "') ";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                 MySqlDataAdapter MyAdapter = new MySqlDataAdapter();

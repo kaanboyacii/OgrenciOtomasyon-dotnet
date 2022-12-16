@@ -32,9 +32,6 @@ namespace OgrenciOtomasyon.Student
             this.components = new System.ComponentModel.Container();
             this.btnExit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.examidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.examBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.obsDataSet7 = new OgrenciOtomasyon.obsDataSet7();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -74,44 +71,17 @@ namespace OgrenciOtomasyon.Student
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.examidDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.startDateDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.examBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(462, 95);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(428, 352);
             this.dataGridView1.TabIndex = 127;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // examidDataGridViewTextBoxColumn
-            // 
-            this.examidDataGridViewTextBoxColumn.DataPropertyName = "exam_id";
-            this.examidDataGridViewTextBoxColumn.HeaderText = "exam_id";
-            this.examidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.examidDataGridViewTextBoxColumn.Name = "examidDataGridViewTextBoxColumn";
-            this.examidDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // startDateDataGridViewTextBoxColumn
-            // 
-            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "start_Date";
-            this.startDateDataGridViewTextBoxColumn.HeaderText = "start_Date";
-            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
-            this.startDateDataGridViewTextBoxColumn.Width = 125;
             // 
             // examBindingSource
             // 
@@ -327,9 +297,6 @@ namespace OgrenciOtomasyon.Student
         private obsDataSet7 obsDataSet7;
         private System.Windows.Forms.BindingSource examBindingSource;
         private obsDataSet7TableAdapters.examTableAdapter examTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn examidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBoxClassId;
     }
