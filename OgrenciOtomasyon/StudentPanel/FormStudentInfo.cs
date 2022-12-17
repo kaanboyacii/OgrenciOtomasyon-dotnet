@@ -167,5 +167,12 @@ namespace OgrenciOtomasyon
             cour.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            StudentPanel.courseResult courseR = new StudentPanel.courseResult(StudentNum);
+            courseR.Show();
+            this.Hide();
+        }
     }
 }

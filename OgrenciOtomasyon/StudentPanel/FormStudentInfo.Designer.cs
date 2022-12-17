@@ -30,8 +30,8 @@ namespace OgrenciOtomasyon
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("");
             this.lblMidterm = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblNumara = new System.Windows.Forms.Label();
@@ -63,6 +63,7 @@ namespace OgrenciOtomasyon
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrenciler1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obsDataSet)).BeginInit();
@@ -291,10 +292,10 @@ namespace OgrenciOtomasyon
             this.name});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem11});
+            listViewItem9});
             this.listView1.Location = new System.Drawing.Point(454, 144);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(154, 242);
+            this.listView1.Size = new System.Drawing.Size(154, 308);
             this.listView1.TabIndex = 126;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -311,10 +312,10 @@ namespace OgrenciOtomasyon
             this.marks});
             this.listView2.HideSelection = false;
             this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem12});
-            this.listView2.Location = new System.Drawing.Point(608, 144);
+            listViewItem10});
+            this.listView2.Location = new System.Drawing.Point(614, 144);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(135, 242);
+            this.listView2.Size = new System.Drawing.Size(135, 308);
             this.listView2.TabIndex = 127;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -330,7 +331,7 @@ namespace OgrenciOtomasyon
             this.btnExamCalender.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnExamCalender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExamCalender.ForeColor = System.Drawing.Color.White;
-            this.btnExamCalender.Location = new System.Drawing.Point(454, 404);
+            this.btnExamCalender.Location = new System.Drawing.Point(779, 198);
             this.btnExamCalender.Name = "btnExamCalender";
             this.btnExamCalender.Size = new System.Drawing.Size(289, 48);
             this.btnExamCalender.TabIndex = 129;
@@ -369,11 +370,25 @@ namespace OgrenciOtomasyon
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(779, 252);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(289, 48);
+            this.button3.TabIndex = 133;
+            this.button3.Text = "Course Result";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // FormStudentInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1211, 496);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
@@ -446,5 +461,6 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

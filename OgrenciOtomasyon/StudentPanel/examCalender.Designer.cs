@@ -83,7 +83,7 @@ namespace OgrenciOtomasyon
             this.MaximizeBox = false;
             this.Name = "examCalender";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "examCalender";
+            this.Text = "Exam Calender";
             this.Load += new System.EventHandler(this.examCalender_Load);
             this.ResumeLayout(false);
 
