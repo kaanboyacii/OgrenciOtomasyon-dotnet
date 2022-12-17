@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data;
+using MySql.Data.MySqlClient;
+
 
 namespace OgrenciOtomasyon.StudentPanel
 {
@@ -26,7 +29,72 @@ namespace OgrenciOtomasyon.StudentPanel
 
         private void courseResult_Load(object sender, EventArgs e)
         {
+            courseListele();
+            courseResultListele();
+        }
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            FormStudentInfo studentınf = new FormStudentInfo(StudentNum);
+            studentınf.Show();
+            this.Hide();
+        }
+        private void courseListele()
+        {
+            {
+                try
+                {
+                    string MyConnection2 = "server=localhost;user id=root;database=obs";
+                    string Query = "select name from course where classroom_id in (select classroom_id from ogrenciler where id = '" + StudentNum + "') ";
+                    MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                    MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    MyConn2.Open();
+                    da.SelectCommand = MyCommand2;
+                    DataSet ds = new DataSet();
+                    DataTable dt = new DataTable();
+                    da.Fill(ds);
+                    dt = ds.Tables[0];
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        DataRow dr = dt.Rows[i];
+                        ListViewItem listitem = new ListViewItem(dr["name"].ToString());
+                        listView1.Items.Add(listitem);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+        private void courseResultListele()
+        {
+            try
+            {
+                string MyConnection = "server=localhost;user id=root;database=obs";
+                string Query = "select marks from exam_result where course_id in (select course_id from course where classroom_id in (select classroom_id from ogrenciler where id = '" + StudentNum + "') ) and student_id in (select id from ogrenciler where student_id = '" + StudentNum + "')";
+                MySqlConnection MyConn = new MySqlConnection(MyConnection);
+                MySqlCommand MyCommand1 = new MySqlCommand(Query, MyConn);
+                MySqlDataAdapter da = new MySqlDataAdapter();
+                MyConn.Open();
+                da.SelectCommand = MyCommand1;
+                DataSet ds = new DataSet();
+                DataTable dt = new DataTable();
+                da.Fill(ds);
+                dt = ds.Tables[0];
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    DataRow dr = dt.Rows[i];
+                    ListViewItem listitem = new ListViewItem(dr["marks"].ToString());
+                    listView2.Items.Add(listitem);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         //private void ortalamaHesap()
         //{
