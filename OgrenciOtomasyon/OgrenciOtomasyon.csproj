@@ -159,6 +159,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>obsDataSet9.xsd</DependentUpon>
     </Compile>
+    <Compile Include="StudentPanel\courseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentPanel\courseList.Designer.cs">
+      <DependentUpon>courseList.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentPanel\examCalender.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="StudentPanel\courseList.resx">
+      <DependentUpon>courseList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentPanel\examCalender.resx">
       <DependentUpon>examCalender.cs</DependentUpon>
     </EmbeddedResource>

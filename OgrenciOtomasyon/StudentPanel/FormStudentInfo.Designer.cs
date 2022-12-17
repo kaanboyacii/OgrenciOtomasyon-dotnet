@@ -30,8 +30,8 @@ namespace OgrenciOtomasyon
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("");
             this.lblMidterm = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblNumara = new System.Windows.Forms.Label();
@@ -62,6 +62,7 @@ namespace OgrenciOtomasyon
             this.btnExamCalender = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrenciler1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obsDataSet)).BeginInit();
@@ -188,7 +189,7 @@ namespace OgrenciOtomasyon
             // 
             // txtBoxFirstName
             // 
-            this.txtBoxFirstName.Location = new System.Drawing.Point(178, 144);
+            this.txtBoxFirstName.Location = new System.Drawing.Point(176, 144);
             this.txtBoxFirstName.Name = "txtBoxFirstName";
             this.txtBoxFirstName.ReadOnly = true;
             this.txtBoxFirstName.Size = new System.Drawing.Size(229, 22);
@@ -197,7 +198,7 @@ namespace OgrenciOtomasyon
             // 
             // txtBoxLastName
             // 
-            this.txtBoxLastName.Location = new System.Drawing.Point(178, 172);
+            this.txtBoxLastName.Location = new System.Drawing.Point(176, 172);
             this.txtBoxLastName.Name = "txtBoxLastName";
             this.txtBoxLastName.ReadOnly = true;
             this.txtBoxLastName.Size = new System.Drawing.Size(229, 22);
@@ -290,7 +291,7 @@ namespace OgrenciOtomasyon
             this.name});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem11});
             this.listView1.Location = new System.Drawing.Point(454, 144);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(154, 242);
@@ -310,7 +311,7 @@ namespace OgrenciOtomasyon
             this.marks});
             this.listView2.HideSelection = false;
             this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem12});
             this.listView2.Location = new System.Drawing.Point(608, 144);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(135, 242);
@@ -355,11 +356,25 @@ namespace OgrenciOtomasyon
             this.label5.TabIndex = 130;
             this.label5.Text = "Classroom ID:";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(779, 144);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(289, 48);
+            this.button2.TabIndex = 132;
+            this.button2.Text = "Course Program";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FormStudentInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1211, 496);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnExamCalender);
@@ -430,5 +445,6 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.Button btnExamCalender;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button2;
     }
 }

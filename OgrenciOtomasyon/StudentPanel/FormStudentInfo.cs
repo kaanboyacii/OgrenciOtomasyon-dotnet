@@ -69,7 +69,7 @@ namespace OgrenciOtomasyon
             try
             {
                 string MyConnection = "server=localhost;user id=root;database=obs";
-                string Query = "SELECT name FROM exam WHERE classroom_id = (select classroom_id from ogrenciler where id = '" + lblStudentNumber.Text + "') and exam_id =(select exam_id from exam_result where student_id = '" + lblStudentNumber.Text + "') ";
+                string Query = "SELECT name FROM exam WHERE classroom_id in (select classroom_id from ogrenciler where id = '" + lblStudentNumber.Text + "') and exam_id in (select exam_id from exam_result where student_id = '" + lblStudentNumber.Text + "') ";
                 MySqlConnection MyConn = new MySqlConnection(MyConnection);
                 MySqlCommand MyCommand1 = new MySqlCommand(Query, MyConn);
  
@@ -93,6 +93,7 @@ namespace OgrenciOtomasyon
                 MessageBox.Show(ex.Message);
             }
         }
+
         private void ogrenciSınavNotlarınıListele()
         {
             try
@@ -122,7 +123,6 @@ namespace OgrenciOtomasyon
                 MessageBox.Show(ex.Message);
             }
         }
-
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -158,6 +158,13 @@ namespace OgrenciOtomasyon
         {
             examCalender exmcl = new examCalender(StudentNum);
             exmcl.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            StudentPanel.courseList cour = new StudentPanel.courseList(StudentNum);
+            cour.Show();
             this.Hide();
         }
     }
