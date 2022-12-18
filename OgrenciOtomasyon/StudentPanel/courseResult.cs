@@ -39,13 +39,12 @@ namespace OgrenciOtomasyon.StudentPanel
             studentınf.Show();
             this.Hide();
         }
-        private void courseListele()
+        public void courseListele()
         {
             {
-                try
-                {
+                try { 
                     string MyConnection2 = "server=localhost;user id=root;database=obs";
-                    string Query = "select name from course where classroom_id in (select classroom_id from ogrenciler where id = '" + StudentNum + "') ";
+                    string Query = "select name,course_id from course where classroom_id in (select classroom_id from ogrenciler where id = '" + StudentNum + "') ";
                     MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                     MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                     MySqlDataAdapter da = new MySqlDataAdapter();
@@ -58,7 +57,8 @@ namespace OgrenciOtomasyon.StudentPanel
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
                         DataRow dr = dt.Rows[i];
-                        ListViewItem listitem = new ListViewItem(dr["name"].ToString());
+                        ListViewItem listitem = new ListViewItem(dr["course_id"].ToString());
+                        listitem.SubItems.Add(dr["name"].ToString());
                         listView1.Items.Add(listitem);
                     }
                 }
@@ -68,12 +68,13 @@ namespace OgrenciOtomasyon.StudentPanel
                 }
             }
         }
+
         private void courseResultListele()
         {
             try
             {
                 string MyConnection = "server=localhost;user id=root;database=obs";
-                string Query = "select marks from exam_result where course_id in (select course_id from course where classroom_id in (select classroom_id from ogrenciler where id = '" + StudentNum + "') ) and student_id in (select id from ogrenciler where student_id = '" + StudentNum + "')";
+                string Query = "select (sum(marks)/count(marks)) from exam_result where course_id in (select course_id from course where classroom_id in (select classroom_id from ogrenciler where id = '" + StudentNum + "') )  and student_id in (select id from ogrenciler where student_id = '" + StudentNum + "')";
                 MySqlConnection MyConn = new MySqlConnection(MyConnection);
                 MySqlCommand MyCommand1 = new MySqlCommand(Query, MyConn);
                 MySqlDataAdapter da = new MySqlDataAdapter();
@@ -86,7 +87,7 @@ namespace OgrenciOtomasyon.StudentPanel
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     DataRow dr = dt.Rows[i];
-                    ListViewItem listitem = new ListViewItem(dr["marks"].ToString());
+                    ListViewItem listitem = new ListViewItem(dr["(sum(marks)/count(marks))"].ToString());
                     listView2.Items.Add(listitem);
                 }
 
@@ -96,6 +97,8 @@ namespace OgrenciOtomasyon.StudentPanel
                 MessageBox.Show(ex.Message);
             }
         }
+
+
         //private void ortalamaHesap()
         //{
         //    string MyConnection2 = "server=localhost;user id=root;database=obs";

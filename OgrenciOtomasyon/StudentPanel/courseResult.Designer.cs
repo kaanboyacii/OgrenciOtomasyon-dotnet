@@ -34,8 +34,10 @@ namespace OgrenciOtomasyon.StudentPanel
             this.listView2 = new System.Windows.Forms.ListView();
             this.avg_status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView1 = new System.Windows.Forms.ListView();
+            this.course_Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.course_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnExit = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listView2
@@ -45,7 +47,7 @@ namespace OgrenciOtomasyon.StudentPanel
             this.listView2.HideSelection = false;
             this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
-            this.listView2.Location = new System.Drawing.Point(174, 12);
+            this.listView2.Location = new System.Drawing.Point(273, 12);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(135, 308);
             this.listView2.TabIndex = 129;
@@ -60,16 +62,22 @@ namespace OgrenciOtomasyon.StudentPanel
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.course_Id,
             this.course_Name});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem2});
             this.listView1.Location = new System.Drawing.Point(14, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(154, 308);
+            this.listView1.Size = new System.Drawing.Size(253, 308);
             this.listView1.TabIndex = 128;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // course_Id
+            // 
+            this.course_Id.Text = "Course ID:";
+            this.course_Id.Width = 100;
             // 
             // course_Name
             // 
@@ -90,11 +98,21 @@ namespace OgrenciOtomasyon.StudentPanel
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.TabIndex = 133;
+            this.label1.Text = "label1";
+            // 
             // courseResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
@@ -105,6 +123,7 @@ namespace OgrenciOtomasyon.StudentPanel
             this.Text = "Course Result";
             this.Load += new System.EventHandler(this.courseResult_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -113,7 +132,9 @@ namespace OgrenciOtomasyon.StudentPanel
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.ColumnHeader avg_status;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader course_Name;
+        private System.Windows.Forms.ColumnHeader course_Id;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ColumnHeader course_Name;
     }
 }
