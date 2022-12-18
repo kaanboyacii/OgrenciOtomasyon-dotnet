@@ -37,7 +37,6 @@ namespace OgrenciOtomasyon.StudentPanel
             this.course_Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.course_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnExit = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
@@ -51,15 +50,15 @@ namespace OgrenciOtomasyon.StudentPanel
             listViewItem1});
             this.listView2.Location = new System.Drawing.Point(273, 12);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(248, 308);
+            this.listView2.Size = new System.Drawing.Size(211, 341);
             this.listView2.TabIndex = 129;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
             // 
             // avg_status
             // 
-            this.avg_status.Text = "Result:";
-            this.avg_status.Width = 130;
+            this.avg_status.Text = "Average:";
+            this.avg_status.Width = 70;
             // 
             // listView1
             // 
@@ -69,9 +68,9 @@ namespace OgrenciOtomasyon.StudentPanel
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem2});
-            this.listView1.Location = new System.Drawing.Point(14, 12);
+            this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(253, 308);
+            this.listView1.Size = new System.Drawing.Size(255, 341);
             this.listView1.TabIndex = 128;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -92,34 +91,24 @@ namespace OgrenciOtomasyon.StudentPanel
             this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(520, 12);
+            this.btnExit.Location = new System.Drawing.Point(12, 374);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(268, 64);
+            this.btnExit.Size = new System.Drawing.Size(472, 64);
             this.btnExit.TabIndex = 132;
             this.btnExit.Text = "Back Student Panel";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 133;
-            this.label1.Text = "label1";
-            // 
             // status
             // 
-            this.status.Text = "Durum:";
+            this.status.Text = "Status:";
             this.status.Width = 90;
             // 
             // courseResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(496, 450);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
@@ -130,7 +119,6 @@ namespace OgrenciOtomasyon.StudentPanel
             this.Text = "Course Result";
             this.Load += new System.EventHandler(this.courseResult_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -141,7 +129,6 @@ namespace OgrenciOtomasyon.StudentPanel
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader course_Id;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ColumnHeader course_Name;
         private System.Windows.Forms.ColumnHeader status;
     }

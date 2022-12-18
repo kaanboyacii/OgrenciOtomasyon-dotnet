@@ -73,8 +73,9 @@ namespace OgrenciOtomasyon.StudentPanel
         {
             try
             {
+             
                 string MyConnection = "server=localhost;user id=root;database=obs";
-                string Query = "select (sum(marks)/count(marks)) from exam_result where course_id in (select course_id from course where classroom_id in (select classroom_id from ogrenciler where id = '" + StudentNum + "') )  and student_id in (select id from ogrenciler where student_id = '" + StudentNum + "')";
+                string Query = "select ROUND((sum(marks) / count(marks)), 2) as num  from exam_result where course_id in (select course_id from course where classroom_id in (select classroom_id from ogrenciler where id = '" + StudentNum + "') )  and student_id in (select id from ogrenciler where student_id = '" + StudentNum + "')";
                 MySqlConnection MyConn = new MySqlConnection(MyConnection);
                 MySqlCommand MyCommand1 = new MySqlCommand(Query, MyConn);
                 MySqlDataAdapter da = new MySqlDataAdapter();
@@ -87,12 +88,12 @@ namespace OgrenciOtomasyon.StudentPanel
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     DataRow dr = dt.Rows[i];
-                    ListViewItem listitem = new ListViewItem(dr["(sum(marks)/count(marks))"].ToString());
+                    ListViewItem listitem = new ListViewItem(dr["num"].ToString());
                     string durum;
-                    if (float.Parse(dr["(sum(marks)/count(marks))"].ToString()) >= 50)
-                        durum = "Geçti";
+                    if (float.Parse(dr["num"].ToString()) >= 50)
+                        durum = "Passed";
                     else
-                        durum = "Kaldı";
+                        durum = "Failed";
                     listitem.SubItems.Add(durum);
                     listView2.Items.Add(listitem);
                 }
