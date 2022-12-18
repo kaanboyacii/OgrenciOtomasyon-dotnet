@@ -88,6 +88,12 @@ namespace OgrenciOtomasyon.StudentPanel
                 {
                     DataRow dr = dt.Rows[i];
                     ListViewItem listitem = new ListViewItem(dr["(sum(marks)/count(marks))"].ToString());
+                    string durum;
+                    if (float.Parse(dr["(sum(marks)/count(marks))"].ToString()) >= 50)
+                        durum = "Geçti";
+                    else
+                        durum = "Kaldı";
+                    listitem.SubItems.Add(durum);
                     listView2.Items.Add(listitem);
                 }
 

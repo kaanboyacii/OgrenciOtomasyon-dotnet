@@ -38,18 +38,20 @@ namespace OgrenciOtomasyon.StudentPanel
             this.course_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listView2
             // 
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.avg_status});
+            this.avg_status,
+            this.status});
             this.listView2.HideSelection = false;
             this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
             this.listView2.Location = new System.Drawing.Point(273, 12);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(135, 308);
+            this.listView2.Size = new System.Drawing.Size(248, 308);
             this.listView2.TabIndex = 129;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -107,6 +109,11 @@ namespace OgrenciOtomasyon.StudentPanel
             this.label1.TabIndex = 133;
             this.label1.Text = "label1";
             // 
+            // status
+            // 
+            this.status.Text = "Durum:";
+            this.status.Width = 90;
+            // 
             // courseResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -136,5 +143,6 @@ namespace OgrenciOtomasyon.StudentPanel
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ColumnHeader course_Name;
+        private System.Windows.Forms.ColumnHeader status;
     }
 }
