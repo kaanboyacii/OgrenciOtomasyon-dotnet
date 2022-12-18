@@ -50,6 +50,7 @@ namespace OgrenciOtomasyon.StudentPanel
             this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = global::OgrenciOtomasyon.Properties.Resources.RR_v_mar_2019_29;
             this.btnExit.Location = new System.Drawing.Point(298, 374);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(268, 64);

@@ -308,6 +308,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="obsDataSet.xsc">
       <DependentUpon>obsDataSet.xsd</DependentUpon>
@@ -436,6 +437,14 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1179173707-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RR-v-mar-2019-29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screen-0.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

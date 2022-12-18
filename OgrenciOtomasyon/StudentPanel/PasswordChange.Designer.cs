@@ -53,6 +53,7 @@ namespace OgrenciOtomasyon
             this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Image = global::OgrenciOtomasyon.Properties.Resources.screen_0;
             this.btnUpdate.Location = new System.Drawing.Point(78, 152);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(329, 48);
@@ -95,9 +96,10 @@ namespace OgrenciOtomasyon
             this.button1.BackColor = System.Drawing.Color.Crimson;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(78, 218);
+            this.button1.Image = global::OgrenciOtomasyon.Properties.Resources.RR_v_mar_2019_29;
+            this.button1.Location = new System.Drawing.Point(96, 206);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(329, 48);
+            this.button1.Size = new System.Drawing.Size(291, 48);
             this.button1.TabIndex = 108;
             this.button1.Text = "Back Student Panel";
             this.button1.UseVisualStyleBackColor = false;
