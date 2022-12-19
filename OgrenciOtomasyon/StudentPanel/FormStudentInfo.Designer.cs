@@ -30,9 +30,8 @@ namespace OgrenciOtomasyon
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStudentInfo));
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.lblMidterm = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblNumara = new System.Windows.Forms.Label();
@@ -41,8 +40,6 @@ namespace OgrenciOtomasyon
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.ogrenciler1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.obsDataSet = new OgrenciOtomasyon.obsDataSet();
-            this.ogrenciler1TableAdapter = new OgrenciOtomasyon.obsDataSetTableAdapters.ogrenciler1TableAdapter();
             this.lblStudentNumber = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblNationality = new System.Windows.Forms.Label();
@@ -67,7 +64,6 @@ namespace OgrenciOtomasyon
             this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrenciler1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMidterm
@@ -144,20 +140,6 @@ namespace OgrenciOtomasyon
             this.btnExit.Text = "Log Out";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // ogrenciler1BindingSource
-            // 
-            this.ogrenciler1BindingSource.DataMember = "ogrenciler1";
-            this.ogrenciler1BindingSource.DataSource = this.obsDataSet;
-            // 
-            // obsDataSet
-            // 
-            this.obsDataSet.DataSetName = "obsDataSet";
-            this.obsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ogrenciler1TableAdapter
-            // 
-            this.ogrenciler1TableAdapter.ClearBeforeFill = true;
             // 
             // lblStudentNumber
             // 
@@ -256,7 +238,7 @@ namespace OgrenciOtomasyon
             this.button1.BackColor = System.Drawing.Color.Green;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Image = global::OgrenciOtomasyon.Properties.Resources.istockphoto_1179173707_612x612;
             this.button1.Location = new System.Drawing.Point(56, 355);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 32);
@@ -270,7 +252,7 @@ namespace OgrenciOtomasyon
             this.btnChangePassword.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnChangePassword.ForeColor = System.Drawing.Color.White;
-            this.btnChangePassword.Image = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.Image")));
+            this.btnChangePassword.Image = global::OgrenciOtomasyon.Properties.Resources.screen_0;
             this.btnChangePassword.Location = new System.Drawing.Point(56, 404);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(349, 48);
@@ -296,7 +278,7 @@ namespace OgrenciOtomasyon
             this.name});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
+            listViewItem1});
             this.listView1.Location = new System.Drawing.Point(454, 144);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(154, 308);
@@ -316,7 +298,7 @@ namespace OgrenciOtomasyon
             this.marks});
             this.listView2.HideSelection = false;
             this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4});
+            listViewItem2});
             this.listView2.Location = new System.Drawing.Point(614, 144);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(135, 308);
@@ -335,7 +317,7 @@ namespace OgrenciOtomasyon
             this.btnExamCalender.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnExamCalender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExamCalender.ForeColor = System.Drawing.Color.White;
-            this.btnExamCalender.Image = ((System.Drawing.Image)(resources.GetObject("btnExamCalender.Image")));
+            this.btnExamCalender.Image = global::OgrenciOtomasyon.Properties.Resources.screen_0;
             this.btnExamCalender.Location = new System.Drawing.Point(779, 198);
             this.btnExamCalender.Name = "btnExamCalender";
             this.btnExamCalender.Size = new System.Drawing.Size(289, 48);
@@ -367,7 +349,7 @@ namespace OgrenciOtomasyon
             this.button2.BackColor = System.Drawing.Color.RoyalBlue;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Image = global::OgrenciOtomasyon.Properties.Resources.screen_0;
             this.button2.Location = new System.Drawing.Point(779, 144);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(289, 48);
@@ -381,7 +363,7 @@ namespace OgrenciOtomasyon
             this.button3.BackColor = System.Drawing.Color.RoyalBlue;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Image = global::OgrenciOtomasyon.Properties.Resources.screen_0;
             this.button3.Location = new System.Drawing.Point(779, 252);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(289, 48);
@@ -430,7 +412,6 @@ namespace OgrenciOtomasyon
             this.Load += new System.EventHandler(this.FormStudentInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrenciler1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,9 +425,7 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnExit;
-        private obsDataSet obsDataSet;
         private System.Windows.Forms.BindingSource ogrenciler1BindingSource;
-        private obsDataSetTableAdapters.ogrenciler1TableAdapter ogrenciler1TableAdapter;
         private System.Windows.Forms.Label lblStudentNumber;
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblNationality;

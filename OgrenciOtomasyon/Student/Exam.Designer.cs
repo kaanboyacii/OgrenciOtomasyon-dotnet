@@ -61,6 +61,7 @@ namespace OgrenciOtomasyon.Student
             this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = global::OgrenciOtomasyon.Properties.Resources.RR_v_mar_2019_29;
             this.btnExit.Location = new System.Drawing.Point(622, 9);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(268, 64);
@@ -117,7 +118,7 @@ namespace OgrenciOtomasyon.Student
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnClear.Location = new System.Drawing.Point(58, 212);
+            this.btnClear.Location = new System.Drawing.Point(58, 228);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(108, 36);
             this.btnClear.TabIndex = 123;
@@ -130,7 +131,8 @@ namespace OgrenciOtomasyon.Student
             this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(58, 328);
+            this.btnUpdate.Image = global::OgrenciOtomasyon.Properties.Resources.screen_0;
+            this.btnUpdate.Location = new System.Drawing.Point(58, 345);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(376, 48);
             this.btnUpdate.TabIndex = 122;
@@ -143,7 +145,8 @@ namespace OgrenciOtomasyon.Student
             this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(58, 254);
+            this.btnAdd.Image = global::OgrenciOtomasyon.Properties.Resources.istockphoto_1179173707_612x612;
+            this.btnAdd.Location = new System.Drawing.Point(58, 291);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(376, 48);
             this.btnAdd.TabIndex = 121;

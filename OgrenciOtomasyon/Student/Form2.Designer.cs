@@ -39,8 +39,6 @@ namespace OgrenciOtomasyon
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ogrencilerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.obsDataSet = new OgrenciOtomasyon.obsDataSet();
-            this.ogrencilerTableAdapter = new OgrenciOtomasyon.obsDataSetTableAdapters.ogrencilerTableAdapter();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -50,17 +48,13 @@ namespace OgrenciOtomasyon
             this.txtBoxId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.ogrencilerBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.obsDataSet4 = new OgrenciOtomasyon.obsDataSet4();
-            this.ogrencilerTableAdapter3 = new OgrenciOtomasyon.obsDataSet4TableAdapters.ogrencilerTableAdapter();
             this.panel2 = new System.Windows.Forms.Panel();
             this.radioButtonFemale = new System.Windows.Forms.RadioButton();
             this.radioButtonMale = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtBoxAdres = new System.Windows.Forms.TextBox();
-            this.obsDataSet5 = new OgrenciOtomasyon.obsDataSet5();
             this.ogrencilerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.ogrencilerTableAdapter1 = new OgrenciOtomasyon.obsDataSet5TableAdapters.ogrencilerTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ogrencilerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.button2 = new System.Windows.Forms.Button();
@@ -73,11 +67,8 @@ namespace OgrenciOtomasyon
             this.ogrencilerBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet4)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource2)).BeginInit();
@@ -160,25 +151,12 @@ namespace OgrenciOtomasyon
             this.pictureBox2.TabIndex = 65;
             this.pictureBox2.TabStop = false;
             // 
-            // ogrencilerBindingSource
-            // 
-            this.ogrencilerBindingSource.DataMember = "ogrenciler";
-            this.ogrencilerBindingSource.DataSource = this.obsDataSet;
-            // 
-            // obsDataSet
-            // 
-            this.obsDataSet.DataSetName = "obsDataSet";
-            this.obsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ogrencilerTableAdapter
-            // 
-            this.ogrencilerTableAdapter.ClearBeforeFill = true;
-            // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Image = global::OgrenciOtomasyon.Properties.Resources.istockphoto_1179173707_612x612;
             this.btnAdd.Location = new System.Drawing.Point(56, 402);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(106, 48);
@@ -192,6 +170,7 @@ namespace OgrenciOtomasyon
             this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Image = global::OgrenciOtomasyon.Properties.Resources.screen_0;
             this.btnUpdate.Location = new System.Drawing.Point(190, 402);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(106, 48);
@@ -230,6 +209,7 @@ namespace OgrenciOtomasyon
             this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = global::OgrenciOtomasyon.Properties.Resources.RR_v_mar_2019_29;
             this.btnExit.Location = new System.Drawing.Point(1125, 9);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(268, 64);
@@ -268,20 +248,6 @@ namespace OgrenciOtomasyon
             this.label4.Size = new System.Drawing.Size(21, 17);
             this.label4.TabIndex = 89;
             this.label4.Text = "ID";
-            // 
-            // ogrencilerBindingSource4
-            // 
-            this.ogrencilerBindingSource4.DataMember = "ogrenciler";
-            this.ogrencilerBindingSource4.DataSource = this.obsDataSet4;
-            // 
-            // obsDataSet4
-            // 
-            this.obsDataSet4.DataSetName = "obsDataSet4";
-            this.obsDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ogrencilerTableAdapter3
-            // 
-            this.ogrencilerTableAdapter3.ClearBeforeFill = true;
             // 
             // panel2
             // 
@@ -354,20 +320,6 @@ namespace OgrenciOtomasyon
             this.txtBoxAdres.Size = new System.Drawing.Size(242, 91);
             this.txtBoxAdres.TabIndex = 94;
             // 
-            // obsDataSet5
-            // 
-            this.obsDataSet5.DataSetName = "obsDataSet5";
-            this.obsDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ogrencilerBindingSource1
-            // 
-            this.ogrencilerBindingSource1.DataMember = "ogrenciler";
-            this.ogrencilerBindingSource1.DataSource = this.obsDataSet5;
-            // 
-            // ogrencilerTableAdapter1
-            // 
-            this.ogrencilerTableAdapter1.ClearBeforeFill = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -381,11 +333,6 @@ namespace OgrenciOtomasyon
             this.dataGridView1.Size = new System.Drawing.Size(918, 554);
             this.dataGridView1.TabIndex = 95;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
-            // 
-            // ogrencilerBindingSource2
-            // 
-            this.ogrencilerBindingSource2.DataMember = "ogrenciler";
-            this.ogrencilerBindingSource2.DataSource = this.obsDataSet5;
             // 
             // button2
             // 
@@ -488,12 +435,9 @@ namespace OgrenciOtomasyon
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet4)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource2)).EndInit();
@@ -515,9 +459,7 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.TextBox txtBoxFirstName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private obsDataSet obsDataSet;
         private System.Windows.Forms.BindingSource ogrencilerBindingSource;
-        private obsDataSetTableAdapters.ogrencilerTableAdapter ogrencilerTableAdapter;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
@@ -526,18 +468,14 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtBoxId;
         private System.Windows.Forms.Label label4;
-        private obsDataSet4 obsDataSet4;
         private System.Windows.Forms.BindingSource ogrencilerBindingSource4;
-        private obsDataSet4TableAdapters.ogrencilerTableAdapter ogrencilerTableAdapter3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton radioButtonFemale;
         private System.Windows.Forms.RadioButton radioButtonMale;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBoxAdres;
-        private obsDataSet5 obsDataSet5;
         private System.Windows.Forms.BindingSource ogrencilerBindingSource1;
-        private obsDataSet5TableAdapters.ogrencilerTableAdapter ogrencilerTableAdapter1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource ogrencilerBindingSource2;
         private System.Windows.Forms.Button button2;

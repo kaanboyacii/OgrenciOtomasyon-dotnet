@@ -157,7 +157,8 @@ namespace OgrenciOtomasyon.Student
             this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(61, 327);
+            this.btnUpdate.Image = global::OgrenciOtomasyon.Properties.Resources.screen_0;
+            this.btnUpdate.Location = new System.Drawing.Point(61, 345);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(376, 48);
             this.btnUpdate.TabIndex = 125;
@@ -170,7 +171,8 @@ namespace OgrenciOtomasyon.Student
             this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(61, 257);
+            this.btnAdd.Image = global::OgrenciOtomasyon.Properties.Resources.istockphoto_1179173707_612x612;
+            this.btnAdd.Location = new System.Drawing.Point(61, 291);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(376, 48);
             this.btnAdd.TabIndex = 124;

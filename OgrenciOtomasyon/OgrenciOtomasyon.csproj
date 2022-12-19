@@ -183,16 +183,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="obsDataSet5.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>obsDataSet5.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="obsDataSet6.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>obsDataSet6.xsd</DependentUpon>
-    </Compile>
     <Compile Include="obsDataSet7.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -240,31 +230,6 @@
     <Compile Include="FormTeacherLogin.Designer.cs">
       <DependentUpon>FormTeacherLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="obsDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>obsDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="obsDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>obsDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="obsDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>obsDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="obsDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>obsDataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="obsDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>obsDataSet4.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="StudentPanel\courseList.resx">
@@ -310,83 +275,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="obsDataSet.xsc">
-      <DependentUpon>obsDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="obsDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>obsDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="obsDataSet.xss">
-      <DependentUpon>obsDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="obsDataSet1.xsc">
-      <DependentUpon>obsDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="obsDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>obsDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="obsDataSet1.xss">
-      <DependentUpon>obsDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="obsDataSet2.xsc">
-      <DependentUpon>obsDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="obsDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>obsDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="obsDataSet2.xss">
-      <DependentUpon>obsDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="obsDataSet3.xsc">
-      <DependentUpon>obsDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="obsDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>obsDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="obsDataSet3.xss">
-      <DependentUpon>obsDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="obsDataSet4.xsc">
-      <DependentUpon>obsDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="obsDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>obsDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="obsDataSet4.xss">
-      <DependentUpon>obsDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="obsDataSet5.xsc">
-      <DependentUpon>obsDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="obsDataSet5.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>obsDataSet5.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="obsDataSet5.xss">
-      <DependentUpon>obsDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="obsDataSet6.xsc">
-      <DependentUpon>obsDataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="obsDataSet6.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>obsDataSet6.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="obsDataSet6.xss">
-      <DependentUpon>obsDataSet6.xsd</DependentUpon>
-    </None>
     <None Include="obsDataSet7.xsc">
       <DependentUpon>obsDataSet7.xsd</DependentUpon>
     </None>

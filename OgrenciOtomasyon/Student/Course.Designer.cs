@@ -46,8 +46,6 @@ namespace OgrenciOtomasyon.Student
             this.btnDelete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.obsDataSet6 = new OgrenciOtomasyon.obsDataSet6();
-            this.courseTableAdapter = new OgrenciOtomasyon.obsDataSet6TableAdapters.courseTableAdapter();
             this.btnExit = new System.Windows.Forms.Button();
             this.obsDataSet8 = new OgrenciOtomasyon.obsDataSet8();
             this.courseBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -58,7 +56,6 @@ namespace OgrenciOtomasyon.Student
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obsDataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obsDataSet9)).BeginInit();
@@ -101,6 +98,7 @@ namespace OgrenciOtomasyon.Student
             this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Image = global::OgrenciOtomasyon.Properties.Resources.screen_0;
             this.btnUpdate.Location = new System.Drawing.Point(58, 345);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(378, 48);
@@ -114,6 +112,7 @@ namespace OgrenciOtomasyon.Student
             this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Image = global::OgrenciOtomasyon.Properties.Resources.istockphoto_1179173707_612x612;
             this.btnAdd.Location = new System.Drawing.Point(58, 291);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(378, 48);
@@ -236,16 +235,6 @@ namespace OgrenciOtomasyon.Student
             // courseBindingSource
             // 
             this.courseBindingSource.DataMember = "course";
-            this.courseBindingSource.DataSource = this.obsDataSet6;
-            // 
-            // obsDataSet6
-            // 
-            this.obsDataSet6.DataSetName = "obsDataSet6";
-            this.obsDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // courseTableAdapter
-            // 
-            this.courseTableAdapter.ClearBeforeFill = true;
             // 
             // btnExit
             // 
@@ -253,6 +242,7 @@ namespace OgrenciOtomasyon.Student
             this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = global::OgrenciOtomasyon.Properties.Resources.RR_v_mar_2019_29;
             this.btnExit.Location = new System.Drawing.Point(748, 8);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(268, 64);
@@ -319,7 +309,6 @@ namespace OgrenciOtomasyon.Student
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obsDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.obsDataSet8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.obsDataSet9)).EndInit();
@@ -345,9 +334,7 @@ namespace OgrenciOtomasyon.Student
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private obsDataSet6 obsDataSet6;
         private System.Windows.Forms.BindingSource courseBindingSource;
-        private obsDataSet6TableAdapters.courseTableAdapter courseTableAdapter;
         private System.Windows.Forms.Button btnExit;
         private obsDataSet8 obsDataSet8;
         private System.Windows.Forms.BindingSource courseBindingSource1;
