@@ -63,7 +63,7 @@ namespace OgrenciOtomasyon
             }
             else
             {
-                MessageBox.Show("Hatalı Kullanıcı Adı veya Şifre Girdiniz.");
+                MessageBox.Show("You entered an incorrect username or password");
             }
             con.Close();
         }
