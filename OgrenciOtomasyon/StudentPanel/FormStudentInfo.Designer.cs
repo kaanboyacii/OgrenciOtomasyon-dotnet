@@ -30,8 +30,8 @@ namespace OgrenciOtomasyon
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
             this.lblMidterm = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblNumara = new System.Windows.Forms.Label();
@@ -227,7 +227,7 @@ namespace OgrenciOtomasyon
             this.name});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem3});
             this.listView1.Location = new System.Drawing.Point(454, 144);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(154, 308);
@@ -247,7 +247,7 @@ namespace OgrenciOtomasyon
             this.marks});
             this.listView2.HideSelection = false;
             this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem4});
             this.listView2.Location = new System.Drawing.Point(614, 144);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(135, 308);
