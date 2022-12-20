@@ -37,9 +37,6 @@ namespace OgrenciOtomasyon
             this.lblNumara = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.ogrenciler1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblStudentNumber = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblNationality = new System.Windows.Forms.Label();
@@ -50,18 +47,22 @@ namespace OgrenciOtomasyon
             this.txtBoxGender = new System.Windows.Forms.TextBox();
             this.txtBoxAddress = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnChangePassword = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
             this.marks = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnExamCalender = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnExamCalender = new System.Windows.Forms.Button();
+            this.btnChangePassword = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.ogrenciler1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrenciler1BindingSource)).BeginInit();
             this.SuspendLayout();
@@ -116,30 +117,6 @@ namespace OgrenciOtomasyon
             this.label3.Size = new System.Drawing.Size(482, 67);
             this.label3.TabIndex = 85;
             this.label3.Text = "Bilgi School Student Panel";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Teal;
-            this.pictureBox2.Location = new System.Drawing.Point(-3, -2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1251, 82);
-            this.pictureBox2.TabIndex = 84;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnExit.BackColor = System.Drawing.Color.Red;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Image = global::OgrenciOtomasyon.Properties.Resources.RR_v_mar_2019_29;
-            this.btnExit.Location = new System.Drawing.Point(931, 10);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(268, 64);
-            this.btnExit.TabIndex = 101;
-            this.btnExit.Text = "Log Out";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblStudentNumber
             // 
@@ -233,34 +210,6 @@ namespace OgrenciOtomasyon
             this.label1.TabIndex = 121;
             this.label1.Text = "Student Information:";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Green;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::OgrenciOtomasyon.Properties.Resources.istockphoto_1179173707_612x612;
-            this.button1.Location = new System.Drawing.Point(56, 355);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 32);
-            this.button1.TabIndex = 122;
-            this.button1.Text = "Refresh";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnChangePassword
-            // 
-            this.btnChangePassword.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnChangePassword.ForeColor = System.Drawing.Color.White;
-            this.btnChangePassword.Image = global::OgrenciOtomasyon.Properties.Resources.screen_0;
-            this.btnChangePassword.Location = new System.Drawing.Point(56, 404);
-            this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(349, 48);
-            this.btnChangePassword.TabIndex = 123;
-            this.btnChangePassword.Text = "Change Your Password";
-            this.btnChangePassword.UseVisualStyleBackColor = false;
-            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -312,20 +261,6 @@ namespace OgrenciOtomasyon
             this.marks.Text = "Mark:";
             this.marks.Width = 130;
             // 
-            // btnExamCalender
-            // 
-            this.btnExamCalender.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnExamCalender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnExamCalender.ForeColor = System.Drawing.Color.White;
-            this.btnExamCalender.Image = global::OgrenciOtomasyon.Properties.Resources.screen_0;
-            this.btnExamCalender.Location = new System.Drawing.Point(779, 198);
-            this.btnExamCalender.Name = "btnExamCalender";
-            this.btnExamCalender.Size = new System.Drawing.Size(289, 48);
-            this.btnExamCalender.TabIndex = 129;
-            this.btnExamCalender.Text = "Exam Calender";
-            this.btnExamCalender.UseVisualStyleBackColor = false;
-            this.btnExamCalender.Click += new System.EventHandler(this.btnExamCalender_Click);
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(176, 228);
@@ -344,19 +279,19 @@ namespace OgrenciOtomasyon
             this.label5.TabIndex = 130;
             this.label5.Text = "Classroom ID:";
             // 
-            // button2
+            // button4
             // 
-            this.button2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::OgrenciOtomasyon.Properties.Resources.screen_0;
-            this.button2.Location = new System.Drawing.Point(779, 144);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(289, 48);
-            this.button2.TabIndex = 132;
-            this.button2.Text = "Course Program";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button4.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::OgrenciOtomasyon.Properties.Resources.screen_0;
+            this.button4.Location = new System.Drawing.Point(779, 306);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(289, 48);
+            this.button4.TabIndex = 134;
+            this.button4.Text = "Class Result";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -372,11 +307,92 @@ namespace OgrenciOtomasyon
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::OgrenciOtomasyon.Properties.Resources.screen_0;
+            this.button2.Location = new System.Drawing.Point(779, 144);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(289, 48);
+            this.button2.TabIndex = 132;
+            this.button2.Text = "Course Program";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnExamCalender
+            // 
+            this.btnExamCalender.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnExamCalender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnExamCalender.ForeColor = System.Drawing.Color.White;
+            this.btnExamCalender.Image = global::OgrenciOtomasyon.Properties.Resources.screen_0;
+            this.btnExamCalender.Location = new System.Drawing.Point(779, 198);
+            this.btnExamCalender.Name = "btnExamCalender";
+            this.btnExamCalender.Size = new System.Drawing.Size(289, 48);
+            this.btnExamCalender.TabIndex = 129;
+            this.btnExamCalender.Text = "Exam Calender";
+            this.btnExamCalender.UseVisualStyleBackColor = false;
+            this.btnExamCalender.Click += new System.EventHandler(this.btnExamCalender_Click);
+            // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnChangePassword.ForeColor = System.Drawing.Color.White;
+            this.btnChangePassword.Image = global::OgrenciOtomasyon.Properties.Resources.screen_0;
+            this.btnChangePassword.Location = new System.Drawing.Point(56, 404);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(349, 48);
+            this.btnChangePassword.TabIndex = 123;
+            this.btnChangePassword.Text = "Change Your Password";
+            this.btnChangePassword.UseVisualStyleBackColor = false;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Green;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::OgrenciOtomasyon.Properties.Resources.istockphoto_1179173707_612x612;
+            this.button1.Location = new System.Drawing.Point(56, 355);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 32);
+            this.button1.TabIndex = 122;
+            this.button1.Text = "Refresh";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = global::OgrenciOtomasyon.Properties.Resources.RR_v_mar_2019_29;
+            this.btnExit.Location = new System.Drawing.Point(931, 10);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(268, 64);
+            this.btnExit.TabIndex = 101;
+            this.btnExit.Text = "Log Out";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Teal;
+            this.pictureBox2.Location = new System.Drawing.Point(-3, -2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1251, 82);
+            this.pictureBox2.TabIndex = 84;
+            this.pictureBox2.TabStop = false;
+            // 
             // FormStudentInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1211, 496);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);
@@ -448,5 +464,6 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
