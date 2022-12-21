@@ -68,5 +68,29 @@ namespace OgrenciOtomasyon.Student
             txtBoxId.Clear();
             txtBoxAbsen.Clear();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string MyConnection2 = "server=localhost;user id=root;database=obs";
+                string Query = "update ogrenciler set id='" + this.txtBoxId.Text + "',absenteeism='" + this.txtBoxAbsen.Text + "' where id='" + this.txtBoxId.Text + "';";
+                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
+                MySqlDataReader MyReader2;
+                MyConn2.Open();
+                MyReader2 = MyCommand2.ExecuteReader();
+                MessageBox.Show("Absenteeism Informations Updated");
+                while (MyReader2.Read())
+                {
+                }
+                ogrenciListele();
+                MyConn2.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

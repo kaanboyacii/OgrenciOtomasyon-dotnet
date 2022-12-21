@@ -62,7 +62,7 @@ namespace OgrenciOtomasyon.Student
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Image = global::OgrenciOtomasyon.Properties.Resources.RR_v_mar_2019_29;
-            this.btnExit.Location = new System.Drawing.Point(622, 9);
+            this.btnExit.Location = new System.Drawing.Point(563, 9);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(268, 64);
             this.btnExit.TabIndex = 128;
@@ -75,7 +75,7 @@ namespace OgrenciOtomasyon.Student
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(462, 95);
+            this.dataGridView1.Location = new System.Drawing.Point(403, 95);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -99,7 +99,7 @@ namespace OgrenciOtomasyon.Student
             this.btnDelete.BackColor = System.Drawing.Color.Crimson;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(58, 399);
+            this.btnDelete.Location = new System.Drawing.Point(12, 403);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(376, 48);
             this.btnDelete.TabIndex = 126;
@@ -110,7 +110,7 @@ namespace OgrenciOtomasyon.Student
             // txtBoxId
             // 
             this.txtBoxId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBoxId.Location = new System.Drawing.Point(192, 95);
+            this.txtBoxId.Location = new System.Drawing.Point(146, 99);
             this.txtBoxId.Name = "txtBoxId";
             this.txtBoxId.Size = new System.Drawing.Size(242, 24);
             this.txtBoxId.TabIndex = 125;
@@ -118,7 +118,7 @@ namespace OgrenciOtomasyon.Student
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnClear.Location = new System.Drawing.Point(58, 228);
+            this.btnClear.Location = new System.Drawing.Point(12, 232);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(108, 36);
             this.btnClear.TabIndex = 123;
@@ -132,7 +132,7 @@ namespace OgrenciOtomasyon.Student
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Image = global::OgrenciOtomasyon.Properties.Resources.screen_0;
-            this.btnUpdate.Location = new System.Drawing.Point(58, 345);
+            this.btnUpdate.Location = new System.Drawing.Point(12, 349);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(376, 48);
             this.btnUpdate.TabIndex = 122;
@@ -146,7 +146,7 @@ namespace OgrenciOtomasyon.Student
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = global::OgrenciOtomasyon.Properties.Resources.istockphoto_1179173707_612x612;
-            this.btnAdd.Location = new System.Drawing.Point(58, 291);
+            this.btnAdd.Location = new System.Drawing.Point(12, 295);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(376, 48);
             this.btnAdd.TabIndex = 121;
@@ -157,7 +157,7 @@ namespace OgrenciOtomasyon.Student
             // txtBoxName
             // 
             this.txtBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBoxName.Location = new System.Drawing.Point(192, 155);
+            this.txtBoxName.Location = new System.Drawing.Point(146, 159);
             this.txtBoxName.Name = "txtBoxName";
             this.txtBoxName.Size = new System.Drawing.Size(242, 24);
             this.txtBoxName.TabIndex = 118;
@@ -167,7 +167,7 @@ namespace OgrenciOtomasyon.Student
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Teal;
             this.label3.Font = new System.Drawing.Font("Dubai", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(46, 9);
+            this.label3.Location = new System.Drawing.Point(0, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(358, 67);
             this.label3.TabIndex = 117;
@@ -186,7 +186,7 @@ namespace OgrenciOtomasyon.Student
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(55, 100);
+            this.label4.Location = new System.Drawing.Point(9, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 17);
             this.label4.TabIndex = 132;
@@ -196,7 +196,7 @@ namespace OgrenciOtomasyon.Student
             // 
             this.lblNumara.AutoSize = true;
             this.lblNumara.BackColor = System.Drawing.Color.Transparent;
-            this.lblNumara.Location = new System.Drawing.Point(55, 184);
+            this.lblNumara.Location = new System.Drawing.Point(9, 188);
             this.lblNumara.Name = "lblNumara";
             this.lblNumara.Size = new System.Drawing.Size(76, 17);
             this.lblNumara.TabIndex = 131;
@@ -206,7 +206,7 @@ namespace OgrenciOtomasyon.Student
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(55, 160);
+            this.label2.Location = new System.Drawing.Point(9, 164);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 17);
             this.label2.TabIndex = 129;
@@ -216,7 +216,7 @@ namespace OgrenciOtomasyon.Student
             // 
             this.dateStartDateTime.CustomFormat = "yyyy-MM-dd";
             this.dateStartDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateStartDateTime.Location = new System.Drawing.Point(192, 184);
+            this.dateStartDateTime.Location = new System.Drawing.Point(146, 188);
             this.dateStartDateTime.Margin = new System.Windows.Forms.Padding(4);
             this.dateStartDateTime.Name = "dateStartDateTime";
             this.dateStartDateTime.Size = new System.Drawing.Size(242, 22);
@@ -231,7 +231,7 @@ namespace OgrenciOtomasyon.Student
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(55, 130);
+            this.label1.Location = new System.Drawing.Point(9, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 17);
             this.label1.TabIndex = 135;
@@ -240,7 +240,7 @@ namespace OgrenciOtomasyon.Student
             // txtBoxClassId
             // 
             this.txtBoxClassId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBoxClassId.Location = new System.Drawing.Point(192, 125);
+            this.txtBoxClassId.Location = new System.Drawing.Point(146, 129);
             this.txtBoxClassId.Name = "txtBoxClassId";
             this.txtBoxClassId.Size = new System.Drawing.Size(242, 24);
             this.txtBoxClassId.TabIndex = 134;
@@ -249,7 +249,7 @@ namespace OgrenciOtomasyon.Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 459);
+            this.ClientSize = new System.Drawing.Size(843, 459);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBoxClassId);
             this.Controls.Add(this.dateStartDateTime);

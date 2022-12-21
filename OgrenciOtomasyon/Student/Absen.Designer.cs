@@ -37,7 +37,7 @@ namespace OgrenciOtomasyon.Student
             this.label2 = new System.Windows.Forms.Label();
             this.txtBoxAbsen = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -46,11 +46,11 @@ namespace OgrenciOtomasyon.Student
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 142);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 142);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(876, 296);
+            this.dataGridView1.Size = new System.Drawing.Size(887, 296);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -59,7 +59,7 @@ namespace OgrenciOtomasyon.Student
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Teal;
             this.label3.Font = new System.Drawing.Font("Dubai", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 7);
+            this.label3.Location = new System.Drawing.Point(1, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(465, 67);
             this.label3.TabIndex = 86;
@@ -78,7 +78,7 @@ namespace OgrenciOtomasyon.Student
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(21, 101);
+            this.label4.Location = new System.Drawing.Point(12, 101);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 17);
             this.label4.TabIndex = 93;
@@ -87,7 +87,7 @@ namespace OgrenciOtomasyon.Student
             // txtBoxId
             // 
             this.txtBoxId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBoxId.Location = new System.Drawing.Point(52, 96);
+            this.txtBoxId.Location = new System.Drawing.Point(43, 96);
             this.txtBoxId.Name = "txtBoxId";
             this.txtBoxId.Size = new System.Drawing.Size(242, 24);
             this.txtBoxId.TabIndex = 92;
@@ -125,18 +125,19 @@ namespace OgrenciOtomasyon.Student
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // btnAdd
+            // btnUpdate
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Image = global::OgrenciOtomasyon.Properties.Resources.screen_0;
-            this.btnAdd.Location = new System.Drawing.Point(745, 87);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(155, 38);
-            this.btnAdd.TabIndex = 134;
-            this.btnAdd.Text = "Update";
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Image = global::OgrenciOtomasyon.Properties.Resources.screen_0;
+            this.btnUpdate.Location = new System.Drawing.Point(745, 87);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(155, 38);
+            this.btnUpdate.TabIndex = 134;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClear
             // 
@@ -155,7 +156,7 @@ namespace OgrenciOtomasyon.Student
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(912, 450);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtBoxId);
@@ -187,7 +188,7 @@ namespace OgrenciOtomasyon.Student
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBoxAbsen;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnClear;
     }
 }
