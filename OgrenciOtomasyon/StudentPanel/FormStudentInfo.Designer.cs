@@ -30,8 +30,8 @@ namespace OgrenciOtomasyon
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem("");
             this.lblMidterm = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblNumara = new System.Windows.Forms.Label();
@@ -198,7 +198,7 @@ namespace OgrenciOtomasyon
             this.txtBoxAddress.Multiline = true;
             this.txtBoxAddress.Name = "txtBoxAddress";
             this.txtBoxAddress.ReadOnly = true;
-            this.txtBoxAddress.Size = new System.Drawing.Size(229, 75);
+            this.txtBoxAddress.Size = new System.Drawing.Size(229, 112);
             this.txtBoxAddress.TabIndex = 120;
             // 
             // label1
@@ -229,7 +229,7 @@ namespace OgrenciOtomasyon
             this.name});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem9});
+            listViewItem13});
             this.listView1.Location = new System.Drawing.Point(454, 144);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(154, 308);
@@ -249,7 +249,7 @@ namespace OgrenciOtomasyon
             this.marks});
             this.listView2.HideSelection = false;
             this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem10});
+            listViewItem14});
             this.listView2.Location = new System.Drawing.Point(614, 144);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(135, 308);
@@ -357,7 +357,7 @@ namespace OgrenciOtomasyon
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::OgrenciOtomasyon.Properties.Resources.istockphoto_1179173707_612x612;
-            this.button1.Location = new System.Drawing.Point(56, 355);
+            this.button1.Location = new System.Drawing.Point(60, 392);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 32);
             this.button1.TabIndex = 122;

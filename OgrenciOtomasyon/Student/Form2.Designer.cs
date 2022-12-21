@@ -65,6 +65,7 @@ namespace OgrenciOtomasyon
             this.ogrencilerBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.ogrencilerTableAdapter2 = new OgrenciOtomasyon.obsDataSet8TableAdapters.ogrencilerTableAdapter();
             this.ogrencilerBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource4)).BeginInit();
@@ -210,7 +211,7 @@ namespace OgrenciOtomasyon
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Image = global::OgrenciOtomasyon.Properties.Resources.RR_v_mar_2019_29;
-            this.btnExit.Location = new System.Drawing.Point(1125, 9);
+            this.btnExit.Location = new System.Drawing.Point(1125, 18);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(268, 64);
             this.btnExit.TabIndex = 84;
@@ -223,7 +224,7 @@ namespace OgrenciOtomasyon
             this.button1.BackColor = System.Drawing.Color.Yellow;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(56, 475);
+            this.button1.Location = new System.Drawing.Point(56, 456);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(376, 48);
             this.button1.TabIndex = 87;
@@ -330,7 +331,7 @@ namespace OgrenciOtomasyon
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(918, 554);
+            this.dataGridView1.Size = new System.Drawing.Size(918, 571);
             this.dataGridView1.TabIndex = 95;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             // 
@@ -339,7 +340,7 @@ namespace OgrenciOtomasyon
             this.button2.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(56, 538);
+            this.button2.Location = new System.Drawing.Point(56, 510);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(376, 48);
             this.button2.TabIndex = 96;
@@ -352,7 +353,7 @@ namespace OgrenciOtomasyon
             this.button3.BackColor = System.Drawing.Color.SeaGreen;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(56, 601);
+            this.button3.Location = new System.Drawing.Point(56, 564);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(376, 48);
             this.button3.TabIndex = 97;
@@ -397,11 +398,25 @@ namespace OgrenciOtomasyon
             this.ogrencilerBindingSource5.DataMember = "ogrenciler";
             this.ogrencilerBindingSource5.DataSource = this.obsDataSet8;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Firebrick;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(56, 618);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(376, 48);
+            this.button4.TabIndex = 100;
+            this.button4.Text = "Add Absenteeism";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1405, 661);
+            this.ClientSize = new System.Drawing.Size(1405, 678);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtBoxClass);
             this.Controls.Add(this.button3);
@@ -486,5 +501,6 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.BindingSource ogrencilerBindingSource3;
         private obsDataSet8TableAdapters.ogrencilerTableAdapter ogrencilerTableAdapter2;
         private System.Windows.Forms.BindingSource ogrencilerBindingSource5;
+        private System.Windows.Forms.Button button4;
     }
 }

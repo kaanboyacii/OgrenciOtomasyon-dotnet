@@ -224,5 +224,12 @@ namespace OgrenciOtomasyon
             examre.Show();
             this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Student.Absen abs = new Student.Absen(TeacherId);
+            abs.Show();
+            this.Hide();
+        }
     }
 }
