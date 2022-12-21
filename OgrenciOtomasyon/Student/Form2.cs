@@ -48,27 +48,7 @@ namespace OgrenciOtomasyon
                 MessageBox.Show(ex.Message);
             }
         }
-        //private void ortalamaHesap()
-        //{
-        //    string MyConnection2 = "server=localhost;user id=root;database=obs";
-        //    int sınav1 = Convert.ToInt32(txtBoxMidtermExam.Text);
-        //    int sınav2 = Convert.ToInt32(txtBoxFinalExam.Text);
-        //    float ort = Convert.ToInt32(sınav1 *  sınav2 / 2);
-        //    string durum;
-        //    if (ort < 50 || sınav2 < 50)
-        //        durum = "Kaldı";
-        //    else
-        //        durum = "Geçti";
-        //    string Query = "update ogrenciler set ortalama='" + ort + "',durum='" + durum + "' where id='" + this.txtboxNumber.Text + "';";
-        //    //This is  MySqlConnection here i have created the object and pass my connection string.
-        //    MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
-        //    MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
-        //    MySqlDataReader MyReader2;
-        //    MyConn2.Open();
-        //    MyReader2 = MyCommand2.ExecuteReader();     // Here our query will be executed and data saved into the database.
-        //    MyConn2.Close();
-        //}
-
+      
         private void Form2_Load(object sender, EventArgs e)
         {
             ogrenciListele();
@@ -80,21 +60,17 @@ namespace OgrenciOtomasyon
             try
             {
                 String gender = "";
-                if (radioButtonMale.Checked == true)  //
-                    gender = "Male";                  //Cinsiyeti kontrol ediyor gender değişkenine atıyor.
-                if (radioButtonFemale.Checked == true)//
+                if (radioButtonMale.Checked == true)  
+                    gender = "Male";                  
+                if (radioButtonFemale.Checked == true)
                     gender = "Female";
-                //This is my connection string i have assigned the database file address path
                 string MyConnection2 = "server=localhost;user id=root;database=obs";
-                //This is my insert query in which i am taking input from the user through windows forms
                 string Query = "insert into ogrenciler(id,ad,soyad,classroom_id,iletisim,cinsiyet,adres) values('" + this.txtBoxId.Text + "','" + this.txtBoxFirstName.Text + "','" + this.txtBoxLastName.Text + "','" + this.txtBoxClass.Text + "','" + this.txtboxNumber.Text + "','" + gender + "','" + this.txtBoxAdres.Text + "');";
-                //This is  MySqlConnection here i have created the object and pass my connection string.
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
-                //This is command class which will handle the query and connection object.
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                 MySqlDataReader MyReader2;
                 MyConn2.Open();
-                MyReader2 = MyCommand2.ExecuteReader();     // Here our query will be executed and data saved into the database.
+                MyReader2 = MyCommand2.ExecuteReader();  
                 MessageBox.Show("Added Student");
                 //ortalamaHesap();
                 while (MyReader2.Read())
@@ -114,15 +90,12 @@ namespace OgrenciOtomasyon
             try
             {
                 String gender = "";
-                if (radioButtonMale.Checked == true)  //
-                    gender = "Male";                  //Cinsiyeti kontrol ediyor gender değişkenine atıyor.
-                if (radioButtonFemale.Checked == true)//
+                if (radioButtonMale.Checked == true)  
+                    gender = "Male";                  
+                if (radioButtonFemale.Checked == true)
                     gender = "Female";
-                //This is my connection string i have assigned the database file address path
                 string MyConnection2 = "server=localhost;user id=root;database=obs";
-                //This is my update query in which i am taking input from the user through windows forms and update the record.
                 string Query = "update ogrenciler set id='" + this.txtBoxId.Text + "',ad='" + this.txtBoxFirstName.Text + "',soyad='" + this.txtBoxLastName.Text + "',classroom_id='" + this.txtBoxClass.Text + "',cinsiyet='" + this.txtboxNumber.Text + "',cinsiyet='" + gender + "',adres='" + this.txtBoxAdres.Text + "' where id='" + this.txtBoxId.Text + "';";
-                //This is  MySqlConnection here i have created the object and pass my connection string.
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                 MySqlDataReader MyReader2;
@@ -133,7 +106,7 @@ namespace OgrenciOtomasyon
                 {
                 }
                 ogrenciListele();
-                MyConn2.Close();//Connection closed here
+                MyConn2.Close();
             }
             catch (Exception ex)
             {
