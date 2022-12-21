@@ -53,12 +53,8 @@ namespace OgrenciOtomasyon
                 txtBoxContact.Text = dr["iletisim"].ToString();
                 txtBoxGender.Text = dr["cinsiyet"].ToString();
                 txtBoxAddress.Text = dr["adres"].ToString();
+                txtBoxAbsen.Text = dr["absenteeism"].ToString();
                 //listBox1.Items.Add(dr["ad"].ToString());
-                //listBox2.Items.Add(dr["soyad"].ToString());
-                //listBox3.Items.Add(dr["id"].ToString());
-                //listBox4.Items.Add(dr["iletisim"].ToString());
-                //listBox5.Items.Add(dr["adres"].ToString());
-                //listBox6.Items.Add(dr["cinsiyet"].ToString());
             }
             MyConn3.Close();
 

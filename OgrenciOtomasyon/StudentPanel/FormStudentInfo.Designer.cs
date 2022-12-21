@@ -30,8 +30,8 @@ namespace OgrenciOtomasyon
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("");
             this.lblMidterm = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblNumara = new System.Windows.Forms.Label();
@@ -63,6 +63,8 @@ namespace OgrenciOtomasyon
             this.btnExit = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ogrenciler1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtBoxAbsen = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrenciler1BindingSource)).BeginInit();
             this.SuspendLayout();
@@ -227,7 +229,7 @@ namespace OgrenciOtomasyon
             this.name});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
+            listViewItem9});
             this.listView1.Location = new System.Drawing.Point(454, 144);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(154, 308);
@@ -247,7 +249,7 @@ namespace OgrenciOtomasyon
             this.marks});
             this.listView2.HideSelection = false;
             this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4});
+            listViewItem10});
             this.listView2.Location = new System.Drawing.Point(614, 144);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(135, 308);
@@ -341,9 +343,9 @@ namespace OgrenciOtomasyon
             this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnChangePassword.ForeColor = System.Drawing.Color.White;
             this.btnChangePassword.Image = global::OgrenciOtomasyon.Properties.Resources.screen_0;
-            this.btnChangePassword.Location = new System.Drawing.Point(56, 404);
+            this.btnChangePassword.Location = new System.Drawing.Point(779, 360);
             this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(349, 48);
+            this.btnChangePassword.Size = new System.Drawing.Size(289, 48);
             this.btnChangePassword.TabIndex = 123;
             this.btnChangePassword.Text = "Change Your Password";
             this.btnChangePassword.UseVisualStyleBackColor = false;
@@ -387,11 +389,31 @@ namespace OgrenciOtomasyon
             this.pictureBox2.TabIndex = 84;
             this.pictureBox2.TabStop = false;
             // 
+            // txtBoxAbsen
+            // 
+            this.txtBoxAbsen.Location = new System.Drawing.Point(277, 430);
+            this.txtBoxAbsen.Name = "txtBoxAbsen";
+            this.txtBoxAbsen.ReadOnly = true;
+            this.txtBoxAbsen.Size = new System.Drawing.Size(128, 22);
+            this.txtBoxAbsen.TabIndex = 136;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(57, 433);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(214, 17);
+            this.label6.TabIndex = 137;
+            this.label6.Text = "Absentessism Information(Hour):";
+            // 
             // FormStudentInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1211, 496);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtBoxAbsen);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -465,5 +487,7 @@ namespace OgrenciOtomasyon
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox txtBoxAbsen;
+        private System.Windows.Forms.Label label6;
     }
 }
