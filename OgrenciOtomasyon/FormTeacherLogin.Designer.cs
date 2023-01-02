@@ -194,6 +194,7 @@ namespace OgrenciOtomasyon
             this.lblTeacherId.Size = new System.Drawing.Size(46, 17);
             this.lblTeacherId.TabIndex = 41;
             this.lblTeacherId.Text = "label1";
+            this.lblTeacherId.Visible = false;
             // 
             // FormTeacherLogin
             // 

@@ -45,7 +45,7 @@ namespace OgrenciOtomasyon
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormStudentInfo frmstudenınf = new FormStudentInfo();
+            FormStudentInfo frmstudenınf = new FormStudentInfo(StudentNum);
             frmstudenınf.Show();
             this.Hide();
         }
