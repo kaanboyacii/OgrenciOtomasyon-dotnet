@@ -40,18 +40,64 @@ namespace OgrenciOtomasyon
                 MyAdapter.SelectCommand = MyCommand2;
                 DataTable dTable = new DataTable();
                 MyAdapter.Fill(dTable);
-                dataGridView1.DataSource = dTable; // here i have assign dTable object to the dataGridView1 object to display data.
-                                                   // MyConn2.Close();
+                dataGridView1.DataSource = dTable;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-      
+
+        private void pie()
+        {
+            try
+            {
+                string MyConnection2 = "server=localhost;user id=root;database=obs";
+                //Display query
+                string Query = "select count(cinsiyet) from ogrenciler where classroom_id in (select classroom_id from classroom where teacher_id = '" + TeacherId + "') group by cinsiyet ";
+                MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
+                MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+                MyAdapter.SelectCommand = MyCommand2;
+                DataTable dTable = new DataTable();
+                MyAdapter.Fill(dTable);
+                dataGridView2.DataSource = dTable;
+
+                dataGridView2.Rows[0].Selected = true;
+                string gender1 = dataGridView2.Rows[0].Cells[0].Value.ToString();
+                string gender2 = dataGridView2.Rows[1].Cells[0].Value.ToString();
+                //string gender1 = dataGridView2.CurrentCell.RowIndex[0].Value.ToString();
+                //string gender2 = dataGridView2.CurrentCell.RowIndex[].Value.ToString();
+                //for (int i = 1; i <= dTable.Rows.Count; i++)
+                //{
+                //    if (dataGridView1.CurrentRow.Cells[0].Value.ToString() == "Male")
+                //    {
+                //        gender1++;
+                //    }
+                //    else if (dataGridView1.CurrentRow.Cells[1].Value.ToString() == "Female")
+                //    {
+                //        gender2++;
+                //    }
+                //    else
+                //    {
+                //        gender2++;
+                //    }
+                //}
+                chart1.Series["s1"].Points.AddXY("Male", gender2);
+                chart1.Series["s1"].Points.AddXY("Female", gender1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+
         private void Form2_Load(object sender, EventArgs e)
         {
             ogrenciListele();
+            pie();
 
         }
 

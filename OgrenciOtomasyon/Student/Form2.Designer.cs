@@ -30,6 +30,9 @@ namespace OgrenciOtomasyon
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lblNumara = new System.Windows.Forms.Label();
             this.txtboxNumber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,6 +69,8 @@ namespace OgrenciOtomasyon
             this.ogrencilerBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.ogrencilerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ogrencilerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obsDataSet8)).BeginInit();
@@ -76,6 +81,8 @@ namespace OgrenciOtomasyon
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNumara
@@ -274,12 +281,12 @@ namespace OgrenciOtomasyon
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(475, 95);
+            this.dataGridView1.Location = new System.Drawing.Point(451, 95);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(992, 571);
+            this.dataGridView1.Size = new System.Drawing.Size(1016, 571);
             this.dataGridView1.TabIndex = 95;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             // 
@@ -366,7 +373,7 @@ namespace OgrenciOtomasyon
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Image = global::OgrenciOtomasyon.Properties.Resources.RR_v_mar_2019_29;
-            this.btnExit.Location = new System.Drawing.Point(1199, 9);
+            this.btnExit.Location = new System.Drawing.Point(1485, 9);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(268, 64);
             this.btnExit.TabIndex = 84;
@@ -411,11 +418,44 @@ namespace OgrenciOtomasyon
             this.pictureBox2.TabIndex = 65;
             this.pictureBox2.TabStop = false;
             // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(1473, 95);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "s1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(280, 290);
+            this.chart1.TabIndex = 101;
+            this.chart1.Text = "chart1";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(1322, 419);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(405, 139);
+            this.dataGridView2.TabIndex = 104;
+            this.dataGridView2.Visible = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1479, 678);
+            this.ClientSize = new System.Drawing.Size(1759, 678);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtBoxClass);
@@ -459,6 +499,8 @@ namespace OgrenciOtomasyon
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrencilerBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -502,5 +544,7 @@ namespace OgrenciOtomasyon
         private obsDataSet8TableAdapters.ogrencilerTableAdapter ogrencilerTableAdapter2;
         private System.Windows.Forms.BindingSource ogrencilerBindingSource5;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
