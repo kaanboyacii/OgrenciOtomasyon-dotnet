@@ -95,7 +95,7 @@ namespace OgrenciOtomasyon
                 if (radioButtonFemale.Checked == true)
                     gender = "Female";
                 string MyConnection2 = "server=localhost;user id=root;database=obs";
-                string Query = "update ogrenciler set id='" + this.txtBoxId.Text + "',ad='" + this.txtBoxFirstName.Text + "',soyad='" + this.txtBoxLastName.Text + "',classroom_id='" + this.txtBoxClass.Text + "',cinsiyet='" + this.txtboxNumber.Text + "',cinsiyet='" + gender + "',adres='" + this.txtBoxAdres.Text + "' where id='" + this.txtBoxId.Text + "';";
+                string Query = "update ogrenciler set id='" + this.txtBoxId.Text + "',ad='" + this.txtBoxFirstName.Text + "',soyad='" + this.txtBoxLastName.Text + "',classroom_id='" + this.txtBoxClass.Text + "',iletisim='" + this.txtboxNumber.Text + "',cinsiyet='" + gender + "',adres='" + this.txtBoxAdres.Text + "' where id='" + this.txtBoxId.Text + "';";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                 MySqlDataReader MyReader2;
@@ -125,7 +125,7 @@ namespace OgrenciOtomasyon
                 MySqlDataReader MyReader2;
                 MyConn2.Open();
                 MyReader2 = MyCommand2.ExecuteReader();
-                MessageBox.Show("Data Deleted");
+                MessageBox.Show("Student Deleted");
                 while (MyReader2.Read())
                 {
                 }
