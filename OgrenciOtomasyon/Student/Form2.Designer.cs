@@ -30,9 +30,9 @@ namespace OgrenciOtomasyon
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lblNumara = new System.Windows.Forms.Label();
             this.txtboxNumber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -286,7 +286,7 @@ namespace OgrenciOtomasyon
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1016, 571);
+            this.dataGridView1.Size = new System.Drawing.Size(814, 571);
             this.dataGridView1.TabIndex = 95;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             // 
@@ -373,9 +373,9 @@ namespace OgrenciOtomasyon
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Image = global::OgrenciOtomasyon.Properties.Resources.RR_v_mar_2019_29;
-            this.btnExit.Location = new System.Drawing.Point(1485, 9);
+            this.btnExit.Location = new System.Drawing.Point(1271, 9);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(268, 64);
+            this.btnExit.Size = new System.Drawing.Size(254, 64);
             this.btnExit.TabIndex = 84;
             this.btnExit.Text = "Log Out";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -420,18 +420,18 @@ namespace OgrenciOtomasyon
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(1473, 95);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(1271, 95);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "s1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(280, 290);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "s1";
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(254, 290);
             this.chart1.TabIndex = 101;
             this.chart1.Text = "chart1";
             // 
@@ -440,7 +440,7 @@ namespace OgrenciOtomasyon
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(1322, 419);
+            this.dataGridView2.Location = new System.Drawing.Point(1274, 402);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 51;
@@ -453,7 +453,7 @@ namespace OgrenciOtomasyon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1759, 678);
+            this.ClientSize = new System.Drawing.Size(1534, 678);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.button4);
